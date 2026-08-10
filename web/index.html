@@ -99,6 +99,12 @@
   .t-model{color:var(--good)} .t-fallback{color:var(--bad)}
   .t-ms{color:var(--muted)} .t-tool{color:var(--ice)}
   .t-flag{color:var(--warn)} .t-tok{color:var(--muted)}
+  .t-ice{color:var(--ice); opacity:1; box-shadow:0 0 12px rgba(127,212,232,.18)}
+  .cursor::after{
+    content:"▍"; color:var(--gold); opacity:.75; margin-left:1px;
+    animation:blink 1.05s step-end infinite;
+  }
+  @keyframes blink{ 50%{opacity:0} }
 
   .composer{border-top:1px solid var(--line); padding:14px 16px; display:flex; gap:10px; flex:none}
   input[type=text]{
@@ -203,6 +209,7 @@ const UI = {
     switchedState:s => `进度切到「${s}」，对话已重开。`,
     lastTurn:(ms,tok) => `上一轮 ${ms} ms · ${tok} tok`,
     failed:m => `请求失败：${m}`, noService:m => `服务未连上：${m}`,
+    firstToken:ms => `首字 ${ms} ms`, total:ms => `共 ${ms} ms`,
     source:{ model:"模型生成", timeout:"降级 · 超时", error:"降级 · 报错", guardrail:"降级 · 护栏" }
   },
   en:{
@@ -222,6 +229,7 @@ const UI = {
     switchedState:s => `Progress switched to "${s}". Conversation reset.`,
     lastTurn:(ms,tok) => `last turn ${ms} ms · ${tok} tok`,
     failed:m => `Request failed: ${m}`, noService:m => `Service unreachable: ${m}`,
+    firstToken:ms => `first token ${ms} ms`, total:ms => `${ms} ms total`,
     source:{ model:"generated", timeout:"fallback · timeout", error:"fallback · error", guardrail:"fallback · guardrail" }
   }
 };
@@ -370,7 +378,10 @@ function diagnostics(node, r){
     add("t-fallback", L.source[r.source.replace("fallback_","")] || r.source);
     node.classList.add("degraded");
   }
-  add("t-ms", Math.round(r.latency_ms) + " ms");
+  // First token is the number streaming actually improves; total latency alone
+  // would hide the whole point of it.
+  if (r.first_token_ms) add("t-ice", L.firstToken(Math.round(r.first_token_ms)));
+  add("t-ms", L.total(Math.round(r.latency_ms)));
   r.tool_calls.forEach(x => add("t-tool", "⚒ " + x));
   r.guardrail_flags.forEach(f => add("t-flag", "⚠ " + f));
   if (r.tokens) add("t-tok", r.tokens + " tok");
@@ -383,10 +394,14 @@ async function send(text){
   const L = t();
 
   bubble(L.you, text, "you");
-  const pending = bubble(L.npc, L.thinking, "npc");
+  const pending = bubble(L.npc, "", "npc");
+  const body = pending.querySelector(".bubble");
+  body.classList.add("cursor");
+
+  let shown = "", reply = null;
 
   try{
-    const res = await fetch("/api/chat", {
+    const res = await fetch("/api/chat/stream", {
       method:"POST", headers:{ "Content-Type":"application/json" },
       body: JSON.stringify({
         message:text, npc_id:"npc_china_historian",
@@ -394,19 +409,57 @@ async function send(text){
         history, language:lang, backend
       })
     });
-    if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
-    const r = await res.json();
+    if (!res.ok) throw new Error((await res.json().catch(()=>({}))).detail || res.statusText);
 
-    pending.querySelector(".who").textContent = r.speaker;
-    pending.querySelector(".bubble").textContent = r.text;
-    diagnostics(pending, r);
+    const reader = res.body.getReader(), decoder = new TextDecoder();
+    let buf = "";
 
-    history.push({ role:"user", text }, { role:"assistant", text:r.text });
+    while (true){
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream:true });
+
+      let cut;
+      while ((cut = buf.indexOf("\n\n")) >= 0){
+        const frame = buf.slice(0, cut); buf = buf.slice(cut + 2);
+        if (!frame.startsWith("data:")) continue;
+
+        let ev;
+        try { ev = JSON.parse(frame.slice(5).trim()); } catch { continue; }
+
+        if (ev.kind === "delta"){
+          shown += ev.text;
+          body.textContent = shown;
+          log.scrollTop = log.scrollHeight;
+        } else if (ev.kind === "replace"){
+          // A guardrail retracted what is on screen. Honouring this is not
+          // optional — ignoring it would leave a leaked answer visible.
+          shown = ev.text;
+          body.textContent = shown;
+          log.scrollTop = log.scrollHeight;
+        } else if (ev.kind === "done"){
+          reply = ev.reply;
+        } else if (ev.kind === "error"){
+          throw new Error(ev.text);
+        }
+      }
+    }
+
+    body.classList.remove("cursor");
+    if (!reply) throw new Error("stream ended without a result");
+
+    pending.querySelector(".who").textContent = reply.speaker;
+    body.textContent = reply.text;
+    diagnostics(pending, reply);
+
+    history.push({ role:"user", text }, { role:"assistant", text:reply.text });
     if (history.length > 12) history = history.slice(-12);
     $("status").innerHTML =
-      `<b>${r.backend}</b> · ${r.model}<br>` + L.lastTurn(Math.round(r.latency_ms), r.tokens);
+      `<b>${reply.backend}</b> · ${reply.model}<br>` +
+      L.lastTurn(Math.round(reply.latency_ms), reply.tokens);
   }catch(e){
-    pending.querySelector(".bubble").innerHTML = `<span class="err">${L.failed(e.message)}</span>`;
+    body.classList.remove("cursor");
+    body.innerHTML = `<span class="err">${L.failed(e.message)}</span>`;
   }finally{
     busy = false; $("send").disabled = false; $("input").focus();
   }

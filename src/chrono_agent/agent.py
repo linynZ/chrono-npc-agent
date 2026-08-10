@@ -18,8 +18,9 @@ player's patience.
 from __future__ import annotations
 
 import asyncio
+import re
 import time
-from typing import Any
+from typing import Any, AsyncIterator
 
 from .fallback import FallbackLibrary
 from .guardrails.rules import (
@@ -34,6 +35,8 @@ from .models import (
     PlayerState,
     ReplySource,
     Role,
+    StreamEvent,
+    StreamEventKind,
     Usage,
 )
 from .persona import NpcPersona, build_system_prompt
@@ -47,6 +50,16 @@ from .tools import ToolContext, ToolRegistry
 # the record away is a smaller change than trying to police what he does with it.
 STRICT_FLAGS = frozenset({"pasted_question"})
 WITHHELD_UNDER_STRICT = frozenset({"lookup_lore"})
+
+# Guardrails need whole thoughts, not fragments — running them per-token would
+# fire on half a word. Checking at sentence boundaries bounds the damage to one
+# sentence while keeping the check cheap.
+SENTENCE_END = re.compile(r"[。！？；…\n]|[.!?](?:\s|$)")
+
+
+def _merge_flags(incoming: list[str], outgoing: list[str]) -> list[str]:
+    """Keep both sides of the record — what was attempted and what was said."""
+    return incoming + [flag for flag in outgoing if flag not in incoming]
 
 
 class NpcAgent:
@@ -136,9 +149,9 @@ class NpcAgent:
             # Both sides, not just the output. Overwriting with the output flags
             # loses the record of what the player was attempting, which is the
             # more useful half when reviewing why a turn degraded.
-            reply.guardrail_flags = input_verdict.flags + [
-                flag for flag in output_verdict.flags if flag not in input_verdict.flags
-            ]
+            reply.guardrail_flags = _merge_flags(
+                input_verdict.flags, output_verdict.flags
+            )
             return reply
 
         return NpcReply(
@@ -192,6 +205,185 @@ class NpcAgent:
         usage.prompt_tokens += final.usage.prompt_tokens
         usage.completion_tokens += final.usage.completion_tokens
         return final.message.content
+
+    async def reply_stream(
+        self,
+        player_message: str,
+        state: PlayerState,
+        history: list[Message] | None = None,
+        language: Language | None = None,
+    ) -> AsyncIterator[StreamEvent]:
+        """Same turn, delivered as it is produced.
+
+        The tension worth naming: streaming and output guardrails want opposite
+        things. A guardrail wants the finished reply; the player wants the first
+        words now. Buffering to satisfy the guardrail throws away the entire
+        benefit, so instead the check runs at each sentence boundary and the
+        contract carries a REPLACE event for when a later sentence trips one.
+        Exposure is bounded to a sentence rather than eliminated — which is the
+        honest trade, and the reason REPLACE is not optional for clients.
+        """
+        language = language or state.language
+        started = time.perf_counter()
+        first_token_ms = 0.0
+
+        input_verdict = inspect_player_message(player_message)
+        system_prompt = build_system_prompt(self.persona, state, language)
+        if note := steering_note(input_verdict, language):
+            system_prompt = f"{system_prompt}\n\n{note}"
+
+        messages: list[Message] = [Message(role=Role.SYSTEM, content=system_prompt)]
+        if history:
+            messages.extend(history[-self.history_turns * 2 :])
+        messages.append(Message(role=Role.USER, content=player_message))
+
+        context = ToolContext(
+            state=state,
+            language=language,
+            quests=self.quests,
+            lore=self.lore,
+            npc_id=self.persona.npc_id,
+        )
+
+        registry = self.registry
+        if STRICT_FLAGS.intersection(input_verdict.flags):
+            registry = registry.subset(
+                [n for n in self.persona.tools if n not in WITHHELD_UNDER_STRICT]
+            )
+
+        tools_used: list[str] = []
+        usage = Usage()
+        emitted = ""
+
+        def elapsed() -> float:
+            return (time.perf_counter() - started) * 1000
+
+        def degrade(source: ReplySource, flags: list[str]) -> NpcReply:
+            reply = self._fallback(
+                player_message, state, language, source, started, tools_used, usage
+            )
+            reply.first_token_ms = first_token_ms
+            reply.guardrail_flags = flags
+            return reply
+
+        try:
+            for _ in range(self.max_tool_rounds + 1):
+                schemas = registry.schemas() or None
+                round_text = ""
+                tool_calls = []
+
+                async for delta in self.provider.stream(messages, schemas):
+                    if delta.done:
+                        tool_calls = delta.tool_calls
+                        usage.prompt_tokens += delta.usage.prompt_tokens
+                        usage.completion_tokens += delta.usage.completion_tokens
+                        usage.cached_tokens += delta.usage.cached_tokens
+                        break
+
+                    if not delta.text:
+                        continue
+                    if first_token_ms == 0.0:
+                        first_token_ms = elapsed()
+
+                    round_text += delta.text
+                    emitted += delta.text
+                    yield StreamEvent(kind=StreamEventKind.DELTA, text=delta.text)
+
+                    # Only check on a completed sentence — mid-word text trips
+                    # nothing useful and costs a regex pass per token.
+                    if SENTENCE_END.search(delta.text):
+                        verdict = inspect_npc_reply(emitted)
+                        if verdict.tripped and "empty_reply" not in verdict.flags:
+                            reply = degrade(
+                                ReplySource.FALLBACK_GUARDRAIL,
+                                _merge_flags(input_verdict.flags, verdict.flags),
+                            )
+                            yield StreamEvent(
+                                kind=StreamEventKind.REPLACE, text=reply.text
+                            )
+                            yield StreamEvent(kind=StreamEventKind.DONE, reply=reply)
+                            return
+
+                if not tool_calls:
+                    break
+
+                # Optimistic streaming: text went out before we knew a tool was
+                # coming. In practice models emit nothing alongside a tool call,
+                # so this retraction is rare — but when it fires, leaving the
+                # preamble on screen would strand it in front of the real reply.
+                if emitted:
+                    yield StreamEvent(kind=StreamEventKind.REPLACE, text="")
+                    emitted = ""
+
+                messages.append(
+                    Message(
+                        role=Role.ASSISTANT, content=round_text, tool_calls=tool_calls
+                    )
+                )
+                for call in tool_calls:
+                    tools_used.append(call.name)
+                    result = registry.execute(context, call.name, call.arguments)
+                    messages.append(
+                        Message(
+                            role=Role.TOOL,
+                            content=result,
+                            tool_call_id=call.id,
+                            name=call.name,
+                        )
+                    )
+            else:
+                # Rounds exhausted with the model still reaching for tools. Ask
+                # once more with none offered so it has to answer in words.
+                if emitted:
+                    yield StreamEvent(kind=StreamEventKind.REPLACE, text="")
+                    emitted = ""
+                async for delta in self.provider.stream(messages, None):
+                    if delta.done:
+                        usage.prompt_tokens += delta.usage.prompt_tokens
+                        usage.completion_tokens += delta.usage.completion_tokens
+                        break
+                    if delta.text:
+                        if first_token_ms == 0.0:
+                            first_token_ms = elapsed()
+                        emitted += delta.text
+                        yield StreamEvent(kind=StreamEventKind.DELTA, text=delta.text)
+
+        except ProviderTimeout:
+            reply = degrade(ReplySource.FALLBACK_TIMEOUT, input_verdict.flags)
+            yield StreamEvent(kind=StreamEventKind.REPLACE, text=reply.text)
+            yield StreamEvent(kind=StreamEventKind.DONE, reply=reply)
+            return
+        except ProviderError:
+            reply = degrade(ReplySource.FALLBACK_ERROR, input_verdict.flags)
+            yield StreamEvent(kind=StreamEventKind.REPLACE, text=reply.text)
+            yield StreamEvent(kind=StreamEventKind.DONE, reply=reply)
+            return
+
+        # Final pass over the whole reply. The per-sentence checks can miss a
+        # rule that only matches across a boundary, and an empty reply is only
+        # knowable once nothing more is coming.
+        verdict = inspect_npc_reply(emitted)
+        if verdict.tripped:
+            reply = degrade(
+                ReplySource.FALLBACK_GUARDRAIL,
+                _merge_flags(input_verdict.flags, verdict.flags),
+            )
+            yield StreamEvent(kind=StreamEventKind.REPLACE, text=reply.text)
+            yield StreamEvent(kind=StreamEventKind.DONE, reply=reply)
+            return
+
+        yield StreamEvent(
+            kind=StreamEventKind.DONE,
+            reply=NpcReply(
+                text=emitted.strip(),
+                source=ReplySource.MODEL,
+                latency_ms=elapsed(),
+                first_token_ms=first_token_ms,
+                tool_calls_made=tools_used,
+                guardrail_flags=input_verdict.flags,
+                usage=usage,
+            ),
+        )
 
     def _fallback(
         self,

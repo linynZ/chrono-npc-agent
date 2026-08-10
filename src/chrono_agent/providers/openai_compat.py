@@ -9,16 +9,18 @@ the results is a difference in the model, not in my plumbing.
 
 from __future__ import annotations
 
+import json
 import time
-from typing import Any
+from typing import Any, AsyncIterator
 
 import httpx
 
-from ..models import Completion, Message, Usage
+from ..models import Completion, Message, ToolCall, Usage
 from .base import (
     LLMProvider,
     ProviderError,
     ProviderTimeout,
+    StreamDelta,
     message_from_wire,
     message_to_wire,
 )
@@ -62,16 +64,7 @@ class OpenAICompatibleProvider(LLMProvider):
         temperature: float = 0.7,
         max_tokens: int = 512,
     ) -> Completion:
-        payload: dict[str, Any] = {
-            "model": self.model,
-            "messages": [message_to_wire(m) for m in messages],
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        }
-        if tools:
-            payload["tools"] = tools
-            payload["tool_choice"] = "auto"
-        payload.update(self._extra_body)
+        payload = self._payload(messages, tools, temperature, max_tokens)
 
         started = time.perf_counter()
         try:
@@ -124,6 +117,126 @@ class OpenAICompatibleProvider(LLMProvider):
             latency_ms=latency_ms,
             model=body.get("model", self.model),
             finish_reason=choice.get("finish_reason", ""),
+        )
+
+    def _payload(
+        self,
+        messages: list[Message],
+        tools: list[dict[str, Any]] | None,
+        temperature: float,
+        max_tokens: int,
+    ) -> dict[str, Any]:
+        payload: dict[str, Any] = {
+            "model": self.model,
+            "messages": [message_to_wire(m) for m in messages],
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+        if tools:
+            payload["tools"] = tools
+            payload["tool_choice"] = "auto"
+        payload.update(self._extra_body)
+        return payload
+
+    async def stream(
+        self,
+        messages: list[Message],
+        tools: list[dict[str, Any]] | None = None,
+        *,
+        temperature: float = 0.7,
+        max_tokens: int = 512,
+    ) -> AsyncIterator[StreamDelta]:
+        """Server-sent events, reassembled.
+
+        Two things arrive in fragments and have to be accumulated rather than
+        forwarded: tool-call arguments (split mid-JSON, keyed by index) and the
+        usage block (only on the final frame, and only if the backend supports
+        `stream_options`). Text is the only part that can be passed straight
+        through, which is the part the player is waiting on.
+        """
+        payload = self._payload(messages, tools, temperature, max_tokens)
+        payload["stream"] = True
+        payload["stream_options"] = {"include_usage": True}
+
+        pending: dict[int, dict[str, str]] = {}
+        usage = Usage()
+        finish_reason = ""
+
+        try:
+            async with self._client.stream(
+                "POST",
+                self._endpoint(),
+                json=payload,
+                headers=self._headers(),
+                timeout=self._timeout_s,
+            ) as response:
+                if response.status_code >= 400:
+                    body = (await response.aread()).decode("utf-8", "replace")
+                    raise ProviderError(
+                        f"{self.name} HTTP {response.status_code}: {body[:300]}"
+                    )
+
+                async for line in response.aiter_lines():
+                    line = line.strip()
+                    if not line or not line.startswith("data:"):
+                        continue
+                    data = line[5:].strip()
+                    if data == "[DONE]":
+                        break
+                    try:
+                        frame = json.loads(data)
+                    except json.JSONDecodeError:
+                        continue
+
+                    if raw_usage := frame.get("usage"):
+                        usage = self._parse_usage(raw_usage)
+
+                    for choice in frame.get("choices") or []:
+                        if reason := choice.get("finish_reason"):
+                            finish_reason = reason
+                        delta = choice.get("delta") or {}
+
+                        for fragment in delta.get("tool_calls") or []:
+                            index = fragment.get("index", 0)
+                            slot = pending.setdefault(
+                                index, {"id": "", "name": "", "arguments": ""}
+                            )
+                            if call_id := fragment.get("id"):
+                                slot["id"] = call_id
+                            function = fragment.get("function") or {}
+                            if name := function.get("name"):
+                                slot["name"] = name
+                            slot["arguments"] += function.get("arguments") or ""
+
+                        if text := delta.get("content"):
+                            yield StreamDelta(text=text)
+
+        except httpx.TimeoutException as exc:
+            raise ProviderTimeout(
+                f"{self.name} exceeded {self._timeout_s * 1000:.0f}ms budget"
+            ) from exc
+        except httpx.HTTPError as exc:
+            raise ProviderError(f"{self.name} transport error: {exc}") from exc
+
+        tool_calls = []
+        for index in sorted(pending):
+            slot = pending[index]
+            if not slot["name"]:
+                continue
+            try:
+                arguments = json.loads(slot["arguments"] or "{}")
+            except json.JSONDecodeError:
+                arguments = {}
+            tool_calls.append(
+                ToolCall(
+                    id=slot["id"] or f"call_{index}",
+                    name=slot["name"],
+                    arguments=arguments if isinstance(arguments, dict) else {},
+                )
+            )
+
+        yield StreamDelta(
+            done=True, tool_calls=tool_calls, usage=usage, finish_reason=finish_reason
         )
 
     @staticmethod

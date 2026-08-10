@@ -18,10 +18,10 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, AsyncIterator
 
 from ..models import Completion, Message, Role, ToolCall, Usage
-from .base import LLMProvider, ProviderError
+from .base import LLMProvider, ProviderError, StreamDelta
 
 
 @dataclass
@@ -48,11 +48,15 @@ class EchoProvider(LLMProvider):
         model: str = "echo-1",
         latency_ms: float = 0.0,
         default_reply: str = "……",
+        chunk_size: int = 6,
     ) -> None:
         self.model = model
         self._replies: list[Scripted] = list(replies or [])
         self._latency_ms = latency_ms
         self._default_reply = default_reply
+        # Streaming is only worth testing if the fake actually fragments; a
+        # single-delta fake would never exercise the sentence-boundary logic.
+        self._chunk_size = max(1, chunk_size)
         # Every call is recorded so tests can assert on what the agent actually
         # sent — the system prompt, the injected state, the tool schemas.
         self.calls: list[dict[str, Any]] = []
@@ -118,6 +122,28 @@ class EchoProvider(LLMProvider):
             latency_ms=self._latency_ms,
             model=self.model,
             finish_reason=finish_reason,
+        )
+
+
+    async def stream(
+        self,
+        messages: list[Message],
+        tools: list[dict[str, Any]] | None = None,
+        *,
+        temperature: float = 0.7,
+        max_tokens: int = 512,
+    ) -> AsyncIterator[StreamDelta]:
+        completion = await self.complete(
+            messages, tools, temperature=temperature, max_tokens=max_tokens
+        )
+        text = completion.message.content
+        for start in range(0, len(text), self._chunk_size):
+            yield StreamDelta(text=text[start : start + self._chunk_size])
+        yield StreamDelta(
+            done=True,
+            tool_calls=completion.message.tool_calls,
+            usage=completion.usage,
+            finish_reason=completion.finish_reason,
         )
 
 

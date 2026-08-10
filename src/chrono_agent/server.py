@@ -12,19 +12,21 @@ for someone to reload a save.
 
 from __future__ import annotations
 
+import json
 import time
 from contextlib import asynccontextmanager
 from pathlib import Path
+from typing import AsyncIterator
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from .agent import NpcAgent
 from .config import PROJECT_ROOT, Settings, build_provider
 from .factory import available_npcs, build_agent
-from .models import Language, Message, PlayerState, Role
+from .models import Language, Message, PlayerState, Role, StreamEventKind
 from .providers import LLMProvider
 
 WEB_DIR = PROJECT_ROOT / "web"
@@ -142,6 +144,79 @@ async def chat(request: ChatRequest) -> ChatResponse:
         tokens=reply.usage.total_tokens,
         backend=request.backend,
         model=agent.provider.model,
+    )
+
+
+def _sse(payload: dict) -> str:
+    return f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
+
+
+@app.post("/api/chat/stream")
+async def chat_stream(request: ChatRequest) -> StreamingResponse:
+    """Same turn as /api/chat, delivered as server-sent events.
+
+    Event kinds are `delta`, `replace` and `done`. **A client that ignores
+    `replace` is broken**: it is how a guardrail retracts text that is already
+    on screen, and dropping it leaves a leaked answer in front of the player.
+    """
+    if request.npc_id not in available_npcs():
+        raise HTTPException(404, f"unknown npc: {request.npc_id}")
+    if request.backend not in ("deepseek", "ollama", "echo"):
+        raise HTTPException(400, f"unknown backend: {request.backend}")
+
+    try:
+        agent = _get_agent(request.npc_id, request.backend)
+    except ValueError as exc:
+        raise HTTPException(503, str(exc)) from exc
+
+    language = request.language or request.state.language
+    history = [
+        Message(
+            role=Role.USER if turn.role == "user" else Role.ASSISTANT,
+            content=turn.text,
+        )
+        for turn in request.history
+    ]
+    speaker = agent.persona.display_name(language)
+
+    async def events() -> AsyncIterator[str]:
+        started = time.perf_counter()
+        try:
+            async for event in agent.reply_stream(
+                request.message, request.state, history=history, language=language
+            ):
+                frame: dict = {"kind": event.kind.value}
+                if event.kind is StreamEventKind.DONE and event.reply:
+                    reply = event.reply
+                    frame["reply"] = {
+                        "text": reply.text,
+                        "speaker": speaker,
+                        "source": reply.source.value,
+                        "latency_ms": round(reply.latency_ms, 1),
+                        "first_token_ms": round(reply.first_token_ms, 1),
+                        "server_ms": round((time.perf_counter() - started) * 1000, 1),
+                        "tool_calls": reply.tool_calls_made,
+                        "guardrail_flags": reply.guardrail_flags,
+                        "tokens": reply.usage.total_tokens,
+                        "backend": request.backend,
+                        "model": agent.provider.model,
+                    }
+                else:
+                    frame["text"] = event.text
+                yield _sse(frame)
+        except Exception as exc:  # noqa: BLE001 - the stream is already open, so
+            # the only way to report a late failure is inside it.
+            yield _sse({"kind": "error", "text": str(exc)})
+
+    return StreamingResponse(
+        events(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            # nginx and friends buffer by default, which would defeat the point.
+            "X-Accel-Buffering": "no",
+        },
     )
 
 
