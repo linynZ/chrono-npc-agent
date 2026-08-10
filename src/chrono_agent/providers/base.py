@@ -14,9 +14,27 @@ from __future__ import annotations
 
 import abc
 import json
-from typing import Any
+from dataclasses import dataclass, field
+from typing import Any, AsyncIterator
 
-from ..models import Completion, Message, Role, ToolCall
+from ..models import Completion, Message, Role, ToolCall, Usage
+
+
+@dataclass
+class StreamDelta:
+    """One piece of a streamed reply.
+
+    Text arrives as `text` on successive deltas. The final delta carries
+    `done=True` plus whatever the turn accumulated — tool calls (which stream as
+    fragments and are only usable once complete) and usage, if the backend
+    reports it.
+    """
+
+    text: str = ""
+    done: bool = False
+    tool_calls: list[ToolCall] = field(default_factory=list)
+    usage: Usage = field(default_factory=Usage)
+    finish_reason: str = ""
 
 
 class ProviderError(RuntimeError):
@@ -43,6 +61,44 @@ class LLMProvider(abc.ABC):
         max_tokens: int = 512,
     ) -> Completion:
         """One round-trip. Raises ProviderTimeout / ProviderError on failure."""
+
+    def stream(
+        self,
+        messages: list[Message],
+        tools: list[dict[str, Any]] | None = None,
+        *,
+        temperature: float = 0.7,
+        max_tokens: int = 512,
+    ) -> AsyncIterator[StreamDelta]:
+        """Same call, delivered incrementally.
+
+        Providers that cannot stream should leave this alone; the default
+        wraps `complete` and emits the whole reply as a single delta, so
+        callers never need to branch on capability.
+        """
+        return self._stream_via_complete(
+            messages, tools, temperature=temperature, max_tokens=max_tokens
+        )
+
+    async def _stream_via_complete(
+        self,
+        messages: list[Message],
+        tools: list[dict[str, Any]] | None,
+        *,
+        temperature: float,
+        max_tokens: int,
+    ) -> AsyncIterator[StreamDelta]:
+        completion = await self.complete(
+            messages, tools, temperature=temperature, max_tokens=max_tokens
+        )
+        if completion.message.content:
+            yield StreamDelta(text=completion.message.content)
+        yield StreamDelta(
+            done=True,
+            tool_calls=completion.message.tool_calls,
+            usage=completion.usage,
+            finish_reason=completion.finish_reason,
+        )
 
     async def aclose(self) -> None:
         """Release any held connections. Safe to call more than once."""

@@ -148,6 +148,28 @@ class NpcReply(BaseModel):
     text: str
     source: ReplySource = ReplySource.MODEL
     latency_ms: float = 0.0
+    first_token_ms: float = 0.0
     tool_calls_made: list[str] = Field(default_factory=list)
     guardrail_flags: list[str] = Field(default_factory=list)
     usage: Usage = Field(default_factory=Usage)
+
+
+class StreamEventKind(str, Enum):
+    DELTA = "delta"
+    REPLACE = "replace"
+    DONE = "done"
+
+
+class StreamEvent(BaseModel):
+    """One thing that happens while a reply is being produced.
+
+    `REPLACE` exists because streaming and output guardrails genuinely conflict:
+    text is already on screen by the time a later sentence trips a rule. Rather
+    than pretend otherwise, the contract lets the agent retract what it has
+    emitted and substitute the written line. Consumers must honour it — a client
+    that ignores REPLACE will leave a leaked answer on screen.
+    """
+
+    kind: StreamEventKind
+    text: str = ""
+    reply: NpcReply | None = None

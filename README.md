@@ -181,8 +181,8 @@ living in the service is a synchronisation bug waiting for someone to reload.
 | Ollama local backend, measured | done |
 | Cloud vs. local comparison | done |
 | FastAPI service + web demo | done |
-| Streaming (to bring p95 down) | next |
-| Unity client | not started |
+| Streaming with mid-stream guardrails | done |
+| Unity client | next |
 
 ## Results
 
@@ -219,9 +219,33 @@ guardrails are cheap enough for a 7B; grounded answers about live game state are
 not. [`docs/findings/04`](docs/findings/04-redundant-context.md) covers how a
 redundant prompt hid that defect completely until the prompt was narrowed.
 
-p95 of 3 s on the cloud path is honest but not good enough for someone standing
-in front of an NPC. Streaming the first sentence is the obvious next move and is
-not implemented.
+### Streaming
+
+`POST /api/chat/stream` delivers the same turn as SSE — `delta` / `replace` /
+`done`. Time to first token, warm, over consecutive identical calls:
+
+| | first token | complete |
+|---|---:|---:|
+| cloud | 1109–2649 ms (variable) | 2125–3312 ms |
+| local | **750–1060 ms (steady)** | 1153–1709 ms |
+
+Streaming buys a consistent **1.5×** on perceived wait — worth having, and it
+matches the game's existing typewriter dialogue box so the Unity side needs no
+new animation. It is not the order of magnitude I assumed before measuring:
+time-to-first-token is a floor, and 86% of the prompt was already served from
+DeepSeek's prefix cache with **no effect on latency at all**. Prefill was never
+the bottleneck; the round trip is. The cache pays out on cost instead — cached
+input bills at 2% of list.
+
+Streaming and output guardrails genuinely conflict: a guardrail wants the
+finished reply, the player wants the first words now. The checks therefore run at
+sentence boundaries, and the protocol carries a `replace` event to retract text
+that is already on screen. Exposure is bounded to one sentence rather than
+eliminated. **A client that ignores `replace` is broken** — it would leave a
+leaked answer visible.
+
+Full measurements, including the cold start that nearly went into this table as
+a real result: [`docs/findings/05`](docs/findings/05-streaming-and-caching.md).
 
 ## License
 
