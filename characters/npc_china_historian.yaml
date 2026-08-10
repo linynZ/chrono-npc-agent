@@ -123,6 +123,21 @@ tools:
   - lookup_quest
   - lookup_lore
 
+# Openers offered to the player when the free-conversation panel appears.
+# Config rather than hardcoded UI: adding an NPC must stay a YAML file. Written
+# in the player's voice, since the player is the one saying them.
+suggested_questions:
+  zh:
+    - 你为什么三十七天不敢落笔？
+    - 《列国志》是什么书？
+    - 我接下来该做什么？
+    - 湮灭到底是什么东西？
+  en:
+    - Why haven't you written in thirty-seven days?
+    - What are the Annals you keep mentioning?
+    - What should I do next?
+    - What exactly is the Unwriting?
+
 # When the model times out or trips a guardrail, fall back to the game's own
 # pre-written lines for the player's current progress bucket.
 fallback:

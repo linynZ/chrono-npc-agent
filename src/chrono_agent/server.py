@@ -25,7 +25,7 @@ from pydantic import BaseModel, Field
 
 from .agent import NpcAgent
 from .config import PROJECT_ROOT, Settings, build_provider
-from .factory import available_npcs, build_agent
+from .factory import available_npcs, build_agent, load_persona
 from .models import Language, Message, PlayerState, Role, StreamEventKind
 from .providers import LLMProvider
 
@@ -79,6 +79,10 @@ class ChatRequest(BaseModel):
     history: list[Turn] = Field(default_factory=list)
     language: Language | None = None
     backend: str = "deepseek"
+    # Free conversation degrades differently: answering a specific question with
+    # an unrelated scripted line reads worse than a silence, so the persona's
+    # last-resort line is used instead of the written dialogue.
+    free_form: bool = False
 
 
 class ChatResponse(BaseModel):
@@ -102,6 +106,28 @@ async def health() -> dict:
         "npcs": available_npcs(),
         "default_backend": settings.provider,
         "backends": ["deepseek", "ollama", "echo"],
+    }
+
+
+@app.get("/api/npc/{npc_id}")
+async def npc_info(npc_id: str, language: Language = "zh") -> dict:
+    """What a client needs before offering free conversation with this NPC.
+
+    The game calls this once on entering a map: a 404 or an unreachable service
+    simply means the free-conversation affordance is not shown, which is the
+    right failure — an entry point that does nothing when pressed is worse than
+    no entry point.
+    """
+    if npc_id not in available_npcs():
+        raise HTTPException(404, f"unknown npc: {npc_id}")
+
+    persona = load_persona(npc_id)
+    return {
+        "npc_id": persona.npc_id,
+        "name": persona.display_name(language),
+        "era": persona.era,
+        "openers": persona.openers(language),
+        "tools": persona.tools,
     }
 
 
@@ -129,7 +155,8 @@ async def chat(request: ChatRequest) -> ChatResponse:
 
     started = time.perf_counter()
     reply = await agent.reply(
-        request.message, request.state, history=history, language=language
+        request.message, request.state, history=history, language=language,
+        free_form=request.free_form,
     )
     server_ms = (time.perf_counter() - started) * 1000
 
@@ -183,7 +210,8 @@ async def chat_stream(request: ChatRequest) -> StreamingResponse:
         started = time.perf_counter()
         try:
             async for event in agent.reply_stream(
-                request.message, request.state, history=history, language=language
+                request.message, request.state, history=history, language=language,
+                free_form=request.free_form,
             ):
                 frame: dict = {"kind": event.kind.value}
                 if event.kind is StreamEventKind.DONE and event.reply:

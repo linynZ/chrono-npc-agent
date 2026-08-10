@@ -92,6 +92,7 @@ class NpcAgent:
         state: PlayerState,
         history: list[Message] | None = None,
         language: Language | None = None,
+        free_form: bool = False,
     ) -> NpcReply:
         language = language or state.language
         started = time.perf_counter()
@@ -132,19 +133,19 @@ class NpcAgent:
         except (asyncio.TimeoutError, ProviderTimeout):
             return self._fallback(
                 player_message, state, language, ReplySource.FALLBACK_TIMEOUT,
-                started, tools_used, usage,
+                started, tools_used, usage, free_form,
             )
         except ProviderError:
             return self._fallback(
                 player_message, state, language, ReplySource.FALLBACK_ERROR,
-                started, tools_used, usage,
+                started, tools_used, usage, free_form,
             )
 
         output_verdict = inspect_npc_reply(text)
         if output_verdict.tripped:
             reply = self._fallback(
                 player_message, state, language, ReplySource.FALLBACK_GUARDRAIL,
-                started, tools_used, usage,
+                started, tools_used, usage, free_form,
             )
             # Both sides, not just the output. Overwriting with the output flags
             # loses the record of what the player was attempting, which is the
@@ -212,6 +213,7 @@ class NpcAgent:
         state: PlayerState,
         history: list[Message] | None = None,
         language: Language | None = None,
+        free_form: bool = False,
     ) -> AsyncIterator[StreamEvent]:
         """Same turn, delivered as it is produced.
 
@@ -260,7 +262,8 @@ class NpcAgent:
 
         def degrade(source: ReplySource, flags: list[str]) -> NpcReply:
             reply = self._fallback(
-                player_message, state, language, source, started, tools_used, usage
+                player_message, state, language, source, started, tools_used,
+                usage, free_form
             )
             reply.first_token_ms = first_token_ms
             reply.guardrail_flags = flags
@@ -394,9 +397,19 @@ class NpcAgent:
         started: float,
         tools_used: list[str],
         usage: Usage,
+        free_form: bool = False,
     ) -> NpcReply:
+        # In scripted dialogue a written line is the right substitute. In free
+        # conversation it is not: the player just asked something specific, and
+        # answering with an unrelated story beat reads worse than a silence.
+        text = ""
+        if free_form:
+            text = self.persona.last_resort(language)
+        if not text:
+            text = self.fallback.pick(self.persona, state, player_message, language)
+
         return NpcReply(
-            text=self.fallback.pick(self.persona, state, player_message, language),
+            text=text,
             source=source,
             latency_ms=(time.perf_counter() - started) * 1000,
             tool_calls_made=tools_used,
