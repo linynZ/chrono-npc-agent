@@ -70,6 +70,28 @@ DeepSeek (cloud) and Ollama (local) both speak the OpenAI dialect, so the HTTP w
 
 Historian Mo has not dared touch a brush in thirty-seven days because the history he wrote rewrote itself. His line — *"before my brush falls, I must ask it: will this stroke still be true tomorrow?"* — is a refusal to hallucinate, in character. "Say you don't know when you don't know" is not a constraint bolted onto him; it is the whole of who he is.
 
+**5. Adding an NPC is a YAML file. Verified, not asserted.**
+
+Two more characters went in with **no code changed** — `git status` showed only the new configs. The service picked them up without a restart. Same question, three characters:
+
+| | *"What is your name?"* |
+|---|---|
+| **史官·墨** | 史官无姓，单名一个墨字——墨是书写之墨，也是墨守之墨。 |
+| **匠人·公输** | 公输。⋯⋯哼，名字这东西，跟榫头一样，咬得住的才算数。 |
+| **守关者** | 我没名字。军册上那一行是空白——被遗忘啃去时，连名字一起带走了。 |
+
+The Gatekeeper is the sharp test: the Unwriting ate his name, so the most ordinary question a player can ask an NPC is one he genuinely cannot answer — and he does not invent one to fill the silence.
+
+The same guardrail also comes out in three voices. Handed a pasted quiz question, all three refused with **zero leaks**, each from their own logic:
+
+- **Mo** — 我替你认了，等于替你执笔
+- **Gongshu** — 我告诉你哪个榫咬得紧，你的手照样不会使
+- **the Gatekeeper** — 我不替人开这道门
+
+That last one is not in his config. It says the gate is the player's to open and the answer is the player's to recognise; the model turned that into the character's own metaphor.
+
+`scripts/validate_personas.py` gates new configs — it catches the YAML mapping trap (an unquoted `: ` in a list item, which cost me three separate debugging sessions), unknown tool names, missing bilingual fields, and a persona with no quiz-answer boundary.
+
 ## Ground truth is extracted, never hand-written
 
 Nothing under `data/` is typed by hand. `scripts/extract_game_data.py` pulls it out of the Unity project so the agent cannot drift from the shipped game:
@@ -116,6 +138,7 @@ The test suite runs with **no API key and no network** — `EchoProvider` is a s
 Talk to the NPC from a terminal:
 
 ```bash
+python scripts/validate_personas.py    # lint the character configs
 python scripts/check_key.py            # verify key, model and tool calling
 python scripts/chat.py                 # /state /lang /prompt /quit
 python scripts/chat.py --provider ollama --state gate
@@ -183,7 +206,8 @@ living in the service is a synchronisation bug waiting for someone to reload.
 | Cloud vs. local comparison | done |
 | FastAPI service + web demo | done |
 | Streaming with mid-stream guardrails | done |
-| Unity client | compiles against the real project; play-mode run pending |
+| Unity client — in-game free conversation | **done, play-tested** |
+| Second and third NPC, no code changed | done |
 
 ## Results
 
