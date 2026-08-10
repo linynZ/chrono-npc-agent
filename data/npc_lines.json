@@ -1,0 +1,553 @@
+{
+ "npc_china_historian": {
+  "npcId": "npc_china_historian",
+  "name": {
+   "en": "Historian Mo",
+   "zh": "史官·墨"
+  },
+  "variants": {
+   "base": [
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "Stay a moment, traveler. I am Mo, Historian of this reach of the river — or I was. These hands have not dared touch a brush in thirty-seven days.",
+      "zh": "旅者留步。我是史官·墨——曾经是。这双手，已有三十七日不敢碰笔了。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "One night I fell asleep at my desk. I woke to find the Annals crawling with shifting ink — the history I wrote with my own hand had rewritten itself.",
+      "zh": "那夜我伏案而眠，醒来时《列国志》满卷字迹游走——我亲手所记的史，自己改了自己。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "A battle we won now reads as lost. The good official who raised the dyke wears a stranger's name. Every stroke sits upright on the page, and every stroke is a lie.",
+      "zh": "齐师明明胜了的那一仗，卷上改成了败；筑堤的良吏，名字换成了旁人。字字端正，字字是谎。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "The people call this blight the Unwriting. It sends out anomalies — Rumor, Fallacy, Oblivion — to hollow the truth out, inch by inch.",
+      "zh": "人们管这祸患叫「湮灭」。它遣出错乱体——谣言、谬误、遗忘——把真实一寸寸蛀空。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "I have collated the bamboo slips of three generations of historians; I can recite every variant reading. Yet now, before my brush falls, I must ask it: will this stroke still be true tomorrow?",
+      "zh": "我校过三代史官的旧简，背得出每一处异文。可如今落笔之前，我先要问：这一笔，明日还作数吗？"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "If a historian's brush cannot be trusted, what is left of the historian? Traveler, I do not ask you to write for me —",
+      "zh": "史官的笔若不可信，史官还剩什么？旅者，我不求你替我执笔——"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "Only purge the anomalies, and gather the scattered memory fragments. When the river runs clear again, my brush will dare to fall.",
+      "zh": "只求你净化错乱体，寻回散落的记忆碎片。长河的水清了，我的字才敢落下去。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "Go. That drifting violet shade is a Rumor. What it fears most is someone standing before it and saying the true sentence aloud.",
+      "zh": "去吧。你看那游荡的紫影，便是「谣言」。它最怕的，是有人当面说出真的那一句。"
+     }
+    }
+   ],
+   "mid": [
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "Traveler — the river is clearing. This morning half a page of false readings faded from my old slips, and the true characters rose from underneath.",
+      "zh": "旅者，长河的水……在变清。今晨旧简上半页异文自己褪去了，露出底下原本的字。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "I have inked my brush. It hangs over the paper — almost, almost. Wash out what murk remains, and this stroke will fall.",
+      "zh": "我已蘸好了墨，笔悬在纸上——还差一点。等你把余下的浊气涤净，这一笔就落。"
+     }
+    }
+   ],
+   "gate": [
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "The gate is stirring. Traveler, that Great Anomaly is the wellspring of every falsehood — every crawling character on my pages has its root in it.",
+      "zh": "关门在动了。旅者，那「大错乱」是一切谬误的源头——我笔下每个游走的字，根都在它身上。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "I cannot pass the gate with you. But a historian has a historian's way of fighting: every blow you strike out there, I will record exactly as it happens. Not one character altered.",
+      "zh": "我不能随你过关。但史官有史官的战法：你在关外的每一击，我都会如实记下，一字不改。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "It will hurl false histories at you. Hold to the true sentence. Truth needs no great number — one true line can pin down a thousand lies.",
+      "zh": "它会拿假的史砸你。你只需守住真的那一句——真话不必多，一句就能压住千句谎。"
+     }
+    }
+   ],
+   "post": [
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "Traveler, look — my brush has fallen. The first stroke in thirty-seven days.",
+      "zh": "旅者，你看——我落笔了。三十七日来的第一笔。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "Can you guess what I wrote? Not the mended Annals. The first stroke records today: in such a year, such a month, the long river ran clear again.",
+      "zh": "你猜我写的什么？不是补《列国志》的残卷。第一笔写的是今天：某年某月，长河复清。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "That is how the chronicle has always been written — one day at a time. Old debts may be repaid slowly; today must never be owed.",
+      "zh": "史书原就是这样一日一日写下来的。旧账可以慢慢补，今日不能欠。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Historian Mo",
+      "zh": "史官·墨"
+     },
+     "text": {
+      "en": "One more thing. Among the old slips I found a line: downriver, in the wind and sand, someone is waiting for one who can speak a name aright. When you go to the Nile — carry my greeting.",
+      "zh": "对了。校简时我读到一句旧记：下游的风沙里，也有人在等一个能把名字念对的人。你去尼罗时，替我带句问候。"
+     }
+    }
+   ]
+  }
+ },
+ "npc_china_artisan": {
+  "npcId": "npc_china_artisan",
+  "name": {
+   "en": "Artisan Gongshu",
+   "zh": "匠人·公输"
+  },
+  "variants": {
+   "base": [
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "Mind that pile of timber, young one — ah, step on it if you like. These days none of it holds onto anything anyway.",
+      "zh": "后生，别踩那堆木料——唉，踩了也罢，反正它们如今谁也咬不住谁。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "I am Gongshu. Fifty years at the builder's trade. The tenon is the tongue, the mortise the mouth — wood bites into wood, and not one nail is needed.",
+      "zh": "我是公输，营造一道做了五十年。榫是舌，卯是口，木头开口咬合，不用一根钉。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "But days ago I cut the plainest dovetail of my life. Set it in — it wobbled. Cut another. Wobbled again.",
+      "zh": "可前几日我做了一副最寻常的燕尾榫。插进去，晃。再做一副，还是晃。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "It is not my hands shaking. The wood has FORGOTTEN how to bite. You see? The rule still sits on the paper — but the holding has leaked out of the world.",
+      "zh": "不是我的手抖。是木头「忘了」怎么咬合——规矩还写在纸上，力道却从世上漏走了。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "And the bridge I raised over the Wei in my youth — last night I dreamed it fell. I went to ask at the ferry, and every soul there swore no bridge had ever stood.",
+      "zh": "还有我年轻时在渭水上造的那座桥。昨夜梦里它塌了，去渡口一问——人人都说，那里从来没有过桥。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "...Hmph. Likely the wood is just old. Likely I am just old. Pay an old man no mind.",
+      "zh": "……哼，兴许只是木头老了，兴许是我老了。后生不必当真。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "But if you mean to trade blows with those anomalies, remember: a built thing holds because every piece answers another. Their lies cannot survive one honest question — 'what keeps it standing?'",
+      "zh": "但你若要与错乱体过招，记住：营造之理环环相扣。它们的谎，最经不起一句「它是怎么立起来的」。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "Go on, then. Ask this land for me — whether it still remembers the small, clean sound of wood biting into wood.",
+      "zh": "去吧。替我问问这片地——它还记不记得，木头咬合时那一声脆响。"
+     }
+    }
+   ],
+   "mid": [
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "Young one, come here — feel this joint. It BIT. This morning, all by itself. And the sound it made was the very sound I heard fifty years ago.",
+      "zh": "后生，过来摸摸这副榫——咬住了！今早它自己咬住的。那一声脆响，和五十年前一模一样。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "...So the wood was never old. It was this land's memory going. Bring back a few more pieces and maybe, maybe my bridge — ah, nothing. Off with you.",
+      "zh": "……木头没老，老的是这片地的记性。你再多寻回几片，兴许、兴许我那座桥……没什么，去忙你的。"
+     }
+    }
+   ],
+   "gate": [
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "The gate's opening, is it? Good. Take this with you, young one — no charm, just a tenon I cut this morning, pulled from the joint that bit the tightest.",
+      "zh": "门要开了？好，好。后生，把这个带上——不是什么法宝，是今早咬得最紧那副里拆下的一枚榫。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "That Great Anomaly's favorite trick is making things come apart. If you feel yourself coming apart out there, hold it — and remember some things, once joined, do not let go.",
+      "zh": "那大错乱最会让东西「散架」。你若觉得撑不住了，就攥攥它——记住，有些东西嵌进去，就不分开。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "...Hmph, don't read into it. It's only wood. Return it when you're done.",
+      "zh": "……哼，别多想，木头而已。打完了还我。"
+     }
+    }
+   ],
+   "post": [
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "Young one! The ferry folk came pounding on my door at dawn — they remembered! There IS a bridge over the Wei, they said, built by a young man named Gongshu!",
+      "zh": "后生！渡口的人今早来敲我的门——他们想起来了！说渭水上是有一座桥，是个姓公输的年轻人造的！"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "I went to see. It stands. Fifty years of water under it — not one nail in it, not one inch of wobble.",
+      "zh": "我赶去看了。桥还在。五十年的水从底下冲过，一根钉都没有，一寸都没晃。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "What fell in the dream came back... So it was never the wood growing old. I'll say that once, and you'll repeat it to no one.",
+      "zh": "梦里塌掉的东西，回来了……原来不是木头老了。这话我只说这一遍，你莫要学给别人听。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Artisan Gongshu",
+      "zh": "匠人·公输"
+     },
+     "text": {
+      "en": "Now go, go. And out there, whenever you meet a fine bridge or a fine tower, come back and tell me of it. This old man dares to take on work again.",
+      "zh": "去吧去吧。往后你在外头见着好桥好塔，回来讲给我听——老头子我，又敢接活了。"
+     }
+    }
+   ]
+  }
+ },
+ "npc_china_guardian": {
+  "npcId": "npc_china_guardian",
+  "name": {
+   "en": "Gatekeeper",
+   "zh": "守关者"
+  },
+  "variants": {
+   "base": [
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Halt. Beyond this pass coils the Great Anomaly that grips Huaxia. While the gate is sealed, none may cross.",
+      "zh": "止步。关隘之后，是盘踞华夏的「大错乱」。此门未启，谁也过不去。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "My name? ...A good question. I have kept this gate for more years than I can count — and my name left before I did.",
+      "zh": "你问我姓名？……问得好。我守这道关，守了不知多少年——名字却先我一步没了。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Not forgotten. Forgetting leaves a hollow. It was gnawed away by an Oblivion — and where it gnaws, not even the fact that 'a name once was' remains.",
+      "zh": "不是忘了。忘了还会留个空。是被「遗忘」啃去的——啃过的地方，连「曾有个名字」都不剩。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "My line in the muster roll is blank. My comrades only call me 'the one at the gate'. At night I recite the Hundred Surnames, character by character — not one of them answers me.",
+      "zh": "军册上我这一行是空白，同袍只唤我「守关的」。夜里我默写百家姓，一个字一个字试——没有一个应我。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "That is what the Unwriting wants. It does not kill a man. It picks him out of everything that ever remembered him.",
+      "zh": "「湮灭」要的就是这个：不杀人，只把人从记得他的一切里，剔出去。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "So if you would open this gate: restore the river's memory in full, and gather every fragment. Memory is the bolt on this door, and it is heavier than iron.",
+      "zh": "所以你要开这道门，先把长河记忆修复圆满、碎片寻齐。记忆是门闩，比铁还重。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Go. I have lost my name, but I still have a gatekeeper's hands. Until you return, this gate is mine.",
+      "zh": "去吧。我没了名字，还有一双守关的手。你回来之前，这门归我。"
+     }
+    }
+   ],
+   "mid": [
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "The river is half clear — and the hollow in my chest has loosened with it. Last night I nearly remembered a character. One character, caught in my throat.",
+      "zh": "长河清了一半，我心口那块空的地方……好像也松了松。昨夜我差点想起一个字，就一个字，卡在喉咙里。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Never mind me. Go on restoring what was lost — every fragment you bring back carries me one inch closer to that character.",
+      "zh": "别管我。你只管去修复记忆——你每寻回一片，我就离那个字近一寸。"
+     }
+    }
+   ],
+   "gate": [
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "The bolt has drawn back. Memory restored in full, every fragment home — you did this. The gate opens for you now.",
+      "zh": "门闩退了。记忆修满、碎片归位——是你做到的。这道关，如今为你开。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Before you go, grant me one charge: look upon the long river beyond the pass for me. And if on some stele, in some scroll, you should find my name... remember it for me.",
+      "zh": "上阵之前，受我一托：替我看看关外的长河。若在哪块碑上、哪卷册里，见到我的名字……替我记住它。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "You need not bring it back to me. So long as one soul in this world remembers, Oblivion has not won. Go.",
+      "zh": "不必带回来告诉我。只要这世上还有一个人记得，「遗忘」就没有赢。去吧。"
+     }
+    }
+   ],
+   "post": [
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Traveler. On your third step up the stairs just now — it came back to me.",
+      "zh": "旅者。方才你踏上石阶的第三步，我忽然就……想起来了。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "My name. It was there all along, like a stele sunk in the riverbed — invisible while the water ran foul, and when the water cleared, it rose of its own accord.",
+      "zh": "我的名字。它一直都在，像沉在河底的一块碑。水浊时看不见；水清了，它自己浮了上来。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "What name is it? Ha... forgive me, I'll not say. This once, I want to speak it over and over — alone, and slowly.",
+      "zh": "是什么名字？哈……恕我不说。这一次，我想自己多念几遍。一个人，慢慢念。"
+     }
+    },
+    {
+     "speaker": {
+      "en": "Gatekeeper",
+      "zh": "守关者"
+     },
+     "text": {
+      "en": "Thank you. Wherever the eras take you, keep this: whoever remembers, keeps the gate. That line is my gift to you.",
+      "zh": "谢你。往后无论你走到哪个时代，记住：记得的人，就是守关的人。这句话，算我赠你的。"
+     }
+    }
+   ]
+  }
+ }
+}

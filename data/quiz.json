@@ -1,0 +1,3212 @@
+{
+ "china": [
+  {
+   "question": {
+    "en": "Which dynasty built the best-preserved sections of the Great Wall seen today?",
+    "zh": "长城保存最完好的段落主要由哪个朝代修建？"
+   },
+   "options": [
+    {
+     "en": "Qin",
+     "zh": "秦"
+    },
+    {
+     "en": "Han",
+     "zh": "汉"
+    },
+    {
+     "en": "Ming",
+     "zh": "明"
+    },
+    {
+     "en": "Qing",
+     "zh": "清"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "The best-preserved brick-and-stone sections of the Great Wall seen today were mostly built by the Ming dynasty (1368-1644).",
+    "zh": "今天所见保存最完好的长城多为明代(1368-1644)修筑的砖石长城。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "In which dynasty was Beijing's Forbidden City first built?",
+    "zh": "北京故宫(紫禁城)始建于哪个朝代？"
+   },
+   "options": [
+    {
+     "en": "Qin",
+     "zh": "秦"
+    },
+    {
+     "en": "Han",
+     "zh": "汉"
+    },
+    {
+     "en": "Tang",
+     "zh": "唐"
+    },
+    {
+     "en": "Ming",
+     "zh": "明"
+    }
+   ],
+   "correctIndex": 3,
+   "explanation": {
+    "en": "The Forbidden City was built in the early 15th century under the Yongle Emperor of the Ming dynasty, serving as the palace of the Ming and Qing.",
+    "zh": "紫禁城由明成祖永乐年间(15世纪初)兴建，是明清两代皇宫。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "In ancient Chinese timber architecture, what is the bracket set between column and beam that bears load and adds flexibility?",
+    "zh": "中国古代木构建筑中，在柱与梁之间出挑承重、富有弹性的构件总称是？"
+   },
+   "options": [
+    {
+     "en": "Dougong (bracket sets)",
+     "zh": "斗拱"
+    },
+    {
+     "en": "Mortise-and-tenon",
+     "zh": "榫卯"
+    },
+    {
+     "en": "Flying eaves",
+     "zh": "飞檐"
+    },
+    {
+     "en": "Caisson ceiling",
+     "zh": "藻井"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Dougong, formed by interlocking blocks and arms, both bears weight and resists earthquakes, a hallmark of Chinese timber architecture.",
+    "zh": "斗拱由斗、拱层叠而成，既承重又抗震，是中国木构建筑的标志。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the large army of clay figures unearthed beside the tomb of Qin Shi Huang called?",
+    "zh": "秦始皇陵旁出土、列阵守陵的大型陶塑军队称为？"
+   },
+   "options": [
+    {
+     "en": "Tang tri-color ware",
+     "zh": "唐三彩"
+    },
+    {
+     "en": "Terracotta Army",
+     "zh": "兵马俑"
+    },
+    {
+     "en": "Pictorial bricks",
+     "zh": "画像砖"
+    },
+    {
+     "en": "Bronze standing figure",
+     "zh": "青铜立人"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Terracotta Army guards the tomb of the First Emperor and is hailed as the eighth wonder of the world.",
+    "zh": "秦始皇陵兵马俑规模宏大，被誉为“世界第八大奇迹”。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which irrigation project, built under Li Bing in the Warring States period, still waters the Chengdu Plain today?",
+    "zh": "战国时李冰主持修建、至今灌溉成都平原的水利工程是？"
+   },
+   "options": [
+    {
+     "en": "Lingqu Canal",
+     "zh": "灵渠"
+    },
+    {
+     "en": "Zhengguo Canal",
+     "zh": "郑国渠"
+    },
+    {
+     "en": "Dujiangyan",
+     "zh": "都江堰"
+    },
+    {
+     "en": "Karez",
+     "zh": "坎儿井"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "Dujiangyan, built by Li Bing and his son, diverts water without a dam and still irrigates farmland today.",
+    "zh": "都江堰由李冰父子主持兴建，无坝引水，至今仍发挥灌溉作用。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_lore_china_dujiangyan"
+  },
+  {
+   "question": {
+    "en": "What great canal, dug in the Sui dynasty, linked north and south China across several river systems?",
+    "zh": "隋朝开凿、贯通南北、沟通多条水系的大型运河是？"
+   },
+   "options": [
+    {
+     "en": "Grand Canal",
+     "zh": "大运河"
+    },
+    {
+     "en": "Lingqu Canal",
+     "zh": "灵渠"
+    },
+    {
+     "en": "Bai Canal",
+     "zh": "白渠"
+    },
+    {
+     "en": "Guangtong Canal",
+     "zh": "广通渠"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Sui Grand Canal connected five major river systems: the Hai, Yellow, Huai, Yangtze and Qiantang.",
+    "zh": "隋朝开凿的大运河沟通海河、黄河、淮河、长江、钱塘江五大水系。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which is China's oldest open-spandrel stone arch bridge, designed by Li Chun in the Sui dynasty?",
+    "zh": "中国现存最古老的敞肩(空腹)石拱桥、隋代李春设计的是？"
+   },
+   "options": [
+    {
+     "en": "Lugou (Marco Polo) Bridge",
+     "zh": "卢沟桥"
+    },
+    {
+     "en": "Zhaozhou Bridge",
+     "zh": "赵州桥"
+    },
+    {
+     "en": "Luoyang Bridge",
+     "zh": "洛阳桥"
+    },
+    {
+     "en": "Guangji Bridge",
+     "zh": "广济桥"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Zhaozhou (Anji) Bridge, built by Li Chun in the Sui dynasty, is the world's oldest surviving open-spandrel stone arch bridge.",
+    "zh": "赵州桥(安济桥)为隋代李春所建，是世界上现存最早的敞肩石拱桥。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the tallest and oldest fully timber pavilion-style Buddhist pagoda still standing (Liao dynasty)?",
+    "zh": "现存最高、最古老的全木结构楼阁式佛塔(辽代)是？"
+   },
+   "options": [
+    {
+     "en": "Big Wild Goose Pagoda",
+     "zh": "大雁塔"
+    },
+    {
+     "en": "Yingxian Wooden Pagoda",
+     "zh": "应县木塔"
+    },
+    {
+     "en": "Liuhe Pagoda",
+     "zh": "六和塔"
+    },
+    {
+     "en": "Chongsheng Temple Pagoda",
+     "zh": "崇圣寺塔"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Yingxian Wooden Pagoda (Sakyamuni Pagoda of Fogong Temple), built in the Liao dynasty, is the tallest surviving timber pagoda.",
+    "zh": "山西应县木塔(佛宫寺释迦塔)建于辽代，是现存最高的木结构古塔。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "After Buddhism arrived, which Chinese structure, evolved from the Indian stupa, was used to enshrine relics?",
+    "zh": "佛教传入后，由印度窣堵坡演变、用于供奉舍利的中国建筑是？"
+   },
+   "options": [
+    {
+     "en": "Que gate-tower",
+     "zh": "阙"
+    },
+    {
+     "en": "Pagoda",
+     "zh": "塔"
+    },
+    {
+     "en": "Pailou archway",
+     "zh": "坊"
+    },
+    {
+     "en": "Pavilion",
+     "zh": "亭"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The pagoda evolved from the Indian stupa and merged with Chinese tower forms into the multi-story pagoda.",
+    "zh": "佛塔源自印度的窣堵坡，传入中国后与楼阁结合，形成多层塔式建筑。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What was the orderly, grid-like city layout of Tang-dynasty Chang'an called?",
+    "zh": "唐代长安城整齐划一、棋盘状的城市布局形式称为？"
+   },
+   "options": [
+    {
+     "en": "Ward (lifang) system",
+     "zh": "里坊制"
+    },
+    {
+     "en": "Hutong system",
+     "zh": "胡同制"
+    },
+    {
+     "en": "Fangxiang system",
+     "zh": "坊巷制"
+    },
+    {
+     "en": "Xiangfang system",
+     "zh": "厢坊制"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Tang Chang'an used the ward (lifang) system, with streets in a grid and ward gates opened and closed on schedule.",
+    "zh": "唐长安实行里坊制，街道纵横如棋盘，坊门定时启闭。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Suzhou classical gardens often draw outside scenery into the garden view; what is this technique called?",
+    "zh": "苏州古典园林常将园外景物纳入园中观赏，这种造园手法称为？"
+   },
+   "options": [
+    {
+     "en": "Opposite scenery",
+     "zh": "对景"
+    },
+    {
+     "en": "Borrowed scenery",
+     "zh": "借景"
+    },
+    {
+     "en": "Framed scenery",
+     "zh": "框景"
+    },
+    {
+     "en": "Blocked scenery",
+     "zh": "障景"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Borrowed scenery (jiejing) brings distant hills and water into the garden's view, a key Chinese garden technique.",
+    "zh": "借景把园外远山近水“借”入园内视野，是中国园林的重要手法。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which roof form ranked highest for ancient Chinese palace halls?",
+    "zh": "中国古代殿宇屋顶中等级最高的形式是？"
+   },
+   "options": [
+    {
+     "en": "Flush gable roof",
+     "zh": "硬山顶"
+    },
+    {
+     "en": "Half-hip (xieshan) roof",
+     "zh": "歇山顶"
+    },
+    {
+     "en": "Hip (wudian) roof",
+     "zh": "庑殿顶"
+    },
+    {
+     "en": "Overhanging gable roof",
+     "zh": "悬山顶"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "The double-eaved hip (wudian) roof ranked highest and was used on the most important halls, such as the Hall of Supreme Harmony.",
+    "zh": "重檐庑殿顶等级最高，多用于太和殿等最重要的宫殿。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Qin Shi Huang joined older walls into the Great Wall mainly to defend against which northern nomadic people?",
+    "zh": "秦始皇连接各国旧墙修筑长城，主要为防御北方哪个游牧族群？"
+   },
+   "options": [
+    {
+     "en": "Turks",
+     "zh": "突厥"
+    },
+    {
+     "en": "Xiongnu",
+     "zh": "匈奴"
+    },
+    {
+     "en": "Khitan",
+     "zh": "契丹"
+    },
+    {
+     "en": "Xianbei",
+     "zh": "鲜卑"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Qin wall was built mainly to fend off incursions by the northern Xiongnu.",
+    "zh": "秦长城主要用于抵御北方匈奴的南下侵扰。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "At Beijing's Temple of Heaven, which round main hall did the emperor use to pray for good harvests?",
+    "zh": "北京天坛中皇帝祈祷五谷丰登的圆形主体建筑是？"
+   },
+   "options": [
+    {
+     "en": "Hall of Prayer for Good Harvests",
+     "zh": "祈年殿"
+    },
+    {
+     "en": "Hall of Supreme Harmony",
+     "zh": "太和殿"
+    },
+    {
+     "en": "Palace of Heavenly Purity",
+     "zh": "乾清宫"
+    },
+    {
+     "en": "Circular Mound Altar",
+     "zh": "圜丘"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Hall of Prayer for Good Harvests is a triple-eaved round hall, the centerpiece for harvest prayers at the Temple of Heaven.",
+    "zh": "祈年殿为三重檐圆形大殿，是天坛祈谷的主体建筑。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "China's most complete ancient county-town wall (a World Heritage Site) is in which old city?",
+    "zh": "中国现存最完整的古代县城城墙(世界遗产)位于哪座古城？"
+   },
+   "options": [
+    {
+     "en": "Pingyao",
+     "zh": "平遥"
+    },
+    {
+     "en": "Xi'an",
+     "zh": "西安"
+    },
+    {
+     "en": "Beijing",
+     "zh": "北京"
+    },
+    {
+     "en": "Kaifeng",
+     "zh": "开封"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The old city of Pingyao in Shanxi preserves a complete Ming-dynasty county-town wall and street plan.",
+    "zh": "山西平遥古城保存了完整的明代县城城墙与街巷格局。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "In Chinese timber-frame buildings the saying goes 'the wall falls but the house stands', because the load is mainly borne by what?",
+    "zh": "中国古代木构架建筑“墙倒屋不塌”，因为承重的主要是？"
+   },
+   "options": [
+    {
+     "en": "The walls",
+     "zh": "墙体"
+    },
+    {
+     "en": "Columns and beams",
+     "zh": "立柱与梁枋"
+    },
+    {
+     "en": "The roof",
+     "zh": "屋顶"
+    },
+    {
+     "en": "The foundation",
+     "zh": "地基"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Timber-frame buildings are carried by columns and beams; walls are only screens, so 'the wall falls but the house stands'.",
+    "zh": "木构建筑由立柱和梁枋承重，墙体只起围护作用，故“墙倒屋不塌”。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "understand"
+  },
+  {
+   "question": {
+    "en": "What is the form of architecture carved into cliffs and filled with Buddhist statues and murals?",
+    "zh": "在山崖上开凿、绘塑佛教造像与壁画的建筑形式称为？"
+   },
+   "options": [
+    {
+     "en": "Grotto (cave temple)",
+     "zh": "石窟"
+    },
+    {
+     "en": "Ancestral hall",
+     "zh": "祠堂"
+    },
+    {
+     "en": "Memorial archway",
+     "zh": "牌坊"
+    },
+    {
+     "en": "Sutra pillar",
+     "zh": "经幢"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Grottoes are carved into cliffs, such as Mogao, Yungang and Longmen, and are treasuries of Buddhist art.",
+    "zh": "石窟依山开凿，如莫高窟、云冈、龙门，是佛教艺术宝库。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The famous Mogao Caves (Caves of a Thousand Buddhas) are in which present-day city?",
+    "zh": "著名的莫高窟(千佛洞)位于今天哪座城市？"
+   },
+   "options": [
+    {
+     "en": "Luoyang",
+     "zh": "洛阳"
+    },
+    {
+     "en": "Datong",
+     "zh": "大同"
+    },
+    {
+     "en": "Dunhuang",
+     "zh": "敦煌"
+    },
+    {
+     "en": "Tianshui",
+     "zh": "天水"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "The Mogao Caves are in Dunhuang, Gansu, famed for their exquisite murals and painted sculptures.",
+    "zh": "莫高窟位于甘肃敦煌，以精美的壁画和彩塑闻名世界。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What are the stone figures and animals lining the spirit road of an imperial tomb collectively called?",
+    "zh": "帝王陵墓神道两侧排列的石人石兽统称为？"
+   },
+   "options": [
+    {
+     "en": "Huabiao columns",
+     "zh": "华表"
+    },
+    {
+     "en": "Stone statuary (shixiangsheng)",
+     "zh": "石像生"
+    },
+    {
+     "en": "Steles",
+     "zh": "碑碣"
+    },
+    {
+     "en": "Que towers",
+     "zh": "阙楼"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The stone statuary (shixiangsheng) lining a tomb's spirit road symbolizes guards and protectors.",
+    "zh": "石像生是陵墓神道两侧的石刻人兽，象征仪卫与守护。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What large circular rammed-earth communal building did the Hakka of Fujian live in?",
+    "zh": "福建客家人聚族而居的大型环形夯土建筑是？"
+   },
+   "options": [
+    {
+     "en": "Tulou (earthen building)",
+     "zh": "土楼"
+    },
+    {
+     "en": "Cave dwelling",
+     "zh": "窑洞"
+    },
+    {
+     "en": "Courtyard house (siheyuan)",
+     "zh": "四合院"
+    },
+    {
+     "en": "Stilt house",
+     "zh": "吊脚楼"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Fujian tulou are large round or square rammed-earth communal dwellings, clan housing that was easy to defend.",
+    "zh": "福建土楼以夯土筑成环形或方形大型聚居建筑，聚族而居、易守难攻。"
+   },
+   "category": "Architecture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Besides papermaking, printing and gunpowder, what is the fourth of China's Four Great Inventions?",
+    "zh": "中国古代“四大发明”中除造纸术、印刷术、火药外，还有？"
+   },
+   "options": [
+    {
+     "en": "The compass",
+     "zh": "指南针"
+    },
+    {
+     "en": "The abacus",
+     "zh": "算盘"
+    },
+    {
+     "en": "The kite",
+     "zh": "风筝"
+    },
+    {
+     "en": "Porcelain",
+     "zh": "瓷器"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Four Great Inventions are papermaking, printing, gunpowder and the compass.",
+    "zh": "四大发明指造纸术、印刷术、火药和指南针。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_lore_china_sinan"
+  },
+  {
+   "question": {
+    "en": "Who improved papermaking in the Eastern Han, making paper widespread?",
+    "zh": "东汉时改进造纸术、使纸张得以普及的是？"
+   },
+   "options": [
+    {
+     "en": "Bi Sheng",
+     "zh": "毕昇"
+    },
+    {
+     "en": "Cai Lun",
+     "zh": "蔡伦"
+    },
+    {
+     "en": "Zhang Heng",
+     "zh": "张衡"
+    },
+    {
+     "en": "Zu Chongzhi",
+     "zh": "祖冲之"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Cai Lun of the Eastern Han improved papermaking; his cheap, accessible paper spread the use of paper.",
+    "zh": "东汉蔡伦改进造纸工艺，所制“蔡侯纸”价廉易得，推动了纸的普及。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "In which dynasty did 'jiaozi', the world's earliest paper money, appear?",
+    "zh": "世界上最早的纸币“交子”出现于哪个朝代？"
+   },
+   "options": [
+    {
+     "en": "Tang",
+     "zh": "唐"
+    },
+    {
+     "en": "Northern Song",
+     "zh": "北宋"
+    },
+    {
+     "en": "Yuan",
+     "zh": "元"
+    },
+    {
+     "en": "Ming",
+     "zh": "明"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'Jiaozi', the world's earliest paper money, appeared in Sichuan during the Northern Song.",
+    "zh": "北宋时四川地区出现“交子”，是世界上最早的纸币。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which traditional Chinese drink, said to be discovered by Shennong, later spread worldwide?",
+    "zh": "相传由神农发现、后风行世界的中国传统饮品是？"
+   },
+   "options": [
+    {
+     "en": "Tea",
+     "zh": "茶"
+    },
+    {
+     "en": "Wine",
+     "zh": "酒"
+    },
+    {
+     "en": "Soy milk",
+     "zh": "豆浆"
+    },
+    {
+     "en": "Rice water",
+     "zh": "米汤"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Tea is said to have been discovered by Shennong and later spread across the world via the Silk Road and sea routes.",
+    "zh": "茶相传为神农所发现，后经丝路与海路传播全球。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Chinese craft, fired from kaolin clay, is referred to by the English word 'china'?",
+    "zh": "以高岭土烧制、英文以“china”指代的中国工艺是？"
+   },
+   "options": [
+    {
+     "en": "Silk",
+     "zh": "丝绸"
+    },
+    {
+     "en": "Porcelain",
+     "zh": "瓷器"
+    },
+    {
+     "en": "Lacquerware",
+     "zh": "漆器"
+    },
+    {
+     "en": "Jade ware",
+     "zh": "玉器"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Chinese porcelain is world-famous; the lowercase English word 'china' means porcelain.",
+    "zh": "中国瓷器名扬世界，英文小写“china”即指瓷器。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What reusable typesetting printing technique did Bi Sheng invent in the Northern Song?",
+    "zh": "北宋毕昇发明的、可重复排版的印刷技术是？"
+   },
+   "options": [
+    {
+     "en": "Woodblock printing",
+     "zh": "雕版印刷"
+    },
+    {
+     "en": "Movable-type printing",
+     "zh": "活字印刷"
+    },
+    {
+     "en": "Rubbing",
+     "zh": "拓印"
+    },
+    {
+     "en": "Color printing",
+     "zh": "套色印刷"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Bi Sheng invented clay movable-type printing in the Northern Song; the type could be reused, improving efficiency.",
+    "zh": "北宋毕昇发明胶泥活字印刷，字模可反复使用，提高了印刷效率。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which is China's grandest traditional festival, on the first day of the lunar new year?",
+    "zh": "农历正月初一、中国最隆重的传统节日是？"
+   },
+   "options": [
+    {
+     "en": "Spring Festival",
+     "zh": "春节"
+    },
+    {
+     "en": "Lantern Festival",
+     "zh": "元宵"
+    },
+    {
+     "en": "Qingming",
+     "zh": "清明"
+    },
+    {
+     "en": "Dragon Boat Festival",
+     "zh": "端午"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Spring Festival marks the start of the lunar new year and is China's most important traditional festival.",
+    "zh": "春节是农历新年之始，是中国最重要的传统节日。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Dragon Boat Festival, with its boat races and zongzi, traditionally commemorates which poet who drowned himself?",
+    "zh": "端午节划龙舟、吃粽子，传统上纪念哪位投江的诗人？"
+   },
+   "options": [
+    {
+     "en": "Li Bai",
+     "zh": "李白"
+    },
+    {
+     "en": "Qu Yuan",
+     "zh": "屈原"
+    },
+    {
+     "en": "Du Fu",
+     "zh": "杜甫"
+    },
+    {
+     "en": "Bai Juyi",
+     "zh": "白居易"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Dragon Boat Festival is said to commemorate the patriotic poet Qu Yuan, who drowned himself in the Miluo River.",
+    "zh": "端午节相传纪念投汨罗江的爱国诗人屈原。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What ancient ritual percussion instrument, made of graduated bells and unearthed from the Tomb of Marquis Yi of Zeng, is this?",
+    "zh": "湖北曾侯乙墓出土、由大小钟组成的古代礼乐打击乐器是？"
+   },
+   "options": [
+    {
+     "en": "Bianzhong (bell chimes)",
+     "zh": "编钟"
+    },
+    {
+     "en": "Guzheng",
+     "zh": "古筝"
+    },
+    {
+     "en": "Pipa",
+     "zh": "琵琶"
+    },
+    {
+     "en": "Sheng",
+     "zh": "笙"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The bianzhong of Marquis Yi of Zeng comprise 65 bronze bells with a wide range, a treasure of pre-Qin ritual music.",
+    "zh": "曾侯乙编钟由65件青铜钟组成，音域宽广，是先秦礼乐文明的瑰宝。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_frag_china_2"
+  },
+  {
+   "question": {
+    "en": "Which system, established in the Sui and Tang, selected officials by examination?",
+    "zh": "隋唐确立、通过考试选拔官员的制度是？"
+   },
+   "options": [
+    {
+     "en": "Hereditary system",
+     "zh": "世袭制"
+    },
+    {
+     "en": "Recommendation system",
+     "zh": "察举制"
+    },
+    {
+     "en": "Imperial examination",
+     "zh": "科举制"
+    },
+    {
+     "en": "Nine-rank system",
+     "zh": "九品中正制"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "The imperial examination began in the Sui and matured in the Tang, selecting officials by exam and shaping China for over a thousand years.",
+    "zh": "科举制始于隋、成于唐，以考试选官，影响中国一千多年。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is China's earliest systematic mature script, inscribed on tortoise shells and animal bones?",
+    "zh": "中国最早成系统的成熟文字、刻在龟甲兽骨上的是？"
+   },
+   "options": [
+    {
+     "en": "Bronze script",
+     "zh": "金文"
+    },
+    {
+     "en": "Oracle bone script",
+     "zh": "甲骨文"
+    },
+    {
+     "en": "Small seal script",
+     "zh": "小篆"
+    },
+    {
+     "en": "Clerical script",
+     "zh": "隶书"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Oracle bone script, carved on tortoise shells and bones in the Shang, is an early form of Chinese characters.",
+    "zh": "甲骨文是商代刻在龟甲、兽骨上的文字，是汉字的早期形态。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which traditional Chinese opera, formed in the Qing dynasty, is hailed as a 'national treasure'?",
+    "zh": "形成于清代、被誉为“国粹”的中国传统戏曲是？"
+   },
+   "options": [
+    {
+     "en": "Kunqu",
+     "zh": "昆曲"
+    },
+    {
+     "en": "Peking Opera",
+     "zh": "京剧"
+    },
+    {
+     "en": "Yue Opera",
+     "zh": "越剧"
+    },
+    {
+     "en": "Huangmei Opera",
+     "zh": "黄梅戏"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Peking Opera formed in the Qing after Anhui troupes came to the capital, and is hailed as a national treasure.",
+    "zh": "京剧在清代由徽班进京后融合发展而成，被誉为国粹。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Confucian 'Four Books' are the Great Learning, the Doctrine of the Mean, the Mencius and which other?",
+    "zh": "儒家经典“四书”指《大学》《中庸》《孟子》和？"
+   },
+   "options": [
+    {
+     "en": "The Analects",
+     "zh": "《论语》"
+    },
+    {
+     "en": "The Book of Songs",
+     "zh": "《诗经》"
+    },
+    {
+     "en": "The Book of Documents",
+     "zh": "《尚书》"
+    },
+    {
+     "en": "The Spring and Autumn Annals",
+     "zh": "《春秋》"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Four Books are the Great Learning, the Doctrine of the Mean, the Analects and the Mencius, compiled by Zhu Xi.",
+    "zh": "四书为《大学》《中庸》《论语》《孟子》，由朱熹合编。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What food is traditionally eaten at the Mid-Autumn Festival while families gather to view the moon?",
+    "zh": "中秋节家人团圆赏月时、传统食用的食品是？"
+   },
+   "options": [
+    {
+     "en": "Zongzi",
+     "zh": "粽子"
+    },
+    {
+     "en": "Mooncakes",
+     "zh": "月饼"
+    },
+    {
+     "en": "Tangyuan",
+     "zh": "汤圆"
+    },
+    {
+     "en": "Rice cake",
+     "zh": "年糕"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Mid-Autumn Festival features moon-viewing and eating mooncakes, symbolizing reunion.",
+    "zh": "中秋节有赏月、吃月饼的习俗，寓意团圆。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "At Spring Festival, what are the neatly paired blessing couplets pasted on both sides of a door called?",
+    "zh": "春节时贴于门两侧、对仗工整的祝愿文字称为？"
+   },
+   "options": [
+    {
+     "en": "Spring couplets (chunlian)",
+     "zh": "春联"
+    },
+    {
+     "en": "New-year prints",
+     "zh": "年画"
+    },
+    {
+     "en": "Window paper-cuts",
+     "zh": "窗花"
+    },
+    {
+     "en": "Door gods",
+     "zh": "门神"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Spring couplets express good wishes in neat parallel lines, originating from ancient peachwood charms.",
+    "zh": "春联用对偶工整的文字表达祝愿，源于古代桃符。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is China's first poetry anthology, said to have been edited by Confucius?",
+    "zh": "我国第一部诗歌总集、相传经孔子删定的是？"
+   },
+   "options": [
+    {
+     "en": "The Songs of Chu",
+     "zh": "《楚辞》"
+    },
+    {
+     "en": "The Book of Songs",
+     "zh": "《诗经》"
+    },
+    {
+     "en": "Yuefu",
+     "zh": "《乐府》"
+    },
+    {
+     "en": "Wen Xuan",
+     "zh": "《文选》"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Book of Songs is China's earliest poetry anthology, collecting poems from the Western Zhou to the Spring and Autumn period.",
+    "zh": "《诗经》是我国最早的诗歌总集，收录西周至春秋的诗歌。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "In traditional Chinese medicine, what are the two basic opposing forces that must be balanced in the body?",
+    "zh": "中医理论中调和人体的两种基本对立力量是？"
+   },
+   "options": [
+    {
+     "en": "Yin and Yang",
+     "zh": "阴阳"
+    },
+    {
+     "en": "Exterior and interior",
+     "zh": "表里"
+    },
+    {
+     "en": "Rising and falling",
+     "zh": "升降"
+    },
+    {
+     "en": "Motion and stillness",
+     "zh": "动静"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Yin-Yang theory is central to Chinese medicine: balance of yin and yang means health.",
+    "zh": "阴阳学说是中医的核心，强调阴阳平衡则身体康健。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which calligrapher, revered as the 'Sage of Calligraphy', is famed for the Preface to the Orchid Pavilion?",
+    "zh": "被后世尊为“书圣”、以《兰亭集序》闻名的书法家是？"
+   },
+   "options": [
+    {
+     "en": "Yan Zhenqing",
+     "zh": "颜真卿"
+    },
+    {
+     "en": "Wang Xizhi",
+     "zh": "王羲之"
+    },
+    {
+     "en": "Liu Gongquan",
+     "zh": "柳公权"
+    },
+    {
+     "en": "Ouyang Xun",
+     "zh": "欧阳询"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Wang Xizhi of the Eastern Jin is revered as the Sage of Calligraphy; his Preface to the Orchid Pavilion is called the finest running script.",
+    "zh": "东晋王羲之被尊为“书圣”，《兰亭集序》被誉为“天下第一行书”。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Chinese traditional calendar accounts for both moon phases and the solar year. What kind of calendar is it?",
+    "zh": "中国传统历法兼顾月相与回归年，属于哪种历？"
+   },
+   "options": [
+    {
+     "en": "Pure solar",
+     "zh": "纯阳历"
+    },
+    {
+     "en": "Pure lunar",
+     "zh": "纯阴历"
+    },
+    {
+     "en": "Lunisolar",
+     "zh": "阴阳合历"
+    },
+    {
+     "en": "Stellar",
+     "zh": "星辰历"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "The Chinese calendar is lunisolar: months follow the moon, and leap months keep it aligned with the solar year.",
+    "zh": "中国农历是阴阳合历：以月相定月，以闰月调和回归年。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "understand"
+  },
+  {
+   "question": {
+    "en": "In the four traditional arts 'qin, qi, shu, hua', what does 'qi' usually refer to?",
+    "zh": "中国传统四艺“琴棋书画”中的“棋”通常指？"
+   },
+   "options": [
+    {
+     "en": "Chinese chess",
+     "zh": "象棋"
+    },
+    {
+     "en": "Go (weiqi)",
+     "zh": "围棋"
+    },
+    {
+     "en": "Gomoku",
+     "zh": "五子棋"
+    },
+    {
+     "en": "Military chess",
+     "zh": "军棋"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "In the literati's four arts, 'qi' refers to Go (weiqi), a game of strategy and positioning.",
+    "zh": "文人四艺中的“棋”指围棋，讲究布局与谋略。"
+   },
+   "category": "Culture",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who founded the Confucian school and advocated 'ren' (benevolence)?",
+    "zh": "儒家学派创始人、主张“仁”的思想家是？"
+   },
+   "options": [
+    {
+     "en": "Laozi",
+     "zh": "老子"
+    },
+    {
+     "en": "Confucius",
+     "zh": "孔子"
+    },
+    {
+     "en": "Mozi",
+     "zh": "墨子"
+    },
+    {
+     "en": "Han Fei",
+     "zh": "韩非"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Confucius founded the Confucian school; his core ideas are 'ren' (benevolence) and 'li' (ritual propriety).",
+    "zh": "孔子是儒家创始人，核心主张是“仁”与“礼”。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who founded Daoism, wrote the Dao De Jing, and taught that 'the Dao follows nature'?",
+    "zh": "道家创始人、著《道德经》主张“道法自然”的是？"
+   },
+   "options": [
+    {
+     "en": "Confucius",
+     "zh": "孔子"
+    },
+    {
+     "en": "Mencius",
+     "zh": "孟子"
+    },
+    {
+     "en": "Laozi",
+     "zh": "老子"
+    },
+    {
+     "en": "Xunzi",
+     "zh": "荀子"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "Laozi founded Daoism; the Dao De Jing teaches that the Dao follows nature and values non-action and stillness.",
+    "zh": "老子是道家创始人，《道德经》主张道法自然、清静无为。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Confucian 'Second Sage' said 'the people are most important, the state next, the ruler least'?",
+    "zh": "提出“民为贵，社稷次之，君为轻”的儒家“亚圣”是？"
+   },
+   "options": [
+    {
+     "en": "Mencius",
+     "zh": "孟子"
+    },
+    {
+     "en": "Zengzi",
+     "zh": "曾子"
+    },
+    {
+     "en": "Zisi",
+     "zh": "子思"
+    },
+    {
+     "en": "Xunzi",
+     "zh": "荀子"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Mencius, revered as the Second Sage, advanced the people-centered idea that the people matter most.",
+    "zh": "孟子被尊为“亚圣”，提出以民为本、民贵君轻的思想。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which pre-Qin school advocated 'universal love' and 'non-aggression'?",
+    "zh": "主张“兼爱”“非攻”的先秦学派是？"
+   },
+   "options": [
+    {
+     "en": "Confucianism",
+     "zh": "儒家"
+    },
+    {
+     "en": "Daoism",
+     "zh": "道家"
+    },
+    {
+     "en": "Mohism",
+     "zh": "墨家"
+    },
+    {
+     "en": "Legalism",
+     "zh": "法家"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "Mohism, founded by Mozi, advocated universal love, non-aggression, meritocracy and frugality.",
+    "zh": "墨家由墨子创立，主张兼爱、非攻、尚贤、节用。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which school advocated ruling by strict laws and harsh punishments and was adopted by Qin?",
+    "zh": "主张以严刑峻法治国、为秦所采用的学派是？"
+   },
+   "options": [
+    {
+     "en": "Confucianism",
+     "zh": "儒家"
+    },
+    {
+     "en": "Legalism",
+     "zh": "法家"
+    },
+    {
+     "en": "Daoism",
+     "zh": "道家"
+    },
+    {
+     "en": "School of Names",
+     "zh": "名家"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Legalism advocated rule by law, statecraft and power, providing the ideological basis for Qin's unification and centralization.",
+    "zh": "法家主张以法、术、势治国，为秦的统一与集权提供了思想基础。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who wrote 'Free and Easy Wandering' and 'On the Equality of Things' and is paired with Laozi as a Daoist master?",
+    "zh": "著《逍遥游》《齐物论》、与老子并称的道家代表是？"
+   },
+   "options": [
+    {
+     "en": "Zhuangzi",
+     "zh": "庄子"
+    },
+    {
+     "en": "Liezi",
+     "zh": "列子"
+    },
+    {
+     "en": "Yang Zhu",
+     "zh": "杨朱"
+    },
+    {
+     "en": "Huizi",
+     "zh": "惠子"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Zhuangzi taught carefree transcendence and the equality of things, and is paired with Laozi as 'Lao-Zhuang'.",
+    "zh": "庄子主张逍遥、齐物，与老子并称“老庄”。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the name for the flourishing of many schools and free thought in the Spring and Autumn and Warring States periods?",
+    "zh": "春秋战国时期学派林立、思想自由的局面被称为？"
+   },
+   "options": [
+    {
+     "en": "Banning the hundred schools",
+     "zh": "罢黜百家"
+    },
+    {
+     "en": "Contention of a hundred schools",
+     "zh": "百家争鸣"
+    },
+    {
+     "en": "Honoring only Confucianism",
+     "zh": "独尊儒术"
+    },
+    {
+     "en": "Pure conversation",
+     "zh": "清谈玄学"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The 'contention of a hundred schools' refers to the era when Confucian, Daoist, Mohist, Legalist and other schools competed.",
+    "zh": "百家争鸣指春秋战国时儒、道、墨、法等学派竞相著说的局面。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Confucius advocated 'restraining oneself and returning to ritual'. What is his core moral concept?",
+    "zh": "孔子主张“克己复礼”，其核心道德观念是？"
+   },
+   "options": [
+    {
+     "en": "Ren (benevolence)",
+     "zh": "仁"
+    },
+    {
+     "en": "Law",
+     "zh": "法"
+    },
+    {
+     "en": "Profit",
+     "zh": "利"
+    },
+    {
+     "en": "Statecraft",
+     "zh": "术"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "'Ren' (benevolence) is the core of Confucius's thought, meaning to love others and extend oneself to them.",
+    "zh": "“仁”是孔子思想的核心，意为爱人、推己及人。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "'Do not do to others...' — what completes this Confucian principle of empathy?",
+    "zh": "“己所不欲”的下一句、体现儒家推己及人之道的是？"
+   },
+   "options": [
+    {
+     "en": "...what you would not want done to yourself",
+     "zh": "勿施于人"
+    },
+    {
+     "en": "...what you must do to them",
+     "zh": "必施于人"
+    },
+    {
+     "en": "...impose it on the people",
+     "zh": "施之于民"
+    },
+    {
+     "en": "...let each follow their own will",
+     "zh": "各从其志"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "'Do not do to others what you would not want done to yourself', from the Analects, expresses the Confucian way of reciprocity.",
+    "zh": "“己所不欲，勿施于人”出自《论语》，体现儒家的恕道。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the Daoist idea of following nature and not forcing action called?",
+    "zh": "道家主张顺应自然、不强行妄为的思想称为？"
+   },
+   "options": [
+    {
+     "en": "Wu wei (non-action)",
+     "zh": "无为"
+    },
+    {
+     "en": "You wei (action)",
+     "zh": "有为"
+    },
+    {
+     "en": "Universal love",
+     "zh": "兼爱"
+    },
+    {
+     "en": "Meritocracy",
+     "zh": "尚贤"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "'Wu wei' (non-action) is central to Daoism: follow nature and govern by not interfering.",
+    "zh": "“无为”是道家核心，主张顺应自然、无为而治。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Warring States Confucian proposed that 'human nature is evil' and should be restrained by ritual and law?",
+    "zh": "提出“性恶论”、主张以礼法节制人性的战国儒者是？"
+   },
+   "options": [
+    {
+     "en": "Mencius",
+     "zh": "孟子"
+    },
+    {
+     "en": "Xunzi",
+     "zh": "荀子"
+    },
+    {
+     "en": "Dong Zhongshu",
+     "zh": "董仲舒"
+    },
+    {
+     "en": "Zhu Xi",
+     "zh": "朱熹"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Xunzi held that human nature is evil and stressed restraining it through ritual and law.",
+    "zh": "荀子主张性恶，强调以礼法、教化约束人性。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Ming master of the School of Mind taught 'the unity of knowledge and action' and 'extending innate knowledge'?",
+    "zh": "提出“知行合一”“致良知”的明代心学集大成者是？"
+   },
+   "options": [
+    {
+     "en": "Cheng Hao",
+     "zh": "程颢"
+    },
+    {
+     "en": "Zhu Xi",
+     "zh": "朱熹"
+    },
+    {
+     "en": "Wang Yangming",
+     "zh": "王阳明"
+    },
+    {
+     "en": "Lu Jiuyuan",
+     "zh": "陆九渊"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "Wang Yangming of the Ming synthesized the School of Mind, teaching the unity of knowledge and action and extending innate moral knowledge.",
+    "zh": "明代王阳明集心学之大成，主张知行合一、致良知。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Confucian classic mainly records the words and deeds of Confucius and his disciples?",
+    "zh": "主要记录孔子及其弟子言行的儒家经典是？"
+   },
+   "options": [
+    {
+     "en": "The Mencius",
+     "zh": "《孟子》"
+    },
+    {
+     "en": "The Analects",
+     "zh": "《论语》"
+    },
+    {
+     "en": "The Great Learning",
+     "zh": "《大学》"
+    },
+    {
+     "en": "The Doctrine of the Mean",
+     "zh": "《中庸》"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Analects was compiled by Confucius's disciples and their followers from his words and deeds.",
+    "zh": "《论语》由孔子弟子及再传弟子辑录孔子言行而成。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which classic explains cosmic change through yin-yang lines and is honored as 'first among the classics'?",
+    "zh": "以阴阳爻象解释宇宙变化、被尊为“群经之首”的是？"
+   },
+   "options": [
+    {
+     "en": "The Book of Changes",
+     "zh": "《易经》"
+    },
+    {
+     "en": "The Book of Documents",
+     "zh": "《尚书》"
+    },
+    {
+     "en": "The Book of Rites",
+     "zh": "《礼记》"
+    },
+    {
+     "en": "The Spring and Autumn Annals",
+     "zh": "《春秋》"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Book of Changes (I Ching) interprets change through yin-yang hexagrams and is honored as first among the classics.",
+    "zh": "《易经》(周易)以阴阳卦爻推演变化，被尊为“群经之首”。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_lore_china_bamboo"
+  },
+  {
+   "question": {
+    "en": "Which thinker synthesized Legalism and wrote the Han Feizi?",
+    "zh": "法家思想集大成、著《韩非子》的思想家是？"
+   },
+   "options": [
+    {
+     "en": "Shang Yang",
+     "zh": "商鞅"
+    },
+    {
+     "en": "Li Si",
+     "zh": "李斯"
+    },
+    {
+     "en": "Han Fei",
+     "zh": "韩非"
+    },
+    {
+     "en": "Shen Buhai",
+     "zh": "申不害"
+    }
+   ],
+   "correctIndex": 2,
+   "explanation": {
+    "en": "Han Fei combined law, statecraft and power to synthesize Legalism, writing the Han Feizi.",
+    "zh": "韩非综合法、术、势，集法家之大成，著《韩非子》。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Confucian 'Five Constants' are benevolence, righteousness, ritual, wisdom and which other?",
+    "zh": "儒家“五常”指仁、义、礼、智和？"
+   },
+   "options": [
+    {
+     "en": "Trust (xin)",
+     "zh": "信"
+    },
+    {
+     "en": "Courage",
+     "zh": "勇"
+    },
+    {
+     "en": "Filial piety",
+     "zh": "孝"
+    },
+    {
+     "en": "Loyalty",
+     "zh": "忠"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Five Constants are benevolence, righteousness, ritual, wisdom and trust, basic Confucian virtues.",
+    "zh": "五常为仁、义、礼、智、信，是儒家基本的道德规范。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Confucius taught differently according to each student's traits. What is this principle called?",
+    "zh": "孔子针对学生不同特点采取不同教法、这一主张称为？"
+   },
+   "options": [
+    {
+     "en": "Education for all",
+     "zh": "有教无类"
+    },
+    {
+     "en": "Teaching according to aptitude",
+     "zh": "因材施教"
+    },
+    {
+     "en": "Reviewing to learn anew",
+     "zh": "温故知新"
+    },
+    {
+     "en": "Learning and practicing",
+     "zh": "学而时习"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'Teaching according to aptitude' means adapting methods to each student, a key Confucian educational idea.",
+    "zh": "因材施教指根据学生特点采用不同教法，是孔子重要的教育思想。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Western Han thinker proposed 'ban the hundred schools and honor only Confucianism'?",
+    "zh": "西汉提出“罢黜百家，独尊儒术”的思想家是？"
+   },
+   "options": [
+    {
+     "en": "Dong Zhongshu",
+     "zh": "董仲舒"
+    },
+    {
+     "en": "Jia Yi",
+     "zh": "贾谊"
+    },
+    {
+     "en": "Yang Xiong",
+     "zh": "扬雄"
+    },
+    {
+     "en": "Wang Chong",
+     "zh": "王充"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Dong Zhongshu advised Emperor Wu of Han to honor only Confucianism, establishing its supremacy.",
+    "zh": "董仲舒向汉武帝建议“罢黜百家，独尊儒术”，确立儒学独尊地位。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Daoist masters are jointly called 'Lao-Zhuang' — Laozi and who else?",
+    "zh": "道家代表人物常并称“老庄”，分别指老子和？"
+   },
+   "options": [
+    {
+     "en": "Confucius",
+     "zh": "孔子"
+    },
+    {
+     "en": "Zhuangzi",
+     "zh": "庄子"
+    },
+    {
+     "en": "Mencius",
+     "zh": "孟子"
+    },
+    {
+     "en": "Mozi",
+     "zh": "墨子"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'Lao-Zhuang' refers to Laozi and Zhuangzi, the two most important Daoist figures.",
+    "zh": "“老庄”指老子与庄子，是道家最重要的两位代表。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "'Among any three people walking, one can be my teacher' is from which record of Confucius's words?",
+    "zh": "“三人行，必有我师焉”出自记录孔子言行的哪部书？"
+   },
+   "options": [
+    {
+     "en": "The Dao De Jing",
+     "zh": "《道德经》"
+    },
+    {
+     "en": "The Analects",
+     "zh": "《论语》"
+    },
+    {
+     "en": "The Mencius",
+     "zh": "《孟子》"
+    },
+    {
+     "en": "The Zhuangzi",
+     "zh": "《庄子》"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "This line is from the Analects, reflecting Confucius's humble eagerness to learn.",
+    "zh": "此句出自《论语·述而》，体现孔子虚心好学的态度。"
+   },
+   "category": "Philosophy",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which river is honored as the 'Mother River' of the Chinese nation and cradle of Central Plains civilization?",
+    "zh": "被誉为中华民族“母亲河”、孕育中原文明的河流是？"
+   },
+   "options": [
+    {
+     "en": "Yangtze",
+     "zh": "长江"
+    },
+    {
+     "en": "Yellow River",
+     "zh": "黄河"
+    },
+    {
+     "en": "Pearl River",
+     "zh": "珠江"
+    },
+    {
+     "en": "Huai River",
+     "zh": "淮河"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Yellow River basin is a major cradle of Chinese civilization and is called the Mother River.",
+    "zh": "黄河流域是中华文明的重要发祥地，被称为“母亲河”。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which is China's longest river and Asia's longest river?",
+    "zh": "中国第一长河、也是亚洲最长的河流是？"
+   },
+   "options": [
+    {
+     "en": "Yellow River",
+     "zh": "黄河"
+    },
+    {
+     "en": "Yangtze",
+     "zh": "长江"
+    },
+    {
+     "en": "Heilong River",
+     "zh": "黑龙江"
+    },
+    {
+     "en": "Lancang River",
+     "zh": "澜沧江"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Yangtze is about 6,300 km long, China's longest river and the longest in Asia.",
+    "zh": "长江全长约6300公里，是中国第一长河、亚洲最长的河流。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Chang'an, the eastern start of the Han-Tang Silk Road, is which city today?",
+    "zh": "汉唐丝绸之路的东方起点、古都长安是今天的？"
+   },
+   "options": [
+    {
+     "en": "Luoyang",
+     "zh": "洛阳"
+    },
+    {
+     "en": "Xi'an",
+     "zh": "西安"
+    },
+    {
+     "en": "Kaifeng",
+     "zh": "开封"
+    },
+    {
+     "en": "Beijing",
+     "zh": "北京"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Chang'an is today's Xi'an in Shaanxi, the Han-Tang capital and eastern start of the Silk Road.",
+    "zh": "长安即今陕西西安，是汉唐都城与丝绸之路的东方起点。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which is the Eastern Great Mountain among China's Five Great Mountains?",
+    "zh": "中国“五岳”中的东岳是？"
+   },
+   "options": [
+    {
+     "en": "Mount Hua",
+     "zh": "华山"
+    },
+    {
+     "en": "Mount Tai",
+     "zh": "泰山"
+    },
+    {
+     "en": "Mount Heng (south)",
+     "zh": "衡山"
+    },
+    {
+     "en": "Mount Heng (north)",
+     "zh": "恒山"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Among the Five Great Mountains, Mount Tai is the Eastern peak, long a site of imperial feng-shan rites.",
+    "zh": "五岳中东岳为泰山，自古为帝王封禅之地。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Ancient 'Central Plains' roughly refers to the middle-lower reaches of which river?",
+    "zh": "古代“中原”大致指哪条河的中下游地区？"
+   },
+   "options": [
+    {
+     "en": "Wei River",
+     "zh": "渭河"
+    },
+    {
+     "en": "Yellow River",
+     "zh": "黄河"
+    },
+    {
+     "en": "Huai River",
+     "zh": "淮河"
+    },
+    {
+     "en": "Han River",
+     "zh": "汉水"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The 'Central Plains' mainly refers to the middle-lower Yellow River region around Henan and nearby areas.",
+    "zh": "古代“中原”主要指黄河中下游的河南一带及周边地区。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which plain does the Dujiangyan irrigation project water?",
+    "zh": "都江堰水利工程灌溉的是哪一片平原？"
+   },
+   "options": [
+    {
+     "en": "Guanzhong Plain",
+     "zh": "关中平原"
+    },
+    {
+     "en": "Chengdu Plain",
+     "zh": "成都平原"
+    },
+    {
+     "en": "Jianghan Plain",
+     "zh": "江汉平原"
+    },
+    {
+     "en": "North China Plain",
+     "zh": "华北平原"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Dujiangyan made the Chengdu Plain flood- and drought-proof, creating the 'Land of Abundance'.",
+    "zh": "都江堰使成都平原水旱从人，成就了“天府之国”。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_lore_china_dujiangyan"
+  },
+  {
+   "question": {
+    "en": "The 'Land of Abundance' of old mainly refers to which region today?",
+    "zh": "古人称为“天府之国”的主要是今天的哪个地区？"
+   },
+   "options": [
+    {
+     "en": "Guanzhong",
+     "zh": "关中"
+    },
+    {
+     "en": "Sichuan (Chengdu Plain)",
+     "zh": "四川(成都平原)"
+    },
+    {
+     "en": "Jiangnan",
+     "zh": "江南"
+    },
+    {
+     "en": "Lingnan",
+     "zh": "岭南"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Thanks to Dujiangyan, the Chengdu Plain was rich in produce and called the 'Land of Abundance'.",
+    "zh": "因都江堰之利，成都平原物产丰饶，被称为“天府之国”。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_lore_china_dujiangyan"
+  },
+  {
+   "question": {
+    "en": "At the west end of the Hexi Corridor, which Silk Road pass is paired with the Jade Gate Pass?",
+    "zh": "河西走廊西端、丝路要道上与玉门关并称的关隘是？"
+   },
+   "options": [
+    {
+     "en": "Shanhai Pass",
+     "zh": "山海关"
+    },
+    {
+     "en": "Yang Pass",
+     "zh": "阳关"
+    },
+    {
+     "en": "Jiayu Pass",
+     "zh": "嘉峪关"
+    },
+    {
+     "en": "Yanmen Pass",
+     "zh": "雁门关"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'West of the Yang Pass there are no old friends' — Yang Pass and the Jade Gate Pass were both key Silk Road passes.",
+    "zh": "“西出阳关无故人”，阳关与玉门关同为丝路要隘。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the overall pattern of China's terrain?",
+    "zh": "中国地势的总体特征是？"
+   },
+   "options": [
+    {
+     "en": "High east, low west",
+     "zh": "东高西低"
+    },
+    {
+     "en": "High west, low east",
+     "zh": "西高东低"
+    },
+    {
+     "en": "High south, low north",
+     "zh": "南高北低"
+    },
+    {
+     "en": "High around, low center",
+     "zh": "四周高中间低"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "China's terrain is high in the west and low in the east, descending in roughly three great steps.",
+    "zh": "中国地势西高东低，大致呈三级阶梯状下降。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The rough dividing line between north and south China's agriculture and climate is along which line?",
+    "zh": "古代南北方农业(稻作与粟麦)与气候的分界线大致是？"
+   },
+   "options": [
+    {
+     "en": "The Great Wall",
+     "zh": "长城一线"
+    },
+    {
+     "en": "The Qinling-Huai River line",
+     "zh": "秦岭—淮河一线"
+    },
+    {
+     "en": "The Yangtze",
+     "zh": "长江一线"
+    },
+    {
+     "en": "The Yellow River",
+     "zh": "黄河一线"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Qinling-Huai River line is China's major north-south geographic divide.",
+    "zh": "秦岭—淮河一线是中国重要的南北地理分界线。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The ancient 'Western Regions' mainly meant the land west of the Jade Gate Pass. Which modern-day region did it mainly refer to?",
+    "zh": "古代“西域”主要指玉门关以西、今天的哪个地区及更西？"
+   },
+   "options": [
+    {
+     "en": "Tibet",
+     "zh": "西藏"
+    },
+    {
+     "en": "Xinjiang",
+     "zh": "新疆"
+    },
+    {
+     "en": "Yunnan",
+     "zh": "云南"
+    },
+    {
+     "en": "Shanxi",
+     "zh": "山西"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Since the Han, the 'Western Regions' mainly referred to today's Xinjiang and Central Asia west of the Jade Gate and Yang passes.",
+    "zh": "自汉代起，“西域”主要指玉门关、阳关以西的今新疆及中亚地区。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "'Jiangnan' usually refers to the region south of the middle-lower reaches of which great river?",
+    "zh": "古代“江南”通常指哪条大河中下游以南地区？"
+   },
+   "options": [
+    {
+     "en": "Yellow River",
+     "zh": "黄河"
+    },
+    {
+     "en": "Yangtze",
+     "zh": "长江"
+    },
+    {
+     "en": "Pearl River",
+     "zh": "珠江"
+    },
+    {
+     "en": "Huai River",
+     "zh": "淮河"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'Jiangnan' usually means the mild, prosperous region south of the middle-lower Yangtze.",
+    "zh": "“江南”通常指长江中下游以南、气候温润富庶的地区。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Song-Yuan port, the old 'Citong Port', was hailed as the greatest port of the East?",
+    "zh": "宋元时期被誉为“东方第一大港”、即古“刺桐港”的是？"
+   },
+   "options": [
+    {
+     "en": "Guangzhou",
+     "zh": "广州"
+    },
+    {
+     "en": "Quanzhou",
+     "zh": "泉州"
+    },
+    {
+     "en": "Ningbo",
+     "zh": "宁波"
+    },
+    {
+     "en": "Yangzhou",
+     "zh": "扬州"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Quanzhou, anciently Citong Port, was a major port of the Maritime Silk Road in the Song and Yuan.",
+    "zh": "泉州古称刺桐港，宋元时为海上丝绸之路的重要港口。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Qin capital Xianyang was near which city today?",
+    "zh": "秦朝的都城咸阳位于今天哪座城市附近？"
+   },
+   "options": [
+    {
+     "en": "Luoyang",
+     "zh": "洛阳"
+    },
+    {
+     "en": "Xi'an",
+     "zh": "西安"
+    },
+    {
+     "en": "Taiyuan",
+     "zh": "太原"
+    },
+    {
+     "en": "Zhengzhou",
+     "zh": "郑州"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Qin capital Xianyang lay near today's Xi'an, on the north bank of the Wei River.",
+    "zh": "秦都咸阳在今陕西西安附近的渭河北岸。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Beijing-Hangzhou Grand Canal links the Hai, Yellow, Huai, Yangtze and which other river system?",
+    "zh": "京杭大运河沟通海河、黄河、淮河、长江和哪条水系？"
+   },
+   "options": [
+    {
+     "en": "Pearl River",
+     "zh": "珠江"
+    },
+    {
+     "en": "Qiantang River",
+     "zh": "钱塘江"
+    },
+    {
+     "en": "Min River",
+     "zh": "闽江"
+    },
+    {
+     "en": "Liao River",
+     "zh": "辽河"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Beijing-Hangzhou Grand Canal connects to the Qiantang River system at its southern end, linking five river systems.",
+    "zh": "京杭大运河南端连通钱塘江水系，沟通五大水系。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "'Beyond the passes' and 'north of the desert' mainly referred to which region?",
+    "zh": "古代“塞外”“漠北”主要指哪一地理区域？"
+   },
+   "options": [
+    {
+     "en": "Tibetan Plateau",
+     "zh": "青藏高原"
+    },
+    {
+     "en": "Mongolian Plateau",
+     "zh": "蒙古高原"
+    },
+    {
+     "en": "Yunnan-Guizhou Plateau",
+     "zh": "云贵高原"
+    },
+    {
+     "en": "Loess Plateau",
+     "zh": "黄土高原"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'Beyond the passes' and 'north of the desert' mainly meant the Mongolian Plateau north of the Great Wall.",
+    "zh": "“塞外”“漠北”主要指长城以北的蒙古高原一带。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Zheng He's great fleet mainly gathered and set sail from which port?",
+    "zh": "郑和下西洋的庞大船队主要从哪个港口集结出发？"
+   },
+   "options": [
+    {
+     "en": "Quanzhou",
+     "zh": "泉州"
+    },
+    {
+     "en": "Liujiagang (Taicang)",
+     "zh": "刘家港(太仓)"
+    },
+    {
+     "en": "Guangzhou",
+     "zh": "广州"
+    },
+    {
+     "en": "Ningbo",
+     "zh": "宁波"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Zheng He's fleet repeatedly assembled and set sail from Liujiagang in Taicang, Jiangsu.",
+    "zh": "郑和船队多次从江苏太仓刘家港集结启航下西洋。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "'Lingnan' refers to the region south of which mountain range (the Five Ridges)?",
+    "zh": "古代“岭南”指哪一山脉(五岭)以南地区？"
+   },
+   "options": [
+    {
+     "en": "Qinling",
+     "zh": "秦岭"
+    },
+    {
+     "en": "Nanling (Five Ridges)",
+     "zh": "南岭"
+    },
+    {
+     "en": "Taihang",
+     "zh": "太行山"
+    },
+    {
+     "en": "Qilian",
+     "zh": "祁连山"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "'Lingnan' means south of the Five Ridges (Nanling), today's Guangdong and Guangxi.",
+    "zh": "“岭南”指五岭(南岭)以南，即今广东、广西一带。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which grand Ming pass is the western terminus of the Great Wall?",
+    "zh": "万里长城西端的终点、明代雄关是？"
+   },
+   "options": [
+    {
+     "en": "Shanhai Pass",
+     "zh": "山海关"
+    },
+    {
+     "en": "Jiayu Pass",
+     "zh": "嘉峪关"
+    },
+    {
+     "en": "Juyong Pass",
+     "zh": "居庸关"
+    },
+    {
+     "en": "Yanmen Pass",
+     "zh": "雁门关"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Ming Great Wall runs from Jiayu Pass in the west to Shanhai Pass in the east.",
+    "zh": "明长城西起嘉峪关，东至山海关。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which eastern capital was paired with Chang'an in the Sui and Tang?",
+    "zh": "隋唐两代与都城长安并称的东都(陪都)是？"
+   },
+   "options": [
+    {
+     "en": "Kaifeng",
+     "zh": "开封"
+    },
+    {
+     "en": "Luoyang",
+     "zh": "洛阳"
+    },
+    {
+     "en": "Nanjing",
+     "zh": "南京"
+    },
+    {
+     "en": "Chengdu",
+     "zh": "成都"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Sui and Tang made Luoyang the eastern capital, on a par with the western capital Chang'an.",
+    "zh": "隋唐以洛阳为东都，与西京长安并重。"
+   },
+   "category": "Geography",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which was China's first unified, centralized dynasty?",
+    "zh": "中国历史上第一个统一的中央集权王朝是？"
+   },
+   "options": [
+    {
+     "en": "Xia",
+     "zh": "夏"
+    },
+    {
+     "en": "Qin",
+     "zh": "秦"
+    },
+    {
+     "en": "Han",
+     "zh": "汉"
+    },
+    {
+     "en": "Tang",
+     "zh": "唐"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "In 221 BC Qin unified the warring states, founding China's first unified centralized dynasty.",
+    "zh": "公元前221年秦统一六国，建立中国第一个统一的中央集权王朝。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_lore_china_measures"
+  },
+  {
+   "question": {
+    "en": "Which ruler unified the six states and styled himself 'First Emperor'?",
+    "zh": "统一六国、自称“始皇帝”的君主是？"
+   },
+   "options": [
+    {
+     "en": "Liu Bang",
+     "zh": "刘邦"
+    },
+    {
+     "en": "Ying Zheng",
+     "zh": "嬴政"
+    },
+    {
+     "en": "Xiang Yu",
+     "zh": "项羽"
+    },
+    {
+     "en": "Li Shimin",
+     "zh": "李世民"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "After unifying the six states, King Zheng of Qin styled himself 'First Emperor', Qin Shi Huang.",
+    "zh": "秦王嬴政统一六国后自称“始皇帝”，史称秦始皇。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which dynasty is traditionally China's first hereditary ('family rule') dynasty?",
+    "zh": "中国传说中第一个“家天下”(世袭)的朝代是？"
+   },
+   "options": [
+    {
+     "en": "Xia",
+     "zh": "夏"
+    },
+    {
+     "en": "Shang",
+     "zh": "商"
+    },
+    {
+     "en": "Zhou",
+     "zh": "周"
+    },
+    {
+     "en": "Qin",
+     "zh": "秦"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Xia, said to be founded by Yu's son Qi, began hereditary kingship, 'all under heaven as family'.",
+    "zh": "夏朝相传由禹之子启建立，开始了王位世袭的“家天下”。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which dynasty produced oracle bone script and highly developed bronzes?",
+    "zh": "出土甲骨文、青铜器高度发达的朝代是？"
+   },
+   "options": [
+    {
+     "en": "Xia",
+     "zh": "夏"
+    },
+    {
+     "en": "Shang",
+     "zh": "商"
+    },
+    {
+     "en": "Zhou",
+     "zh": "周"
+    },
+    {
+     "en": "Qin",
+     "zh": "秦"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Shang had highly developed oracle bone script and bronzes, such as the Houmuwu ding.",
+    "zh": "商朝甲骨文与青铜器(如后母戊鼎)高度发达。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which dynasty used enfeoffment, the ritual-music system, and split into Western and Eastern periods?",
+    "zh": "实行分封制、有“礼乐”制度、分东西两期的朝代是？"
+   },
+   "options": [
+    {
+     "en": "Shang",
+     "zh": "商"
+    },
+    {
+     "en": "Zhou",
+     "zh": "周"
+    },
+    {
+     "en": "Qin",
+     "zh": "秦"
+    },
+    {
+     "en": "Han",
+     "zh": "汉"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Zhou split into Western and Eastern periods, using enfeoffment and forming the ritual-music civilization.",
+    "zh": "周朝分西周与东周，实行分封制并形成礼乐文明。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember",
+   "evidenceId": "journal_frag_china_1"
+  },
+  {
+   "question": {
+    "en": "Which dynasty sent Zhang Qian to the Western Regions and opened the overland Silk Road?",
+    "zh": "派张骞出使西域、开通陆上丝绸之路的朝代是？"
+   },
+   "options": [
+    {
+     "en": "Qin",
+     "zh": "秦"
+    },
+    {
+     "en": "Han",
+     "zh": "汉"
+    },
+    {
+     "en": "Tang",
+     "zh": "唐"
+    },
+    {
+     "en": "Song",
+     "zh": "宋"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Emperor Wu of Han sent Zhang Qian to the Western Regions, opening the overland Silk Road.",
+    "zh": "汉武帝派张骞出使西域，开通了陆上丝绸之路。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who was the only officially recognized female emperor in Chinese history?",
+    "zh": "中国历史上唯一的正统女皇帝是？"
+   },
+   "options": [
+    {
+     "en": "Empress Lü",
+     "zh": "吕后"
+    },
+    {
+     "en": "Wu Zetian",
+     "zh": "武则天"
+    },
+    {
+     "en": "Cixi",
+     "zh": "慈禧"
+    },
+    {
+     "en": "Empress Dowager Xiao",
+     "zh": "萧太后"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Wu Zetian changed the dynastic name to Zhou and is the only widely recognized female emperor in Chinese history.",
+    "zh": "武则天改国号为周，是中国历史上唯一被广泛承认的女皇帝。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Tang emperor created the 'Reign of Zhenguan'?",
+    "zh": "开创“贞观之治”的唐代皇帝是？"
+   },
+   "options": [
+    {
+     "en": "Emperor Gaozu",
+     "zh": "唐高祖"
+    },
+    {
+     "en": "Emperor Taizong",
+     "zh": "唐太宗"
+    },
+    {
+     "en": "Emperor Xuanzong",
+     "zh": "唐玄宗"
+    },
+    {
+     "en": "Emperor Gaozong",
+     "zh": "唐高宗"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Emperor Taizong (Li Shimin) ruled with clarity and good government, known as the Reign of Zhenguan.",
+    "zh": "唐太宗李世民在位期间政治清明，史称“贞观之治”。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "In which dynasty did the 'burning of books and burying of scholars' occur?",
+    "zh": "“焚书坑儒”发生在哪个朝代？"
+   },
+   "options": [
+    {
+     "en": "Qin",
+     "zh": "秦"
+    },
+    {
+     "en": "Han",
+     "zh": "汉"
+    },
+    {
+     "en": "Sui",
+     "zh": "隋"
+    },
+    {
+     "en": "Ming",
+     "zh": "明"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The burning of books and burying of scholars was a measure by Qin Shi Huang to tighten ideological control.",
+    "zh": "“焚书坑儒”是秦始皇为加强思想控制而采取的措施。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the early Western Han era of recovery and prosperity called?",
+    "zh": "西汉初年休养生息、出现的盛世史称？"
+   },
+   "options": [
+    {
+     "en": "Rule of Wen and Jing",
+     "zh": "文景之治"
+    },
+    {
+     "en": "Reign of Zhenguan",
+     "zh": "贞观之治"
+    },
+    {
+     "en": "Kaiyuan Prosperity",
+     "zh": "开元盛世"
+    },
+    {
+     "en": "Kang-Qian Prosperity",
+     "zh": "康乾盛世"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "Emperors Wen and Jing lightened taxes and let the people rest, an era called the Rule of Wen and Jing.",
+    "zh": "汉文帝、汉景帝轻徭薄赋、与民休息，史称“文景之治”。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which work by Sima Qian is China's first general history in biographical form?",
+    "zh": "司马迁所著、我国第一部纪传体通史是？"
+   },
+   "options": [
+    {
+     "en": "Book of Han",
+     "zh": "《汉书》"
+    },
+    {
+     "en": "Records of the Grand Historian",
+     "zh": "《史记》"
+    },
+    {
+     "en": "Zizhi Tongjian",
+     "zh": "《资治通鉴》"
+    },
+    {
+     "en": "Spring and Autumn Annals",
+     "zh": "《春秋》"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Records of the Grand Historian by Sima Qian is hailed as 'the historian's masterpiece, an unrhymed Li Sao'.",
+    "zh": "《史记》由司马迁所著，被誉为“史家之绝唱，无韵之离骚”。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "The Three Kingdoms were Wei, Shu and which other state?",
+    "zh": "三国鼎立指魏、蜀和哪个政权？"
+   },
+   "options": [
+    {
+     "en": "Wu",
+     "zh": "吴"
+    },
+    {
+     "en": "Chu",
+     "zh": "楚"
+    },
+    {
+     "en": "Yue",
+     "zh": "越"
+    },
+    {
+     "en": "Yan",
+     "zh": "燕"
+    }
+   ],
+   "correctIndex": 0,
+   "explanation": {
+    "en": "The Three Kingdoms were Cao Wei, Shu Han and Eastern Wu standing in opposition.",
+    "zh": "三国指曹魏、蜀汉与孙吴三个政权并立。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who was 'draped in the yellow robe' at the Chenqiao Mutiny and founded the Northern Song?",
+    "zh": "陈桥兵变“黄袍加身”、建立北宋的是？"
+   },
+   "options": [
+    {
+     "en": "Li Yuan",
+     "zh": "李渊"
+    },
+    {
+     "en": "Zhao Kuangyin",
+     "zh": "赵匡胤"
+    },
+    {
+     "en": "Zhu Wen",
+     "zh": "朱温"
+    },
+    {
+     "en": "Shi Jingtang",
+     "zh": "石敬瑭"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Zhao Kuangyin was draped in the yellow robe by his troops at Chenqiao and founded the Northern Song.",
+    "zh": "赵匡胤在陈桥驿被部下拥立“黄袍加身”，建立北宋。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who founded the Yuan dynasty and made Dadu (today's Beijing) the capital?",
+    "zh": "建立元朝、定都大都(今北京)的是？"
+   },
+   "options": [
+    {
+     "en": "Genghis Khan",
+     "zh": "成吉思汗"
+    },
+    {
+     "en": "Kublai Khan",
+     "zh": "忽必烈"
+    },
+    {
+     "en": "Ögedei",
+     "zh": "窝阔台"
+    },
+    {
+     "en": "Tolui",
+     "zh": "拖雷"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Kublai Khan founded the Yuan dynasty and made Dadu the capital, Emperor Shizu of Yuan.",
+    "zh": "忽必烈建立元朝，定都大都，是元世祖。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who was the founding emperor of the Ming (Emperor Taizu)?",
+    "zh": "明朝的开国皇帝(明太祖)是？"
+   },
+   "options": [
+    {
+     "en": "Zhu Di",
+     "zh": "朱棣"
+    },
+    {
+     "en": "Zhu Yuanzhang",
+     "zh": "朱元璋"
+    },
+    {
+     "en": "Zhu Yunwen",
+     "zh": "朱允炆"
+    },
+    {
+     "en": "Chen Youliang",
+     "zh": "陈友谅"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Zhu Yuanzhang overthrew the Yuan and founded the Ming, becoming Emperor Taizu.",
+    "zh": "朱元璋推翻元朝、建立明朝，是明太祖。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which Ming navigator led fleets on seven voyages to the Western Seas?",
+    "zh": "明代率船队七下西洋的航海家是？"
+   },
+   "options": [
+    {
+     "en": "Jianzhen",
+     "zh": "鉴真"
+    },
+    {
+     "en": "Zheng He",
+     "zh": "郑和"
+    },
+    {
+     "en": "Faxian",
+     "zh": "法显"
+    },
+    {
+     "en": "Xuanzang",
+     "zh": "玄奘"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Zheng He of the Ming led seven voyages reaching Southeast Asia, the Indian Ocean and the east coast of Africa.",
+    "zh": "明代郑和七下西洋，远航至东南亚、印度洋乃至非洲东海岸。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Which was the last feudal dynasty in Chinese history?",
+    "zh": "中国历史上最后一个封建王朝是？"
+   },
+   "options": [
+    {
+     "en": "Ming",
+     "zh": "明"
+    },
+    {
+     "en": "Qing",
+     "zh": "清"
+    },
+    {
+     "en": "Yuan",
+     "zh": "元"
+    },
+    {
+     "en": "Song",
+     "zh": "宋"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Qing was China's last feudal dynasty, ending in 1912.",
+    "zh": "清朝是中国历史上最后一个封建王朝，1912年终结。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "Who was the first of the 'Five Hegemons' of the Spring and Autumn period, strengthening his state by employing Guan Zhong?",
+    "zh": "“春秋五霸”之首、任用管仲改革图强的是？"
+   },
+   "options": [
+    {
+     "en": "Duke Wen of Jin",
+     "zh": "晋文公"
+    },
+    {
+     "en": "Duke Huan of Qi",
+     "zh": "齐桓公"
+    },
+    {
+     "en": "Duke Mu of Qin",
+     "zh": "秦穆公"
+    },
+    {
+     "en": "King Zhuang of Chu",
+     "zh": "楚庄王"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "Duke Huan of Qi employed Guan Zhong's reforms and 'honored the king to repel the barbarians', becoming the first hegemon.",
+    "zh": "齐桓公任用管仲改革，“尊王攘夷”，成为春秋首霸。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What are the seven major states of the Warring States period collectively called?",
+    "zh": "战国时期七个主要诸侯国合称？"
+   },
+   "options": [
+    {
+     "en": "Five Hegemons",
+     "zh": "春秋五霸"
+    },
+    {
+     "en": "Seven Warring States",
+     "zh": "战国七雄"
+    },
+    {
+     "en": "Partition of Jin",
+     "zh": "三家分晋"
+    },
+    {
+     "en": "Alliances and coalitions",
+     "zh": "合纵连横"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The Seven Warring States were Qi, Chu, Yan, Han, Zhao, Wei and Qin.",
+    "zh": "战国七雄指齐、楚、燕、韩、赵、魏、秦。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  },
+  {
+   "question": {
+    "en": "What is the prosperous early reign of Emperor Xuanzong of Tang called?",
+    "zh": "唐玄宗统治前期政治清明、经济繁荣的盛世史称？"
+   },
+   "options": [
+    {
+     "en": "Reign of Zhenguan",
+     "zh": "贞观之治"
+    },
+    {
+     "en": "Kaiyuan Prosperity",
+     "zh": "开元盛世"
+    },
+    {
+     "en": "Yongle Prosperity",
+     "zh": "永乐盛世"
+    },
+    {
+     "en": "Reign of Renxuan",
+     "zh": "仁宣之治"
+    }
+   ],
+   "correctIndex": 1,
+   "explanation": {
+    "en": "The early reign of Emperor Xuanzong, under the Kaiyuan era name, was so prosperous it is called the Kaiyuan Prosperity.",
+    "zh": "唐玄宗前期年号开元，国力鼎盛，史称“开元盛世”。"
+   },
+   "category": "History",
+   "region": "china",
+   "bloom": "remember"
+  }
+ ]
+}
