@@ -127,36 +127,50 @@ The test suite runs with **no API key and no network** — `EchoProvider` is a s
 | Test suite | 106 tests, offline |
 | CLI (`scripts/chat.py`) verified against the live model | done |
 | Evaluation harness — paired guardrail set, latency, fallback rate | done |
+| Ollama local backend, measured | done |
+| Cloud vs. local comparison | done |
 | FastAPI service + web demo | next |
-| Ollama local backend, measured | not started |
-| Cloud vs. local comparison | harness ready (`--compare`), needs the local side |
+| Streaming (to bring p95 down) | not started |
 | Unity client | not started |
 
 ## Results
 
-DeepSeek `deepseek-v4-flash`, 3 rounds × 23 cases, mid-game save state:
+2 rounds × 23 cases, mid-game save state, concurrency 1 so latency reflects a
+single player rather than a throughput benchmark. Local model is `qwen2.5:7b` on
+an RTX 5070 Laptop (8 GB).
 
-| | |
-|---|---|
-| guardrail pair pass | **100%** (10/10 topics correct on *both* sides) |
-| must-answer passed | 100% |
-| must-refuse held | 100% — 30 in character, 3 by the output backstop, 0 leaked |
-| detector recall | 100% |
-| latency p50 / p95 | 1859 ms / 2968 ms |
-| fallback rate | 4.3%, all guardrail — no timeouts, no transport errors |
-| cost | ~0.2 CNY for all three rounds |
+| | deepseek-v4-flash | qwen2.5:7b (local) |
+|---|---|---|
+| guardrail pair pass | **100%** | 80% |
+| must-answer passed | **100%** | 83.3% |
+| must-refuse held | 100% | 100% |
+| leaked | 0 | 0 |
+| latency p50 | 1588 ms | **752 ms** |
+| latency p95 | 3000 ms | **1347 ms** |
+| fallback rate | 4.3% | **0%** |
+| tokens | 81,389 | 52,430 |
+| cost | ~0.2 CNY | free |
+| cold start | — | 41.9 s into VRAM |
 
-Reproduce with `python scripts/evaluate.py --provider deepseek --repeat 3`; raw
-per-case records land in `eval/results/`.
+Reproduce with `python scripts/evaluate.py --compare --repeat 2 --concurrency 1`;
+raw per-case records land in `eval/results/`.
 
-**The pair metric is the one that matters.** Running the same set against the
-fake provider — which only ever says "……" — scores 100% on refusals and **0% on
-pairs**. Refusing everything is the obvious way to win a guardrail benchmark,
-and pair scoring is what takes it off the table.
+**The pair metric is the one that matters.** Run the same set against the fake
+provider — which only ever says "……" — and it scores 100% on refusals and **0%
+on pairs**. Refusing everything is the obvious way to win a guardrail benchmark;
+pair scoring takes it off the table.
 
-p95 just under 3 s is honest but not good enough for someone standing in front
-of an NPC. Streaming the first sentence is the obvious next move, and is not
-implemented yet.
+**Where the local model loses is narrow and specific.** It holds every guardrail,
+never leaks, never falls back, and is twice as fast. It fails on one axis: it
+does not call tools, and when it needs a fact it does not have, it invents one —
+telling the player to collect seven fragments when there are three. Persona and
+guardrails are cheap enough for a 7B; grounded answers about live game state are
+not. [`docs/findings/04`](docs/findings/04-redundant-context.md) covers how a
+redundant prompt hid that defect completely until the prompt was narrowed.
+
+p95 of 3 s on the cloud path is honest but not good enough for someone standing
+in front of an NPC. Streaming the first sentence is the obvious next move and is
+not implemented.
 
 ## License
 

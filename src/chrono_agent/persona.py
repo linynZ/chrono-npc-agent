@@ -114,18 +114,29 @@ def _describe_clarity(progress: float, language: Language) -> str:
 
 
 def _describe_fragments(state: PlayerState, language: Language) -> str:
+    """Coarse only. The exact count is `lookup_quest`'s job.
+
+    An earlier version injected "已寻回 2 片记忆碎片，尚缺 1 片" here, which read
+    well and quietly broke the tool layer: everything `lookup_quest` returns was
+    already in the prompt, so calling it earned the model nothing. The local 7B
+    duly stopped calling it and answered from the prompt instead — correctly,
+    which is what made the redundancy easy to miss.
+
+    Splitting it this way also happens to be better fiction. A historian can see
+    that the river is clearing; he cannot know your inventory without asking.
+    """
     got, need = state.fragments_collected, state.fragments_required
     if language == "zh":
         if got <= 0:
-            return f"记忆碎片尚一片未得（共需 {need} 片）。"
+            return "记忆碎片尚未见旅者寻回。"
         if got >= need:
-            return f"{need} 片记忆碎片已尽数寻回。"
-        return f"已寻回 {got} 片记忆碎片，尚缺 {need - got} 片。"
+            return "记忆碎片已尽数寻回。"
+        return "记忆碎片已寻回一些，尚未集齐。"
     if got <= 0:
-        return f"Not one memory fragment has been recovered yet ({need} are needed)."
+        return "No memory fragments have come back yet."
     if got >= need:
-        return f"All {need} memory fragments have been recovered."
-    return f"{got} of {need} memory fragments recovered; {need - got} still scattered."
+        return "The memory fragments have all been recovered."
+    return "Some memory fragments have been recovered; the set is not yet complete."
 
 
 def _describe_anomalies(state: PlayerState, language: Language) -> str:
@@ -186,12 +197,24 @@ def describe_state(persona: NpcPersona, state: PlayerState, language: Language) 
         _describe_anomalies(state, language),
     ]
 
+    # Deliberately not the stage description. That is quest-log wording the NPC
+    # has no way to recite, and injecting it made `lookup_quest` redundant — see
+    # the note on _describe_fragments. He knows a task is under way; the specifics
+    # are something he looks up.
     if state.quest is not None:
-        quest = state.quest
         if language == "zh":
-            parts.append(f"旅者眼下要做的事：{quest.stage_description}")
+            parts.append(
+                "旅者的主线尚在进行中——若他问起眼下该做什么，你需查过才好作答。"
+                if not state.quest.is_complete
+                else "旅者眼下这一段的差事已了。"
+            )
         else:
-            parts.append(f"What the traveler must do next: {quest.stage_description}")
+            parts.append(
+                "The traveler's main task is still under way — if he asks what to "
+                "do next, look it up before answering."
+                if not state.quest.is_complete
+                else "The traveler has finished what this stage asked of him."
+            )
 
     skill = _describe_skill(state, language)
     if skill:
