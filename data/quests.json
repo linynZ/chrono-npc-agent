@@ -1,0 +1,53 @@
+{
+ "quest_china_main": {
+  "stages": [
+   {
+    "description": "前往华夏，寻访史官·墨。",
+    "objectives": [
+     {
+      "type": "talk",
+      "targetId": "npc_china_historian",
+      "required": 1,
+      "label": "拜会史官·墨"
+     }
+    ]
+   },
+   {
+    "description": "净化游荡的错乱体。",
+    "objectives": [
+     {
+      "type": "defeat",
+      "targetId": "china_rumor",
+      "required": 1,
+      "label": "净化「谣言」错乱体"
+     }
+    ]
+   },
+   {
+    "description": "寻回散落的记忆碎片。",
+    "objectives": [
+     {
+      "type": "collect",
+      "targetId": "frag_china",
+      "required": 3,
+      "label": "寻回记忆碎片"
+     }
+    ]
+   },
+   {
+    "description": "击败盘踞华夏的大错乱。",
+    "objectives": [
+     {
+      "type": "defeat",
+      "targetId": "china_boss",
+      "required": 1,
+      "label": "击败大错乱"
+     }
+    ]
+   }
+  ],
+  "questId": "quest_china_main",
+  "title": "重订华夏记忆",
+  "description": "湮灭侵蚀着华夏的记忆。净化错乱、寻回碎片，修复这一段编年长河。"
+ }
+}
