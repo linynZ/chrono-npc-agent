@@ -4,7 +4,12 @@ A runtime LLM agent that lets you talk to the NPCs of [ChronoTraveler](https://y
 
 The NPC knows who it is, knows how far the player has actually progressed, can look things up with tools, is constrained by guardrails it cannot talk its way around, and falls back to the game's own written lines when the model is too slow or goes off the rails.
 
-> **Status: in progress.** The provider layer, persona/state injection and tool layer are implemented and tested. Guardrails, the agent loop, the HTTP service and the evaluation harness are not done yet. This section will not claim otherwise — see [Progress](#progress).
+> **Status: working end to end, in the actual game.** Three NPCs, cloud and local
+> backends, streaming with mid-stream guardrails, an evaluation harness, and a
+> Unity client that has been play-tested. What is not done is listed in
+> [Progress](#progress) rather than glossed over, and `docs/findings/` records
+> five results from testing — two of which falsified a design assumption I had
+> already written down here as fact.
 
 ---
 
@@ -103,7 +108,7 @@ quiz.json       500 questions across 5 regions
 quests.json     5 quests       (4 stages / 4 objectives each)
 ```
 
-The quest parser reads Unity's YAML `.asset` format directly, including its `\uXXXX`-escaped CJK.
+The quest parser reads Unity's YAML `.asset` format directly, including its `\uXXXX`-escaped CJK. What ships in `data/` is the China era only — the one this project uses; `--eras all` pulls the rest.
 
 ## Layout
 
@@ -118,8 +123,12 @@ src/chrono_agent/
   persona.py         persona loading and state-as-perception injection
   providers/         base seam · openai_compat · deepseek · ollama · echo (fake)
   tools/             registry + the tools an NPC may call
-  guardrails/        (not yet implemented)
-tests/               pytest suite; runs offline against the fake provider
+  guardrails/        input steering, output backstop, contextual strictness
+  agent.py           the loop: prompt, tools, guardrails, fallback, streaming
+  server.py          FastAPI — /api/chat, /api/chat/stream, /api/npc/{id}
+eval/                paired guardrail cases + raw run records
+docs/findings/       five write-ups, including the assumptions that were wrong
+tests/               120 tests; runs offline against the fake provider
 ```
 
 ## Running it
