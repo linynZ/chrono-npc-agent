@@ -50,6 +50,8 @@ namespace ChronoTraveler.Agent
         private GameObject panel, hint;
         private TextMeshProUGUI hintText, speakerLabel, bodyLabel, statusLabel;
         private TMP_InputField input;
+        private ScrollRect bodyScroll;
+        private Button sendButton;
         private readonly List<Button> openerButtons = new List<Button>();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -166,13 +168,25 @@ namespace ChronoTraveler.Agent
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.Escape)) { SetOpen(false); return; }
+            if (Input.GetKeyDown(KeyCode.Escape)) SetOpen(false);
+        }
 
-            if (!asking && Input.GetKeyDown(KeyCode.Return) && input.isFocused)
-            {
-                string text = input.text.Trim();
-                if (text.Length > 0) Ask(text);
-            }
+        /// <summary>
+        /// Submission goes through TMP_InputField.onSubmit, never a polled
+        /// GetKeyDown(Return).
+        ///
+        /// Two reasons the polled version could not work. TMP raises submit and
+        /// drops focus in the same frame, so `input.isFocused` is already false
+        /// by the time an Update poll looks at it. And with an IME active, Enter
+        /// is consumed to accept the candidate word — a Chinese sentence types
+        /// fine and then has no way out. The send button exists for the same
+        /// reason: the keyboard path should never be the only way through.
+        /// </summary>
+        private void OnSubmit(string text)
+        {
+            text = (text ?? string.Empty).Trim();
+            if (asking || text.Length == 0) { input.ActivateInputField(); return; }
+            Ask(text);
         }
 
         private void SetOpen(bool value)
@@ -232,12 +246,13 @@ namespace ChronoTraveler.Agent
                 npcId, question, state, history,
                 // Deltas drive the text directly — the game already reads dialogue
                 // a character at a time, so streaming *is* the typewriter here.
-                onDelta: delta => { shown += delta; bodyLabel.text = prefix + shown; },
+                onDelta: delta => { shown += delta; bodyLabel.text = prefix + shown; ScrollToBottom(); },
                 // Mandatory: a guardrail retracting what is already on screen.
-                onReplace: text => { shown = text; bodyLabel.text = prefix + shown; },
+                onReplace: text => { shown = text; bodyLabel.text = prefix + shown; ScrollToBottom(); },
                 onDone: reply =>
                 {
                     bodyLabel.text = prefix + reply.text;
+                    ScrollToBottom();
                     statusLabel.text = reply.IsFallback
                         ? (zh ? "（史官一时无言）" : "(the historian says nothing)")
                         : string.Empty;
@@ -299,7 +314,7 @@ namespace ChronoTraveler.Agent
             rt.anchorMin = new Vector2(.5f, 0f); rt.anchorMax = new Vector2(.5f, 0f);
             rt.pivot = new Vector2(.5f, 0f);
             rt.anchoredPosition = new Vector2(0, 40);
-            rt.sizeDelta = new Vector2(1500, 470);
+            rt.sizeDelta = new Vector2(1500, 600);
 
             Image fill = UIFactory.CreateImage("Fill", panel.transform, UITheme.WindowFill);
             Stretch(fill.rectTransform);
@@ -308,21 +323,85 @@ namespace ChronoTraveler.Agent
                 TextAlignmentOptions.TopLeft, UITheme.FrameGold);
             Place(speakerLabel.rectTransform, 28, -18, 700, 40);
 
-            bodyLabel = UIFactory.CreateText("Body", panel.transform, 27,
-                TextAlignmentOptions.TopLeft, UITheme.TextMain);
-            Place(bodyLabel.rectTransform, 28, -62, 1444, 210);
-
             statusLabel = UIFactory.CreateText("Status", panel.transform, 22,
                 TextAlignmentOptions.TopRight, UITheme.TextDim);
             Place(statusLabel.rectTransform, 28, -18, 1444, 34);
 
+            BuildBody();
             BuildOpeners();
             BuildInput();
 
-            var close = UIFactory.CreateText("CloseHint", panel.transform, 21,
-                TextAlignmentOptions.BottomRight, UITheme.TextDim);
-            close.text = "ESC";
-            Place(close.rectTransform, 28, -430, 1444, 30);
+            BuildCloseButton();
+        }
+
+        /// <summary>
+        /// Clickable, not just an ESC hint. A focused TMP_InputField consumes
+        /// Escape to cancel editing, so the key can be swallowed exactly when the
+        /// player most wants out — mid-typing. A panel that traps the player is
+        /// not a acceptable failure, so there is a second way.
+        /// </summary>
+        private void BuildCloseButton()
+        {
+            var go = new GameObject("Close");
+            go.transform.SetParent(panel.transform, false);
+            var image = go.AddComponent<Image>();
+            image.color = new Color(0, 0, 0, 0);
+            var button = go.AddComponent<Button>();
+            button.targetGraphic = image;
+            button.onClick.AddListener(() => SetOpen(false));
+            Place(go.GetComponent<RectTransform>(), 1250, -562, 222, 32);
+
+            var label = UIFactory.CreateText("Label", go.transform, 21,
+                TextAlignmentOptions.Right, UITheme.TextDim);
+            label.text = LocalizationManager.Current == Language.Chinese ? "ESC 或点此结束" : "ESC or click to close";
+            Stretch(label.rectTransform);
+        }
+
+        /// <summary>
+        /// The reply scrolls instead of sitting in a fixed box.
+        ///
+        /// A fixed height cannot work: replies run one to four sentences and the
+        /// long ones overflowed straight through the buttons underneath. Clipping
+        /// would hide the end of what the character said, which is worse. The
+        /// view follows the bottom as text streams in, so the newest words are
+        /// always the visible ones.
+        /// </summary>
+        private void BuildBody()
+        {
+            var viewport = new GameObject("BodyViewport");
+            viewport.transform.SetParent(panel.transform, false);
+            var mask = viewport.AddComponent<Image>();      // RectMask2D needs something to clip
+            mask.color = new Color(0, 0, 0, 0);
+            viewport.AddComponent<RectMask2D>();
+            var viewportRt = viewport.GetComponent<RectTransform>();
+            Place(viewportRt, 28, -62, 1444, 330);
+
+            bodyLabel = UIFactory.CreateText("Body", viewport.transform, 26,
+                TextAlignmentOptions.TopLeft, UITheme.TextMain);
+            var bodyRt = bodyLabel.rectTransform;
+            bodyRt.anchorMin = new Vector2(0, 1);
+            bodyRt.anchorMax = new Vector2(1, 1);
+            bodyRt.pivot = new Vector2(.5f, 1);
+            bodyRt.offsetMin = new Vector2(0, 0);
+            bodyRt.offsetMax = new Vector2(0, 0);
+
+            // The label is its own scroll content — its height tracks the text.
+            var fitter = bodyLabel.gameObject.AddComponent<ContentSizeFitter>();
+            fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+            bodyScroll = viewport.AddComponent<ScrollRect>();
+            bodyScroll.viewport = viewportRt;
+            bodyScroll.content = bodyRt;
+            bodyScroll.horizontal = false;
+            bodyScroll.movementType = ScrollRect.MovementType.Clamped;
+            bodyScroll.scrollSensitivity = 26f;
+        }
+
+        private void ScrollToBottom()
+        {
+            if (bodyScroll == null) return;
+            Canvas.ForceUpdateCanvases();       // the fitter has not run yet this frame
+            bodyScroll.verticalNormalizedPosition = 0f;
         }
 
         private void BuildOpeners()
@@ -343,7 +422,7 @@ namespace ChronoTraveler.Agent
                 lrt.offsetMin = new Vector2(14, 0); lrt.offsetMax = new Vector2(-14, 0);
 
                 Place(go.GetComponent<RectTransform>(), 28 + (i % 2) * 730,
-                      -288 - (i / 2) * 46, 710, 40);
+                      -410 - (i / 2) * 48, 710, 42);
                 openerButtons.Add(button);
             }
         }
@@ -354,7 +433,7 @@ namespace ChronoTraveler.Agent
             go.transform.SetParent(panel.transform, false);
             var image = go.AddComponent<Image>();   // brings a RectTransform with it
             image.color = UITheme.BarTrack;
-            Place(go.GetComponent<RectTransform>(), 28, -388, 1444, 46);
+            Place(go.GetComponent<RectTransform>(), 28, -512, 1290, 48);
 
             input = go.AddComponent<TMP_InputField>();
             input.image = image;
@@ -376,12 +455,34 @@ namespace ChronoTraveler.Agent
             var placeholder = UIFactory.CreateText("Placeholder", area.transform, 24,
                 TextAlignmentOptions.Left, UITheme.TextDim);
             placeholder.text = LocalizationManager.Current == Language.Chinese
-                ? "问些什么……（回车递话）" : "Ask something… (Enter to send)";
+                ? "问些什么……" : "Ask something…";
             Stretch(placeholder.rectTransform);
 
             input.textViewport = art;
             input.textComponent = text;
             input.placeholder = placeholder;
+            // The event, not a polled key — see OnSubmit for why the polled
+            // version cannot work with an IME.
+            input.onSubmit.AddListener(OnSubmit);
+
+            BuildSendButton();
+        }
+
+        private void BuildSendButton()
+        {
+            var go = new GameObject("Send");
+            go.transform.SetParent(panel.transform, false);
+            var image = go.AddComponent<Image>();
+            image.color = UITheme.WindowFillTop;
+            sendButton = go.AddComponent<Button>();
+            sendButton.targetGraphic = image;
+            sendButton.onClick.AddListener(() => OnSubmit(input.text));
+            Place(go.GetComponent<RectTransform>(), 1330, -512, 142, 48);
+
+            var label = UIFactory.CreateText("Label", go.transform, 24,
+                TextAlignmentOptions.Center, UITheme.FrameGold);
+            label.text = LocalizationManager.Current == Language.Chinese ? "递话" : "Send";
+            Stretch(label.rectTransform);
         }
 
         private static void Stretch(RectTransform rt)
