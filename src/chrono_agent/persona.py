@@ -59,10 +59,20 @@ class NpcPersona(BaseModel):
     knows_about: list[str] = Field(default_factory=list)
     boundaries: list[Boundary] = Field(default_factory=list)
     tools: list[str] = Field(default_factory=list)
+    suggested_questions: dict[str, list[str]] = Field(default_factory=dict)
     fallback: Fallback = Field(default_factory=Fallback)
 
     def display_name(self, language: Language) -> str:
         return self.name.get(language) or self.name.get("zh") or self.npc_id
+
+    def openers(self, language: Language) -> list[str]:
+        """Suggested questions in the player's voice, for clients that offer them."""
+        return self.suggested_questions.get(language) or self.suggested_questions.get("zh") or []
+
+    def last_resort(self, language: Language) -> str:
+        """Used when free conversation degrades — repeating a scripted story beat
+        at someone who just asked a new question reads worse than a silence."""
+        return unfold_cjk((self.fallback.last_resort.get(language) or "").strip())
 
     @classmethod
     def load(cls, npc_id: str, directory: Path | None = None) -> "NpcPersona":

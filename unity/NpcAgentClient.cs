@@ -83,6 +83,7 @@ namespace ChronoTraveler.Agent
             public TurnDto[] history;
             public string language;
             public string backend;
+            public bool free_form;
         }
 
         [Serializable]
@@ -110,6 +111,48 @@ namespace ChronoTraveler.Agent
             public ReplyDto reply;
         }
 
+        [Serializable]
+        public class NpcInfoDto
+        {
+            public string npc_id;
+            public string name;
+            public string era;
+            public string[] openers;
+            public string[] tools;
+        }
+
+        // --- discovery --------------------------------------------------
+
+        /// <summary>
+        /// Ask the service what it knows about an NPC. Used to decide whether to
+        /// offer free conversation at all: a failure here means the affordance is
+        /// simply not shown, which is the right outcome — an entry point that
+        /// does nothing when pressed is worse than no entry point.
+        /// </summary>
+        public IEnumerator FetchNpcInfo(
+            string npcId, string language,
+            Action<NpcInfoDto> onDone, Action<string> onError = null)
+        {
+            string url = $"{baseUrl.TrimEnd('/')}/api/npc/{npcId}?language={language}";
+            using (UnityWebRequest request = UnityWebRequest.Get(url))
+            {
+                request.timeout = Mathf.Max(1, Mathf.CeilToInt(timeoutSeconds));
+                yield return request.SendWebRequest();
+
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    onError?.Invoke(Describe(request));
+                    yield break;
+                }
+
+                NpcInfoDto info = null;
+                try { info = JsonUtility.FromJson<NpcInfoDto>(request.downloadHandler.text); }
+                catch (Exception e) { onError?.Invoke("bad response: " + e.Message); }
+
+                if (info != null) onDone?.Invoke(info);
+            }
+        }
+
         // --- blocking ---------------------------------------------------
 
         /// <summary>
@@ -119,10 +162,11 @@ namespace ChronoTraveler.Agent
         /// </summary>
         public IEnumerator Chat(
             string npcId, string message, PlayerStateDto state,
-            IList<TurnDto> history, Action<ReplyDto> onDone, Action<string> onError = null)
+            IList<TurnDto> history, Action<ReplyDto> onDone, Action<string> onError = null,
+            bool freeForm = false)
         {
             IsBusy = true;
-            using (UnityWebRequest request = BuildRequest("/api/chat", npcId, message, state, history))
+            using (UnityWebRequest request = BuildRequest("/api/chat", npcId, message, state, history, freeForm))
             {
                 yield return request.SendWebRequest();
 
@@ -156,7 +200,7 @@ namespace ChronoTraveler.Agent
         public IEnumerator ChatStream(
             string npcId, string message, PlayerStateDto state, IList<TurnDto> history,
             Action<string> onDelta, Action<string> onReplace, Action<ReplyDto> onDone,
-            Action<string> onError = null)
+            Action<string> onError = null, bool freeForm = false)
         {
             IsBusy = true;
 
@@ -179,7 +223,7 @@ namespace ChronoTraveler.Agent
                 }
             }
 
-            using (UnityWebRequest request = BuildRequest("/api/chat/stream", npcId, message, state, history))
+            using (UnityWebRequest request = BuildRequest("/api/chat/stream", npcId, message, state, history, freeForm))
             {
                 request.downloadHandler = new SseHandler(HandleFrame);
                 yield return request.SendWebRequest();
@@ -202,7 +246,7 @@ namespace ChronoTraveler.Agent
 
         private UnityWebRequest BuildRequest(
             string path, string npcId, string message,
-            PlayerStateDto state, IList<TurnDto> history)
+            PlayerStateDto state, IList<TurnDto> history, bool freeForm = false)
         {
             var payload = new ChatRequestDto
             {
@@ -211,7 +255,10 @@ namespace ChronoTraveler.Agent
                 state = state ?? new PlayerStateDto(),
                 history = ToArray(history),
                 language = state != null ? state.language : "zh",
-                backend = backend
+                backend = backend,
+                // Free conversation degrades to the persona's last-resort line
+                // rather than replaying an unrelated scripted beat.
+                free_form = freeForm
             };
 
             var request = new UnityWebRequest(baseUrl.TrimEnd('/') + path, UnityWebRequest.kHttpVerbPOST);

@@ -1,16 +1,45 @@
 # Unity client
 
-Three files. Drop them into `Assets/Scripts/Agent/` in a ChronoTraveler checkout
-and press **F8** in play mode.
+Four files. Drop them into `Assets/Scripts/Agent/` in a ChronoTraveler checkout.
 
 | file | depends on | job |
 |---|---|---|
 | `NpcAgentClient.cs` | Unity only | HTTP + SSE. No game references, so it lifts into any project. |
 | `ChronoAgentBridge.cs` | the game | Reads live save state into the wire format. |
-| `NpcAgentProbe.cs` | both | Self-booting probe. F8 cycles through six questions, Console shows the result. |
+| `NpcFreeTalk.cs` | the game | The real feature — free conversation layered on top of scripted dialogue. |
+| `NpcAgentProbe.cs` | both | Console probe. F8 cycles six questions; useful when the UI is not the thing being debugged. |
 
-The split is the point: everything game-specific is in one file. Porting this to
-another project means rewriting `ChronoAgentBridge` and nothing else.
+The split is the point: `NpcAgentClient` knows nothing about the game. Porting
+this elsewhere means rewriting the bridge and the UI, not the transport.
+
+## How free conversation fits in
+
+Scripted dialogue runs first and is **not touched**. It still fires
+`OnDialogueCompletedId`, which is what advances a quest's TalkTo objective — an
+NPC whose dialogue was handed wholesale to a model would quietly break the quest
+chain. When the written lines finish, a prompt offers to keep talking:
+
+```
+E → scripted lines (quest fires, narrative intact)
+  → "按 T 与史官·墨继续交谈"
+  → T → free conversation panel
+        suggested openers (from the persona YAML) + a text field
+        ESC closes
+```
+
+The prompt appears **only** if the service answered `/api/npc/{id}` for that NPC.
+Service down, or NPC not configured: no prompt, and the game behaves exactly as
+it always did. An entry point that does nothing when pressed is worse than none.
+
+Streaming lands naturally here — the game already reads dialogue a character at
+a time, so `onDelta` drives the text directly rather than waiting for the whole
+reply and then animating text that has already arrived.
+
+Free conversation also degrades differently. The scripted path substitutes a
+written line, which is right there and wrong here: the player just asked
+something specific, and answering with an unrelated story beat reads worse than
+the character having nothing to say. `free_form: true` switches the fallback to
+the persona's last-resort line — *「……」史官·墨垂下眼，指尖在案上停了一停，终究没有开口。*
 
 ## Verified
 
@@ -19,16 +48,17 @@ Compiled against the real project with the game's own offline check
 assemblies, runs while the editor is open):
 
 ```
-OK: 134 runtime scripts compile clean (Unity 6000.3.15f1)
+OK: 135 runtime scripts compile clean (Unity 6000.3.15f1)
 ```
 
-131 existing scripts plus these three. Two namespace assumptions were wrong on
-the first pass and the compiler caught both — `CollectionManager` lives in
-`ChronoTraveler.Collectibles` (plural, unlike its folder) and the localisation
-entry point is `LocalizationManager`, not `Localization`.
+131 existing scripts plus these four. Three namespace assumptions were wrong
+across two passes and the compiler caught all three — `CollectionManager` lives
+in `ChronoTraveler.Collectibles` (plural, unlike its folder), the localisation
+entry point is `LocalizationManager` rather than `Localization`, and `UITheme`
+sits in `ChronoTraveler.Battle` despite being used project-wide.
 
 **Not yet run in play mode.** Compiling is not the same as working, and this
-section will not claim otherwise until someone presses F8.
+section will not claim otherwise until someone has actually talked to him.
 
 ## What the bridge sends
 

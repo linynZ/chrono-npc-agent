@@ -271,6 +271,34 @@ async def test_broken_character_is_replaced(make_agent, midgame_state):
     assert "broke_character" in reply.guardrail_flags
 
 
+async def test_free_form_degrades_to_silence_not_a_story_beat(
+    make_agent, midgame_state, historian, fallback_library
+):
+    # Free conversation degrades differently on purpose. The player asked
+    # something specific; replying with an unrelated written line reads worse
+    # than the character having nothing to say.
+    agent = make_agent(BrokenProvider())
+
+    reply = await agent.reply("你觉得史书该怎么写？", midgame_state, free_form=True)
+
+    assert reply.source is ReplySource.FALLBACK_ERROR
+    assert reply.text == historian.last_resort("zh")
+    scripted = fallback_library.lines_for(historian.npc_id, "mid", "zh")
+    assert reply.text not in scripted
+
+
+async def test_scripted_dialogue_still_falls_back_to_written_lines(
+    make_agent, midgame_state, historian, fallback_library
+):
+    # The other half of the pair: without free_form, a written line is still
+    # the right substitute.
+    agent = make_agent(BrokenProvider())
+
+    reply = await agent.reply("近来如何？", midgame_state)
+
+    assert reply.text in fallback_library.lines_for(historian.npc_id, "mid", "zh")
+
+
 async def test_fallback_is_deterministic(make_agent, midgame_state):
     async def once():
         agent = make_agent(BrokenProvider())
