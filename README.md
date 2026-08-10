@@ -107,11 +107,62 @@ Requires Python 3.11+ and [uv](https://github.com/astral-sh/uv).
 uv venv
 uv pip install -e ".[dev]"
 cp .env.example .env        # then paste your DeepSeek key in
-python scripts/extract_game_data.py
-pytest
+pytest                      # no key needed — runs against the fake provider
 ```
 
 The test suite runs with **no API key and no network** — `EchoProvider` is a scriptable fake that can be told to return a line, request a tool call, time out, or fail, which makes the failure paths testable on demand instead of by luck.
+
+Talk to the NPC from a terminal:
+
+```bash
+python scripts/check_key.py            # verify key, model and tool calling
+python scripts/chat.py                 # /state /lang /prompt /quit
+python scripts/chat.py --provider ollama --state gate
+```
+
+Or run the service and open the demo page at <http://127.0.0.1:8000>:
+
+```bash
+uvicorn chrono_agent.server:app --port 8000
+```
+
+The page exposes the parts that are usually invisible: every reply is annotated
+with where it came from, how long it took, which tools ran and which guardrails
+fired, and the backend and player-progress switches are live, so the same
+question can be put to a cloud and a local model at four different points in the
+save file.
+
+`data/` ships only the era this project uses. To regenerate, or to pull the
+other four:
+
+```bash
+python scripts/extract_game_data.py --game-root path/to/ChronoTraveler
+python scripts/extract_game_data.py --game-root ... --eras all
+```
+
+### API
+
+`POST /api/chat` — the game sends its own state and history; the service keeps
+neither. A save file is already the source of truth for both, and a second copy
+living in the service is a synchronisation bug waiting for someone to reload.
+
+```json
+{
+  "message": "我接下来该做什么？",
+  "npc_id": "npc_china_historian",
+  "backend": "deepseek",
+  "state": { "memory_progress": 0.62, "fragments_collected": 2, "...": "..." },
+  "history": [{ "role": "user", "text": "..." }]
+}
+```
+
+```json
+{
+  "text": "旅者，你正行在第三程——记忆碎片已寻回二，尚余其一。",
+  "source": "model", "latency_ms": 2141,
+  "tool_calls": ["lookup_quest"], "guardrail_flags": [], "tokens": 2530
+}
+```
 
 ## Progress
 
@@ -129,8 +180,8 @@ The test suite runs with **no API key and no network** — `EchoProvider` is a s
 | Evaluation harness — paired guardrail set, latency, fallback rate | done |
 | Ollama local backend, measured | done |
 | Cloud vs. local comparison | done |
-| FastAPI service + web demo | next |
-| Streaming (to bring p95 down) | not started |
+| FastAPI service + web demo | done |
+| Streaming (to bring p95 down) | next |
 | Unity client | not started |
 
 ## Results
