@@ -32,7 +32,8 @@ namespace ChronoTraveler.Agent
     {
         public const KeyCode OpenKey = KeyCode.T;
         private const int SortOrder = 260;      // just above UILayerOrder.Dialogue (250)
-        private const float HintSeconds = 8f;
+        private const float HintSeconds = 10f;    // how long the prompt is shown
+        private const float OfferSeconds = 45f;   // how long T still works after it fades
 
         public static NpcFreeTalk Instance { get; private set; }
 
@@ -43,7 +44,7 @@ namespace ChronoTraveler.Agent
         private string[] openers = new string[0];
         private bool offerAvailable;    // service answered for this NPC
         private bool open, asking;
-        private float hintUntil;
+        private float hintUntil, offerUntil;
 
         private Canvas canvas;
         private GameObject panel, hint;
@@ -69,18 +70,21 @@ namespace ChronoTraveler.Agent
             hint.SetActive(false);
         }
 
+        // Only OnDialogueCompletedId, and the order is the reason. DialogueManager
+        // raises OnDialogueEnded *first* and OnDialogueCompletedId after it, so
+        // hanging the prompt off Ended ran the check before the NPC id had even
+        // arrived — the prompt could never appear. Compiling proved nothing here;
+        // it took running the game.
         private void OnEnable()
         {
             if (DialogueManager.Instance == null) return;
             DialogueManager.Instance.OnDialogueCompletedId += OnSpokeTo;
-            DialogueManager.Instance.OnDialogueEnded += OnDialogueClosed;
         }
 
         private void OnDisable()
         {
             if (DialogueManager.Instance == null) return;
             DialogueManager.Instance.OnDialogueCompletedId -= OnSpokeTo;
-            DialogueManager.Instance.OnDialogueEnded -= OnDialogueClosed;
         }
 
         private void Start()
@@ -98,13 +102,27 @@ namespace ChronoTraveler.Agent
 
         // --- entry point ------------------------------------------------
 
+        /// <summary>
+        /// Fires after the written dialogue has closed. Switching NPC resets the
+        /// conversation; talking to the same one again reuses what we already
+        /// know and offers straight away — an earlier version bailed out on a
+        /// repeat visit and silently withheld the prompt for the rest of the run.
+        /// </summary>
         private void OnSpokeTo(string id)
         {
-            if (string.IsNullOrEmpty(id) || id == npcId) return;
-            npcId = id;
-            offerAvailable = false;
-            history.Clear();
-            StartCoroutine(FetchInfo(id));
+            if (string.IsNullOrEmpty(id)) return;
+
+            if (id != npcId)
+            {
+                npcId = id;
+                offerAvailable = false;
+                speakerName = null;
+                openers = new string[0];
+                history.Clear();
+            }
+
+            if (offerAvailable) ShowHint();
+            else StartCoroutine(FetchInfo(id));
         }
 
         private IEnumerator FetchInfo(string id)
@@ -118,18 +136,23 @@ namespace ChronoTraveler.Agent
                     speakerName = info.name;
                     openers = info.openers ?? new string[0];
                     offerAvailable = true;
+                    // Show it here rather than on a dialogue event: the lookup is
+                    // a round trip, and every dialogue event has long since fired
+                    // by the time it lands.
+                    ShowHint();
                 },
                 _ => { /* service down or NPC not configured — stay silent */ });
         }
 
-        private void OnDialogueClosed()
+        private void ShowHint()
         {
-            if (!offerAvailable || open) return;
+            if (open || !offerAvailable || string.IsNullOrEmpty(speakerName)) return;
             hintText.text = LocalizationManager.Current == Language.Chinese
                 ? $"按 <color=#F0CE77>T</color> 与{speakerName}继续交谈"
                 : $"Press <color=#F0CE77>T</color> to keep talking with {speakerName}";
             hint.SetActive(true);
             hintUntil = Time.unscaledTime + HintSeconds;
+            offerUntil = Time.unscaledTime + OfferSeconds;
         }
 
         private void Update()
@@ -138,7 +161,8 @@ namespace ChronoTraveler.Agent
 
             if (!open)
             {
-                if (offerAvailable && hint.activeSelf && Input.GetKeyDown(OpenKey)) SetOpen(true);
+                bool offered = offerAvailable && Time.unscaledTime < offerUntil;
+                if (offered && Input.GetKeyDown(OpenKey)) SetOpen(true);
                 return;
             }
 
