@@ -71,9 +71,27 @@ async def test_system_prompt_carries_persona_and_state(make_agent, midgame_state
     prompt = provider.last_system_prompt
     assert "史官·墨" in prompt
     # State is injected as perception, not as numbers.
-    assert "已寻回 2 片记忆碎片" in prompt
+    assert "记忆碎片已寻回一些" in prompt
+    assert "长河之水已清了大半" in prompt
     assert "0.62" not in prompt
     assert "memory_progress" not in prompt
+
+
+async def test_prompt_withholds_what_the_tools_are_for(make_agent, midgame_state):
+    # The prompt must not pre-answer `lookup_quest`. When it did, the tool
+    # earned the model nothing and the local 7B stopped calling it — answering
+    # correctly from the prompt, which is what made the redundancy hard to spot.
+    provider = EchoProvider(replies=["……"])
+    agent = make_agent(provider)
+
+    await agent.reply("我还差几片？", midgame_state)
+
+    prompt = provider.last_system_prompt
+    assert "2/3" not in prompt
+    assert "尚缺 1 片" not in prompt
+    # Quest-log wording is not something a historian can recite.
+    assert midgame_state.quest.stage_description not in prompt
+    assert midgame_state.quest.objective_label not in prompt
 
 
 async def test_fresh_player_is_told_they_are_a_stranger(make_agent, fresh_state):
