@@ -88,6 +88,7 @@ The quest parser reads Unity's YAML `.asset` format directly, including its `\uX
 ```
 characters/          NPC persona files — one YAML per NPC, no code changes to add one
 data/                extracted ground truth (generated; see script above)
+unity/               C# client, state bridge and in-game probe (see unity/README.md)
 scripts/             extraction and operational scripts
 src/chrono_agent/
   models.py          PlayerState (mirrors the game's SaveData), messages, replies
@@ -182,7 +183,7 @@ living in the service is a synchronisation bug waiting for someone to reload.
 | Cloud vs. local comparison | done |
 | FastAPI service + web demo | done |
 | Streaming with mid-stream guardrails | done |
-| Unity client | next |
+| Unity client | compiles against the real project; play-mode run pending |
 
 ## Results
 
