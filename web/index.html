@@ -164,6 +164,11 @@
     <aside class="panel side">
       <div class="side-scroll">
         <section>
+          <h2 id="h-npc"></h2>
+          <p class="hint" id="hint-npc"></p>
+          <div class="opts" id="npcs"></div>
+        </section>
+        <section>
           <h2 id="h-backend"></h2>
           <p class="hint" id="hint-backend"></p>
           <div class="opts" id="backends"></div>
@@ -197,6 +202,10 @@ const UI = {
     subtitle:"ChronoTraveler 运行时 NPC Agent",
     legend:"每条回复下方的标签是平时看不见的东西：<b>来源</b> · <b>延迟</b> · <b>调用了哪个工具</b> · <b>哪条护栏响了</b>。回退到预写台词的回复带红框。",
     placeholder:"与史官·墨说话……", send:"递话",
+    placeholderFor:n => `与${n}说话……`,
+    hNpc:"角色", hintNpc:"换一个角色只是换一份 YAML 配置——代码与护栏同一套。",
+    askKind:"提问", idKind:"身份",
+    switchedNpc:n => `现在与「${n}」交谈，对话已重开。`,
     hBackend:"后端", hintBackend:"同一套人设与护栏，换一个模型。",
     hState:"玩家进度", hintState:"NPC 只看得到「感知」，看不到存档数字。换一档，同一个问题他会答得不一样。",
     hLang:"语言",
@@ -217,6 +226,10 @@ const UI = {
     subtitle:"Runtime NPC agent for ChronoTraveler",
     legend:"The tags under each reply show what is normally invisible: <b>source</b> · <b>latency</b> · <b>tools called</b> · <b>guardrails fired</b>. A reply that fell back to written dialogue is outlined in red.",
     placeholder:"Say something to Historian Mo…", send:"Speak",
+    placeholderFor:n => `Say something to ${n}…`,
+    hNpc:"Character", hintNpc:"Each character is one YAML file — same code, same guardrails.",
+    askKind:"Ask", idKind:"Identity",
+    switchedNpc:n => `Now talking to ${n}. Conversation reset.`,
     hBackend:"Backend", hintBackend:"Same persona, same guardrails, different model.",
     hState:"Player progress", hintState:"The NPC sees perception, never save-file numbers. Switch a bucket and the same question gets a different answer.",
     hLang:"Language",
@@ -272,8 +285,41 @@ const PROBES = {
   ]
 };
 
+/* Scene-setting lines are cosmetic, so an NPC added later just gets the
+   generic opening until someone writes one — nothing breaks. */
+const OPENINGS = {
+  zh:{
+    npc_china_historian:"史官·墨伏案而坐，笔搁在砚边。",
+    npc_china_artisan:"匠人·公输蹲在木料旁，拇指摩挲着一枚榫头。",
+    npc_china_guardian:"守关者立在门侧，枪杆拄地，像一段没写完的碑文。"
+  },
+  en:{
+    npc_china_historian:"Historian Mo sits at his desk, the brush resting on the inkstone.",
+    npc_china_artisan:"Artisan Gongshu crouches by the timber, thumbing a tenon joint.",
+    npc_china_guardian:"The Gatekeeper stands by the gate, spear grounded, like an unfinished inscription."
+  }
+};
+
+const DEFAULT_NPC = "npc_china_historian";
 let backend = "deepseek", stateKey = "mid", lang = "zh", backends = ["deepseek","ollama","echo"];
+let npcId = DEFAULT_NPC, npcs = [DEFAULT_NPC];
+const npcInfo = {};   // `${lang}:${id}` → /api/npc payload (name, openers, …)
 let history = [], busy = false;
+
+const infoFor = (id = npcId) => npcInfo[lang + ":" + id];
+const npcNameOf = (id = npcId) => (infoFor(id) || {}).name || id.replace(/^npc_/, "");
+const openingFor = () => OPENINGS[lang][npcId] || (infoFor() ? "…" : UI[lang].opening);
+
+async function loadNpcInfo(){
+  await Promise.all(npcs.map(async id => {
+    const key = lang + ":" + id;
+    if (npcInfo[key]) return;
+    try{
+      const res = await fetch(`/api/npc/${id}?language=${lang}`);
+      if (res.ok) npcInfo[key] = await res.json();
+    }catch{ /* chip falls back to the raw id */ }
+  }));
+}
 
 const $ = id => document.getElementById(id);
 const t = () => UI[lang];
@@ -311,31 +357,48 @@ function chips(host, items, current, onPick){
 
 function renderChrome(){
   const L = t();
+  const name = (infoFor() || {}).name || L.npc;
   document.documentElement.lang = L.htmlLang;
-  $("npcName").textContent = L.npc;
+  document.title = name + " — ChronoTraveler NPC Agent";
+  $("npcName").textContent = name;
   $("subtitle").textContent = L.subtitle;
   $("legend").innerHTML = L.legend;
-  $("input").placeholder = L.placeholder;
+  $("input").placeholder = infoFor() ? L.placeholderFor(name) : L.placeholder;
   $("send").textContent = L.send;
+  $("h-npc").textContent     = L.hNpc;       $("hint-npc").textContent     = L.hintNpc;
   $("h-backend").textContent = L.hBackend;   $("hint-backend").textContent = L.hintBackend;
   $("h-state").textContent   = L.hState;     $("hint-state").textContent   = L.hintState;
   $("h-lang").textContent    = L.hLang;
   $("h-probe").textContent   = L.hProbe;     $("hint-probe").textContent   = L.hintProbe;
 
+  chips($("npcs"), npcs.map(id => [id, npcNameOf(id)]), npcId, k => {
+    npcId = k; renderChrome(); reset();
+    note(t().switchedNpc(npcNameOf())); note(openingFor());
+  });
   chips($("backends"), backends.map(b => [b, b]), backend, k => {
     backend = k; renderChrome(); reset(); note(t().switchedBackend(k));
   });
   chips($("states"), Object.keys(STATES).map(k => [k, L.states[k]]), stateKey, k => {
     stateKey = k; renderChrome(); reset(); note(t().switchedState(t().states[k]));
   });
-  chips($("langs"), [["zh","中文"],["en","English"]], lang, k => {
+  chips($("langs"), [["zh","中文"],["en","English"]], lang, async k => {
     if (k === lang) return;
-    lang = k; renderChrome(); reset(); note(t().opening);
+    lang = k; await loadNpcInfo(); renderChrome(); reset(); note(openingFor());
   });
+
+  /* The historian keeps his hand-picked probe set (it shows a tool call and his
+     backstory); every other character gets the openers its own YAML declares.
+     Guardrail probes are universal on purpose — same net, different voices. */
+  const identity = { kind:L.idKind, text: lang === "zh" ? "你叫什么名字？" : "What is your name?" };
+  const openers = ((infoFor() || {}).openers || []).map(q => ({ kind:L.askKind, text:q }));
+  const curated = npcId === DEFAULT_NPC ? PROBES[lang].filter(p => !p.guard) : openers;
+  const guards  = PROBES[lang].filter(p => p.guard);
+  const probes  = [identity, ...curated, ...guards]
+    .filter((p, i, a) => a.findIndex(q => q.text === p.text) === i);
 
   const host = $("probes");
   host.innerHTML = "";
-  PROBES[lang].forEach(p => {
+  probes.forEach(p => {
     const b = document.createElement("button");
     b.type = "button";
     b.className = "probe" + (p.guard ? " guard" : "");
@@ -394,7 +457,7 @@ async function send(text){
   const L = t();
 
   bubble(L.you, text, "you");
-  const pending = bubble(L.npc, "", "npc");
+  const pending = bubble(npcNameOf(), "", "npc");
   const body = pending.querySelector(".bubble");
   body.classList.add("cursor");
 
@@ -404,7 +467,7 @@ async function send(text){
     const res = await fetch("/api/chat/stream", {
       method:"POST", headers:{ "Content-Type":"application/json" },
       body: JSON.stringify({
-        message:text, npc_id:"npc_china_historian",
+        message:text, npc_id:npcId,
         state:{ ...STATES[stateKey], language:lang },
         history, language:lang, backend
       })
@@ -472,13 +535,26 @@ $("form").onsubmit = e => {
 };
 
 (async function boot(){
+  // ?npc=…&backend=…&state=…&lang=… — lets a recording (or a shared link)
+  // open straight onto a chosen character instead of clicking through.
+  const qs = new URLSearchParams(location.search);
+  if (STATES[qs.get("state")]) stateKey = qs.get("state");
+  if (["zh","en"].includes(qs.get("lang"))) lang = qs.get("lang");
+
   try{
     const h = await (await fetch("/api/health")).json();
     backend = h.default_backend || backend;
     backends = h.backends || backends;
+    if (backends.includes(qs.get("backend"))) backend = qs.get("backend");
+    if (h.npcs && h.npcs.length){
+      // The flagship character leads; the rest keep the service's order.
+      npcs = [...h.npcs.filter(n => n === DEFAULT_NPC), ...h.npcs.filter(n => n !== DEFAULT_NPC)];
+    }
+    if (npcs.includes(qs.get("npc"))) npcId = qs.get("npc");
+    await loadNpcInfo();
     renderChrome();
     $("status").innerHTML = t().ready(backend);
-    note(t().opening);
+    note(openingFor());
   }catch(e){
     renderChrome();
     $("status").innerHTML = `<span class="err">${t().noService(e.message)}</span>`;
