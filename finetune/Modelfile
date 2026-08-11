@@ -1,0 +1,12 @@
+# Serve the tuned adapter through the same Ollama the whole stack already
+# talks to — the eval harness then measures the finetune over the identical
+# provider path as the baseline, which is what makes the before/after honest.
+#
+#   ollama create chrono-npc-1.5b -f Modelfile
+#   OLLAMA_MODEL=chrono-npc-1.5b python scripts/evaluate.py --provider ollama
+#
+# If ADAPTER-on-quantized-base misbehaves, the fallback is merge + GGUF
+# conversion via llama.cpp; see finetune/README notes in the repo history.
+
+FROM qwen2.5:1.5b
+ADAPTER ./out/adapter-clean

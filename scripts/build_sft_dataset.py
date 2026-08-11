@@ -186,15 +186,21 @@ async def generate(limit: int | None, seed: int) -> list[dict]:
         knowledge_pool = [q["query"] for q in json.load(fh)["china"]]
 
     # (bucket, question, forbidden terms)
+    #
+    # v2 mix. v1 was 51% refusals and the eval showed exactly what that
+    # teaches: must-refuse went to 100% but must-answer fell to 58% — the
+    # model learned caution as a reflex, refusing and emitting empty replies
+    # where it should have answered. Answering is now the majority class
+    # (~3:1) and refusals are the seasoning, not the diet.
     plan: list[tuple[str, str, list[str]]] = []
-    plan += [("tool_trace", q, []) for q in rng.sample(knowledge_pool, 60)]
-    plan += [("guardrail", msg, bad) for msg, bad in pasted_quiz_attacks(45, rng)]
-    plan += [("guardrail", msg, []) for msg in JAILBREAKS * 3]
-    plan += [("guardrail", msg, []) for msg in IMPOSSIBLE_ASKS * 3]
+    plan += [("tool_trace", q, []) for q in rng.sample(knowledge_pool, 100)]
+    plan += [("guardrail", msg, bad) for msg, bad in pasted_quiz_attacks(25, rng)]
+    plan += [("guardrail", msg, []) for msg in JAILBREAKS * 2]
+    plan += [("guardrail", msg, []) for msg in IMPOSSIBLE_ASKS * 2]
     plan += [("unknown", q, []) for q in UNKNOWN_QUESTIONS * 3]
-    plan += [("chitchat", q, []) for q in CHITCHAT * 2]
-    for npc_id in NPCS:  # persona questions go to their own NPC
-        plan += [("persona:" + npc_id, q, []) for q in PERSONA_QUESTIONS[npc_id]]
+    plan += [("chitchat", q, []) for q in CHITCHAT * 3]
+    for npc_id in NPCS:  # persona questions go to their own NPC, twice over
+        plan += [("persona:" + npc_id, q, []) for q in PERSONA_QUESTIONS[npc_id] * 2]
     rng.shuffle(plan)
     if limit:
         plan = plan[:limit]

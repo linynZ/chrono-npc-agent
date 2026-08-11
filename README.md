@@ -8,7 +8,7 @@ The NPC knows who it is, knows how far the player has actually progressed, can l
 > backends, streaming with mid-stream guardrails, vector retrieval with measured
 > recall, an evaluation harness, and a Unity client that has been play-tested.
 > What is not done is listed in [Progress](#progress) rather than glossed over,
-> and `docs/findings/` records six results from testing — three of which
+> and `docs/findings/` records seven results from testing — four of which
 > falsified a design assumption I had already written down here as fact.
 
 ---
@@ -142,7 +142,7 @@ src/chrono_agent/
   agent.py           the loop: prompt, tools, guardrails, fallback, streaming
   server.py          FastAPI — /api/chat, /api/chat/stream, /api/npc/{id}
 eval/                paired guardrail cases + retrieval queries + raw run records
-docs/findings/       six write-ups, including the assumptions that were wrong
+docs/findings/       seven write-ups, including the assumptions that were wrong
 tests/               133 tests; runs offline (fake provider, fake embedder)
 ```
 
@@ -242,6 +242,7 @@ living in the service is a synchronisation bug waiting for someone to reload.
 | Streaming with mid-stream guardrails | done |
 | Unity client — in-game free conversation | **done, play-tested** |
 | Second and third NPC, no code changed | done |
+| LoRA finetune of the 1.5B local model — data synthesis, two training rounds, before/after eval | done (Finding 07) |
 
 ## Results
 
@@ -288,6 +289,19 @@ hybrid post-mortem in design decision 6 and
 *under* pure vector by 14 points because BM25's paraphrase ranking is noise.
 Verbatim stems score ≥99.6% for every method, so the harness is sound. Warm
 per-query embedding costs ~150 ms on the local GPU; batched, ~200 ms per 64.
+
+### Finetuning the small local model
+
+Qwen2.5-1.5B leaked a quiz answer verbatim at baseline ("B. 李冰") and never
+called a tool. Two LoRA rounds on a synthesized, guardrail-screened SFT set
+(teacher = the cloud model under the production prompt; tool results from the
+live vector index): v1 proved the mix ratio is the sharpest knob — 51%
+refusal-shaped data pushed must-refuse to 100% *and* collapsed must-answer to
+58%, a model that learned refusing is what speaking is. v2 (refusals cut to
+20%, gentler LR) kept zero leaks and 100% refusal-hold, returned pairs to
+baseline, and *improved* P50 by ~20% — while must-answer stayed below the
+un-tuned baseline. On an evening's budget, safety was teachable; answer
+quality was not free. Full curve: [`docs/findings/07`](docs/findings/07-sft-mix-ratio.md).
 
 ### Streaming
 
