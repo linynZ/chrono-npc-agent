@@ -78,7 +78,10 @@ def load_rows(tokenizer, path: Path) -> Dataset:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--smoke", action="store_true")
-    parser.add_argument("--epochs", type=float, default=3.0)
+    # v1 ran 3 epochs at 1e-4 on 172 samples: loss 0.5, token-accuracy 0.90,
+    # and an eval that said "memorized the refusals, forgot how to answer".
+    parser.add_argument("--epochs", type=float, default=2.0)
+    parser.add_argument("--lr", type=float, default=5e-5)
     parser.add_argument("--out", default=str(HERE / "out" / "lora-qwen2.5-1.5b"))
     args = parser.parse_args()
 
@@ -111,9 +114,9 @@ def main() -> int:
         per_device_train_batch_size=1,
         gradient_accumulation_steps=8,
         gradient_checkpointing=True,
-        learning_rate=1e-4,
+        learning_rate=args.lr,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.05,
+        warmup_steps=5,
         logging_steps=5,
         save_strategy="epoch",
         bf16=True,
