@@ -21,3 +21,7 @@ data/index/
 # OS
 Thumbs.db
 .DS_Store
+
+# Finetune workspace — env and checkpoints stay local
+finetune/.venv/
+finetune/out/
