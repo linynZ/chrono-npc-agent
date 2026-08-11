@@ -17,6 +17,7 @@ from .providers import DeepSeekProvider, EchoProvider, LLMProvider, OllamaProvid
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_ROOT / "data"
 CHARACTERS_DIR = PROJECT_ROOT / "characters"
+LORE_INDEX_DIR = DATA_DIR / "index"
 
 _loaded = False
 
@@ -42,6 +43,8 @@ class Settings:
     ollama_model: str = "qwen2.5:7b"
     ollama_base_url: str = "http://localhost:11434/v1"
 
+    embed_model: str = "bge-m3"
+
     @classmethod
     def from_env(cls) -> "Settings":
         load_env()
@@ -60,6 +63,7 @@ class Settings:
             ).strip(),
             ollama_model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b").strip(),
             ollama_base_url=ollama_base,
+            embed_model=os.getenv("EMBED_MODEL", "bge-m3").strip(),
         )
 
 

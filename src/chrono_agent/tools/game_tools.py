@@ -103,12 +103,12 @@ def build_lore_index(quiz_by_region: dict[str, list[dict]], region: str) -> list
 
 
 def _score(entry: dict, terms: list[str], language: str) -> int:
-    """Crude overlap scoring. Good enough, and it has no moving parts.
+    """Crude overlap scoring — now the bottom rung of the retrieval ladder.
 
-    A vector store would score better on paraphrase, but it would also add an
-    embedding dependency and a build step to a lookup over a few hundred short
-    strings. If recall turns out to be the bottleneck, that is the moment to
-    upgrade — measured, not assumed.
+    This started as the whole search. Measuring it on paraphrased queries is
+    what justified the hybrid retriever in `retrieval/` (the numbers live in
+    `eval/results/`); it stays because a fresh clone with no index built must
+    still answer, and zero-dependency substring matching can never be down.
     """
     haystack = " ".join(
         [
@@ -121,7 +121,14 @@ def _score(entry: dict, terms: list[str], language: str) -> int:
 
 
 def _lookup_lore(context: ToolContext, topic: str, limit: int = 3) -> dict[str, Any]:
-    """Search the era's historical record for what is known about a topic."""
+    """Search the era's historical record for what is known about a topic.
+
+    Retrieval quality is a ladder, not a switch: hybrid (BM25 + vectors) when
+    the index is built, BM25 alone when the embedding server is down, and the
+    original substring scan when the retrieval stack was never set up. Rung
+    changes show up in the result's `retrieval` field so a degraded lookup is
+    visible in diagnostics instead of silently looking like a bad model day.
+    """
     zh = context.language == "zh"
     language = "zh" if zh else "en"
 
@@ -129,23 +136,38 @@ def _lookup_lore(context: ToolContext, topic: str, limit: int = 3) -> dict[str, 
     if not topic:
         return {"error": "topic is required"}
 
-    # CJK has no spaces, so fall back to per-character terms when whitespace
-    # splitting yields a single blob.
-    terms = [t for t in topic.split() if t]
-    if len(terms) <= 1 and any("一" <= ch <= "鿿" for ch in topic):
-        terms = [ch for ch in topic if "一" <= ch <= "鿿"]
+    hits: list[dict[str, Any]] = []
+    retrieval = "substring"
+    if context.retriever is not None:
+        indices, retrieval = context.retriever.search(topic, language, k=max(1, limit))
+        hits = [
+            {
+                "category": context.lore[i].get("category", ""),
+                "fact": context.lore[i].get(language, ""),
+            }
+            for i in indices
+            if 0 <= i < len(context.lore)
+        ]
 
-    scored = [
-        (score, entry)
-        for entry in context.lore
-        if (score := _score(entry, terms, language)) > 0
-    ]
-    scored.sort(key=lambda pair: pair[0], reverse=True)
+    if not hits:
+        # CJK has no spaces, so fall back to per-character terms when whitespace
+        # splitting yields a single blob.
+        terms = [t for t in topic.split() if t]
+        if len(terms) <= 1 and any("一" <= ch <= "鿿" for ch in topic):
+            terms = [ch for ch in topic if "一" <= ch <= "鿿"]
 
-    hits = [
-        {"category": entry.get("category", ""), "fact": entry.get(language, "")}
-        for _, entry in scored[: max(1, limit)]
-    ]
+        scored = [
+            (score, entry)
+            for entry in context.lore
+            if (score := _score(entry, terms, language)) > 0
+        ]
+        scored.sort(key=lambda pair: pair[0], reverse=True)
+
+        hits = [
+            {"category": entry.get("category", ""), "fact": entry.get(language, "")}
+            for _, entry in scored[: max(1, limit)]
+        ]
+        retrieval = "substring"
 
     if not hits:
         return {
@@ -156,7 +178,7 @@ def _lookup_lore(context: ToolContext, topic: str, limit: int = 3) -> dict[str, 
                 else "The old slips do not record this."
             ),
         }
-    return {"found": True, "records": hits}
+    return {"found": True, "retrieval": retrieval, "records": hits}
 
 
 LOOKUP_LORE = Tool(
