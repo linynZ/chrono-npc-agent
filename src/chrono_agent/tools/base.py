@@ -31,6 +31,9 @@ class ToolContext:
     quests: dict[str, Any] = field(default_factory=dict)
     lore: list[dict[str, Any]] = field(default_factory=list)
     npc_id: str = ""
+    # Hybrid retriever over `lore`, or None when the vector index has not been
+    # built — tools that search must keep working either way.
+    retriever: Any = None
 
 
 ToolFunc = Callable[..., Any]

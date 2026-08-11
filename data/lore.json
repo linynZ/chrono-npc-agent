@@ -1,0 +1,4512 @@
+{
+ "china": [
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which dynasty built the best-preserved sections of the Great Wall seen today?",
+    "zh": "长城保存最完好的段落主要由哪个朝代修建？"
+   },
+   "zh": "今天所见保存最完好的长城多为明代(1368-1644)修筑的砖石长城。",
+   "en": "The best-preserved brick-and-stone sections of the Great Wall seen today were mostly built by the Ming dynasty (1368-1644)."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "In which dynasty was Beijing's Forbidden City first built?",
+    "zh": "北京故宫(紫禁城)始建于哪个朝代？"
+   },
+   "zh": "紫禁城由明成祖永乐年间(15世纪初)兴建，是明清两代皇宫。",
+   "en": "The Forbidden City was built in the early 15th century under the Yongle Emperor of the Ming dynasty, serving as the palace of the Ming and Qing."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "In ancient Chinese timber architecture, what is the bracket set between column and beam that bears load and adds flexibility?",
+    "zh": "中国古代木构建筑中，在柱与梁之间出挑承重、富有弹性的构件总称是？"
+   },
+   "zh": "斗拱由斗、拱层叠而成，既承重又抗震，是中国木构建筑的标志。",
+   "en": "Dougong, formed by interlocking blocks and arms, both bears weight and resists earthquakes, a hallmark of Chinese timber architecture."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What is the large army of clay figures unearthed beside the tomb of Qin Shi Huang called?",
+    "zh": "秦始皇陵旁出土、列阵守陵的大型陶塑军队称为？"
+   },
+   "zh": "秦始皇陵兵马俑规模宏大，被誉为“世界第八大奇迹”。",
+   "en": "The Terracotta Army guards the tomb of the First Emperor and is hailed as the eighth wonder of the world."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which irrigation project, built under Li Bing in the Warring States period, still waters the Chengdu Plain today?",
+    "zh": "战国时李冰主持修建、至今灌溉成都平原的水利工程是？"
+   },
+   "zh": "都江堰由李冰父子主持兴建，无坝引水，至今仍发挥灌溉作用。",
+   "en": "Dujiangyan, built by Li Bing and his son, diverts water without a dam and still irrigates farmland today."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What great canal, dug in the Sui dynasty, linked north and south China across several river systems?",
+    "zh": "隋朝开凿、贯通南北、沟通多条水系的大型运河是？"
+   },
+   "zh": "隋朝开凿的大运河沟通海河、黄河、淮河、长江、钱塘江五大水系。",
+   "en": "The Sui Grand Canal connected five major river systems: the Hai, Yellow, Huai, Yangtze and Qiantang."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which is China's oldest open-spandrel stone arch bridge, designed by Li Chun in the Sui dynasty?",
+    "zh": "中国现存最古老的敞肩(空腹)石拱桥、隋代李春设计的是？"
+   },
+   "zh": "赵州桥(安济桥)为隋代李春所建，是世界上现存最早的敞肩石拱桥。",
+   "en": "The Zhaozhou (Anji) Bridge, built by Li Chun in the Sui dynasty, is the world's oldest surviving open-spandrel stone arch bridge."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What is the tallest and oldest fully timber pavilion-style Buddhist pagoda still standing (Liao dynasty)?",
+    "zh": "现存最高、最古老的全木结构楼阁式佛塔(辽代)是？"
+   },
+   "zh": "山西应县木塔(佛宫寺释迦塔)建于辽代，是现存最高的木结构古塔。",
+   "en": "The Yingxian Wooden Pagoda (Sakyamuni Pagoda of Fogong Temple), built in the Liao dynasty, is the tallest surviving timber pagoda."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "After Buddhism arrived, which Chinese structure, evolved from the Indian stupa, was used to enshrine relics?",
+    "zh": "佛教传入后，由印度窣堵坡演变、用于供奉舍利的中国建筑是？"
+   },
+   "zh": "佛塔源自印度的窣堵坡，传入中国后与楼阁结合，形成多层塔式建筑。",
+   "en": "The pagoda evolved from the Indian stupa and merged with Chinese tower forms into the multi-story pagoda."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What was the orderly, grid-like city layout of Tang-dynasty Chang'an called?",
+    "zh": "唐代长安城整齐划一、棋盘状的城市布局形式称为？"
+   },
+   "zh": "唐长安实行里坊制，街道纵横如棋盘，坊门定时启闭。",
+   "en": "Tang Chang'an used the ward (lifang) system, with streets in a grid and ward gates opened and closed on schedule."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Suzhou classical gardens often draw outside scenery into the garden view; what is this technique called?",
+    "zh": "苏州古典园林常将园外景物纳入园中观赏，这种造园手法称为？"
+   },
+   "zh": "借景把园外远山近水“借”入园内视野，是中国园林的重要手法。",
+   "en": "Borrowed scenery (jiejing) brings distant hills and water into the garden's view, a key Chinese garden technique."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which roof form ranked highest for ancient Chinese palace halls?",
+    "zh": "中国古代殿宇屋顶中等级最高的形式是？"
+   },
+   "zh": "重檐庑殿顶等级最高，多用于太和殿等最重要的宫殿。",
+   "en": "The double-eaved hip (wudian) roof ranked highest and was used on the most important halls, such as the Hall of Supreme Harmony."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Qin Shi Huang joined older walls into the Great Wall mainly to defend against which northern nomadic people?",
+    "zh": "秦始皇连接各国旧墙修筑长城，主要为防御北方哪个游牧族群？"
+   },
+   "zh": "秦长城主要用于抵御北方匈奴的南下侵扰。",
+   "en": "The Qin wall was built mainly to fend off incursions by the northern Xiongnu."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "At Beijing's Temple of Heaven, which round main hall did the emperor use to pray for good harvests?",
+    "zh": "北京天坛中皇帝祈祷五谷丰登的圆形主体建筑是？"
+   },
+   "zh": "祈年殿为三重檐圆形大殿，是天坛祈谷的主体建筑。",
+   "en": "The Hall of Prayer for Good Harvests is a triple-eaved round hall, the centerpiece for harvest prayers at the Temple of Heaven."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "China's most complete ancient county-town wall (a World Heritage Site) is in which old city?",
+    "zh": "中国现存最完整的古代县城城墙(世界遗产)位于哪座古城？"
+   },
+   "zh": "山西平遥古城保存了完整的明代县城城墙与街巷格局。",
+   "en": "The old city of Pingyao in Shanxi preserves a complete Ming-dynasty county-town wall and street plan."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "In Chinese timber-frame buildings the saying goes 'the wall falls but the house stands', because the load is mainly borne by what?",
+    "zh": "中国古代木构架建筑“墙倒屋不塌”，因为承重的主要是？"
+   },
+   "zh": "木构建筑由立柱和梁枋承重，墙体只起围护作用，故“墙倒屋不塌”。",
+   "en": "Timber-frame buildings are carried by columns and beams; walls are only screens, so 'the wall falls but the house stands'."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What is the form of architecture carved into cliffs and filled with Buddhist statues and murals?",
+    "zh": "在山崖上开凿、绘塑佛教造像与壁画的建筑形式称为？"
+   },
+   "zh": "石窟依山开凿，如莫高窟、云冈、龙门，是佛教艺术宝库。",
+   "en": "Grottoes are carved into cliffs, such as Mogao, Yungang and Longmen, and are treasuries of Buddhist art."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The famous Mogao Caves (Caves of a Thousand Buddhas) are in which present-day city?",
+    "zh": "著名的莫高窟(千佛洞)位于今天哪座城市？"
+   },
+   "zh": "莫高窟位于甘肃敦煌，以精美的壁画和彩塑闻名世界。",
+   "en": "The Mogao Caves are in Dunhuang, Gansu, famed for their exquisite murals and painted sculptures."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What are the stone figures and animals lining the spirit road of an imperial tomb collectively called?",
+    "zh": "帝王陵墓神道两侧排列的石人石兽统称为？"
+   },
+   "zh": "石像生是陵墓神道两侧的石刻人兽，象征仪卫与守护。",
+   "en": "The stone statuary (shixiangsheng) lining a tomb's spirit road symbolizes guards and protectors."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What large circular rammed-earth communal building did the Hakka of Fujian live in?",
+    "zh": "福建客家人聚族而居的大型环形夯土建筑是？"
+   },
+   "zh": "福建土楼以夯土筑成环形或方形大型聚居建筑，聚族而居、易守难攻。",
+   "en": "Fujian tulou are large round or square rammed-earth communal dwellings, clan housing that was easy to defend."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Besides papermaking, printing and gunpowder, what is the fourth of China's Four Great Inventions?",
+    "zh": "中国古代“四大发明”中除造纸术、印刷术、火药外，还有？"
+   },
+   "zh": "四大发明指造纸术、印刷术、火药和指南针。",
+   "en": "The Four Great Inventions are papermaking, printing, gunpowder and the compass."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Who improved papermaking in the Eastern Han, making paper widespread?",
+    "zh": "东汉时改进造纸术、使纸张得以普及的是？"
+   },
+   "zh": "东汉蔡伦改进造纸工艺，所制“蔡侯纸”价廉易得，推动了纸的普及。",
+   "en": "Cai Lun of the Eastern Han improved papermaking; his cheap, accessible paper spread the use of paper."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "In which dynasty did 'jiaozi', the world's earliest paper money, appear?",
+    "zh": "世界上最早的纸币“交子”出现于哪个朝代？"
+   },
+   "zh": "北宋时四川地区出现“交子”，是世界上最早的纸币。",
+   "en": "'Jiaozi', the world's earliest paper money, appeared in Sichuan during the Northern Song."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which traditional Chinese drink, said to be discovered by Shennong, later spread worldwide?",
+    "zh": "相传由神农发现、后风行世界的中国传统饮品是？"
+   },
+   "zh": "茶相传为神农所发现，后经丝路与海路传播全球。",
+   "en": "Tea is said to have been discovered by Shennong and later spread across the world via the Silk Road and sea routes."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Chinese craft, fired from kaolin clay, is referred to by the English word 'china'?",
+    "zh": "以高岭土烧制、英文以“china”指代的中国工艺是？"
+   },
+   "zh": "中国瓷器名扬世界，英文小写“china”即指瓷器。",
+   "en": "Chinese porcelain is world-famous; the lowercase English word 'china' means porcelain."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What reusable typesetting printing technique did Bi Sheng invent in the Northern Song?",
+    "zh": "北宋毕昇发明的、可重复排版的印刷技术是？"
+   },
+   "zh": "北宋毕昇发明胶泥活字印刷，字模可反复使用，提高了印刷效率。",
+   "en": "Bi Sheng invented clay movable-type printing in the Northern Song; the type could be reused, improving efficiency."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which is China's grandest traditional festival, on the first day of the lunar new year?",
+    "zh": "农历正月初一、中国最隆重的传统节日是？"
+   },
+   "zh": "春节是农历新年之始，是中国最重要的传统节日。",
+   "en": "The Spring Festival marks the start of the lunar new year and is China's most important traditional festival."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Dragon Boat Festival, with its boat races and zongzi, traditionally commemorates which poet who drowned himself?",
+    "zh": "端午节划龙舟、吃粽子，传统上纪念哪位投江的诗人？"
+   },
+   "zh": "端午节相传纪念投汨罗江的爱国诗人屈原。",
+   "en": "The Dragon Boat Festival is said to commemorate the patriotic poet Qu Yuan, who drowned himself in the Miluo River."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What ancient ritual percussion instrument, made of graduated bells and unearthed from the Tomb of Marquis Yi of Zeng, is this?",
+    "zh": "湖北曾侯乙墓出土、由大小钟组成的古代礼乐打击乐器是？"
+   },
+   "zh": "曾侯乙编钟由65件青铜钟组成，音域宽广，是先秦礼乐文明的瑰宝。",
+   "en": "The bianzhong of Marquis Yi of Zeng comprise 65 bronze bells with a wide range, a treasure of pre-Qin ritual music."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which system, established in the Sui and Tang, selected officials by examination?",
+    "zh": "隋唐确立、通过考试选拔官员的制度是？"
+   },
+   "zh": "科举制始于隋、成于唐，以考试选官，影响中国一千多年。",
+   "en": "The imperial examination began in the Sui and matured in the Tang, selecting officials by exam and shaping China for over a thousand years."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What is China's earliest systematic mature script, inscribed on tortoise shells and animal bones?",
+    "zh": "中国最早成系统的成熟文字、刻在龟甲兽骨上的是？"
+   },
+   "zh": "甲骨文是商代刻在龟甲、兽骨上的文字，是汉字的早期形态。",
+   "en": "Oracle bone script, carved on tortoise shells and bones in the Shang, is an early form of Chinese characters."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which traditional Chinese opera, formed in the Qing dynasty, is hailed as a 'national treasure'?",
+    "zh": "形成于清代、被誉为“国粹”的中国传统戏曲是？"
+   },
+   "zh": "京剧在清代由徽班进京后融合发展而成，被誉为国粹。",
+   "en": "Peking Opera formed in the Qing after Anhui troupes came to the capital, and is hailed as a national treasure."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Confucian 'Four Books' are the Great Learning, the Doctrine of the Mean, the Mencius and which other?",
+    "zh": "儒家经典“四书”指《大学》《中庸》《孟子》和？"
+   },
+   "zh": "四书为《大学》《中庸》《论语》《孟子》，由朱熹合编。",
+   "en": "The Four Books are the Great Learning, the Doctrine of the Mean, the Analects and the Mencius, compiled by Zhu Xi."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What food is traditionally eaten at the Mid-Autumn Festival while families gather to view the moon?",
+    "zh": "中秋节家人团圆赏月时、传统食用的食品是？"
+   },
+   "zh": "中秋节有赏月、吃月饼的习俗，寓意团圆。",
+   "en": "The Mid-Autumn Festival features moon-viewing and eating mooncakes, symbolizing reunion."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "At Spring Festival, what are the neatly paired blessing couplets pasted on both sides of a door called?",
+    "zh": "春节时贴于门两侧、对仗工整的祝愿文字称为？"
+   },
+   "zh": "春联用对偶工整的文字表达祝愿，源于古代桃符。",
+   "en": "Spring couplets express good wishes in neat parallel lines, originating from ancient peachwood charms."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What is China's first poetry anthology, said to have been edited by Confucius?",
+    "zh": "我国第一部诗歌总集、相传经孔子删定的是？"
+   },
+   "zh": "《诗经》是我国最早的诗歌总集，收录西周至春秋的诗歌。",
+   "en": "The Book of Songs is China's earliest poetry anthology, collecting poems from the Western Zhou to the Spring and Autumn period."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "In traditional Chinese medicine, what are the two basic opposing forces that must be balanced in the body?",
+    "zh": "中医理论中调和人体的两种基本对立力量是？"
+   },
+   "zh": "阴阳学说是中医的核心，强调阴阳平衡则身体康健。",
+   "en": "Yin-Yang theory is central to Chinese medicine: balance of yin and yang means health."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which calligrapher, revered as the 'Sage of Calligraphy', is famed for the Preface to the Orchid Pavilion?",
+    "zh": "被后世尊为“书圣”、以《兰亭集序》闻名的书法家是？"
+   },
+   "zh": "东晋王羲之被尊为“书圣”，《兰亭集序》被誉为“天下第一行书”。",
+   "en": "Wang Xizhi of the Eastern Jin is revered as the Sage of Calligraphy; his Preface to the Orchid Pavilion is called the finest running script."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Chinese traditional calendar accounts for both moon phases and the solar year. What kind of calendar is it?",
+    "zh": "中国传统历法兼顾月相与回归年，属于哪种历？"
+   },
+   "zh": "中国农历是阴阳合历：以月相定月，以闰月调和回归年。",
+   "en": "The Chinese calendar is lunisolar: months follow the moon, and leap months keep it aligned with the solar year."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "In the four traditional arts 'qin, qi, shu, hua', what does 'qi' usually refer to?",
+    "zh": "中国传统四艺“琴棋书画”中的“棋”通常指？"
+   },
+   "zh": "文人四艺中的“棋”指围棋，讲究布局与谋略。",
+   "en": "In the literati's four arts, 'qi' refers to Go (weiqi), a game of strategy and positioning."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Who founded the Confucian school and advocated 'ren' (benevolence)?",
+    "zh": "儒家学派创始人、主张“仁”的思想家是？"
+   },
+   "zh": "孔子是儒家创始人，核心主张是“仁”与“礼”。",
+   "en": "Confucius founded the Confucian school; his core ideas are 'ren' (benevolence) and 'li' (ritual propriety)."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Who founded Daoism, wrote the Dao De Jing, and taught that 'the Dao follows nature'?",
+    "zh": "道家创始人、著《道德经》主张“道法自然”的是？"
+   },
+   "zh": "老子是道家创始人，《道德经》主张道法自然、清静无为。",
+   "en": "Laozi founded Daoism; the Dao De Jing teaches that the Dao follows nature and values non-action and stillness."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Confucian 'Second Sage' said 'the people are most important, the state next, the ruler least'?",
+    "zh": "提出“民为贵，社稷次之，君为轻”的儒家“亚圣”是？"
+   },
+   "zh": "孟子被尊为“亚圣”，提出以民为本、民贵君轻的思想。",
+   "en": "Mencius, revered as the Second Sage, advanced the people-centered idea that the people matter most."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which pre-Qin school advocated 'universal love' and 'non-aggression'?",
+    "zh": "主张“兼爱”“非攻”的先秦学派是？"
+   },
+   "zh": "墨家由墨子创立，主张兼爱、非攻、尚贤、节用。",
+   "en": "Mohism, founded by Mozi, advocated universal love, non-aggression, meritocracy and frugality."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which school advocated ruling by strict laws and harsh punishments and was adopted by Qin?",
+    "zh": "主张以严刑峻法治国、为秦所采用的学派是？"
+   },
+   "zh": "法家主张以法、术、势治国，为秦的统一与集权提供了思想基础。",
+   "en": "Legalism advocated rule by law, statecraft and power, providing the ideological basis for Qin's unification and centralization."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Who wrote 'Free and Easy Wandering' and 'On the Equality of Things' and is paired with Laozi as a Daoist master?",
+    "zh": "著《逍遥游》《齐物论》、与老子并称的道家代表是？"
+   },
+   "zh": "庄子主张逍遥、齐物，与老子并称“老庄”。",
+   "en": "Zhuangzi taught carefree transcendence and the equality of things, and is paired with Laozi as 'Lao-Zhuang'."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "What is the name for the flourishing of many schools and free thought in the Spring and Autumn and Warring States periods?",
+    "zh": "春秋战国时期学派林立、思想自由的局面被称为？"
+   },
+   "zh": "百家争鸣指春秋战国时儒、道、墨、法等学派竞相著说的局面。",
+   "en": "The 'contention of a hundred schools' refers to the era when Confucian, Daoist, Mohist, Legalist and other schools competed."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Confucius advocated 'restraining oneself and returning to ritual'. What is his core moral concept?",
+    "zh": "孔子主张“克己复礼”，其核心道德观念是？"
+   },
+   "zh": "“仁”是孔子思想的核心，意为爱人、推己及人。",
+   "en": "'Ren' (benevolence) is the core of Confucius's thought, meaning to love others and extend oneself to them."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "'Do not do to others...' — what completes this Confucian principle of empathy?",
+    "zh": "“己所不欲”的下一句、体现儒家推己及人之道的是？"
+   },
+   "zh": "“己所不欲，勿施于人”出自《论语》，体现儒家的恕道。",
+   "en": "'Do not do to others what you would not want done to yourself', from the Analects, expresses the Confucian way of reciprocity."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "What is the Daoist idea of following nature and not forcing action called?",
+    "zh": "道家主张顺应自然、不强行妄为的思想称为？"
+   },
+   "zh": "“无为”是道家核心，主张顺应自然、无为而治。",
+   "en": "'Wu wei' (non-action) is central to Daoism: follow nature and govern by not interfering."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Warring States Confucian proposed that 'human nature is evil' and should be restrained by ritual and law?",
+    "zh": "提出“性恶论”、主张以礼法节制人性的战国儒者是？"
+   },
+   "zh": "荀子主张性恶，强调以礼法、教化约束人性。",
+   "en": "Xunzi held that human nature is evil and stressed restraining it through ritual and law."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Ming master of the School of Mind taught 'the unity of knowledge and action' and 'extending innate knowledge'?",
+    "zh": "提出“知行合一”“致良知”的明代心学集大成者是？"
+   },
+   "zh": "明代王阳明集心学之大成，主张知行合一、致良知。",
+   "en": "Wang Yangming of the Ming synthesized the School of Mind, teaching the unity of knowledge and action and extending innate moral knowledge."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Confucian classic mainly records the words and deeds of Confucius and his disciples?",
+    "zh": "主要记录孔子及其弟子言行的儒家经典是？"
+   },
+   "zh": "《论语》由孔子弟子及再传弟子辑录孔子言行而成。",
+   "en": "The Analects was compiled by Confucius's disciples and their followers from his words and deeds."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which classic explains cosmic change through yin-yang lines and is honored as 'first among the classics'?",
+    "zh": "以阴阳爻象解释宇宙变化、被尊为“群经之首”的是？"
+   },
+   "zh": "《易经》(周易)以阴阳卦爻推演变化，被尊为“群经之首”。",
+   "en": "The Book of Changes (I Ching) interprets change through yin-yang hexagrams and is honored as first among the classics."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which thinker synthesized Legalism and wrote the Han Feizi?",
+    "zh": "法家思想集大成、著《韩非子》的思想家是？"
+   },
+   "zh": "韩非综合法、术、势，集法家之大成，著《韩非子》。",
+   "en": "Han Fei combined law, statecraft and power to synthesize Legalism, writing the Han Feizi."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Confucian 'Five Constants' are benevolence, righteousness, ritual, wisdom and which other?",
+    "zh": "儒家“五常”指仁、义、礼、智和？"
+   },
+   "zh": "五常为仁、义、礼、智、信，是儒家基本的道德规范。",
+   "en": "The Five Constants are benevolence, righteousness, ritual, wisdom and trust, basic Confucian virtues."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Confucius taught differently according to each student's traits. What is this principle called?",
+    "zh": "孔子针对学生不同特点采取不同教法、这一主张称为？"
+   },
+   "zh": "因材施教指根据学生特点采用不同教法，是孔子重要的教育思想。",
+   "en": "'Teaching according to aptitude' means adapting methods to each student, a key Confucian educational idea."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Western Han thinker proposed 'ban the hundred schools and honor only Confucianism'?",
+    "zh": "西汉提出“罢黜百家，独尊儒术”的思想家是？"
+   },
+   "zh": "董仲舒向汉武帝建议“罢黜百家，独尊儒术”，确立儒学独尊地位。",
+   "en": "Dong Zhongshu advised Emperor Wu of Han to honor only Confucianism, establishing its supremacy."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Daoist masters are jointly called 'Lao-Zhuang' — Laozi and who else?",
+    "zh": "道家代表人物常并称“老庄”，分别指老子和？"
+   },
+   "zh": "“老庄”指老子与庄子，是道家最重要的两位代表。",
+   "en": "'Lao-Zhuang' refers to Laozi and Zhuangzi, the two most important Daoist figures."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "'Among any three people walking, one can be my teacher' is from which record of Confucius's words?",
+    "zh": "“三人行，必有我师焉”出自记录孔子言行的哪部书？"
+   },
+   "zh": "此句出自《论语·述而》，体现孔子虚心好学的态度。",
+   "en": "This line is from the Analects, reflecting Confucius's humble eagerness to learn."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which river is honored as the 'Mother River' of the Chinese nation and cradle of Central Plains civilization?",
+    "zh": "被誉为中华民族“母亲河”、孕育中原文明的河流是？"
+   },
+   "zh": "黄河流域是中华文明的重要发祥地，被称为“母亲河”。",
+   "en": "The Yellow River basin is a major cradle of Chinese civilization and is called the Mother River."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which is China's longest river and Asia's longest river?",
+    "zh": "中国第一长河、也是亚洲最长的河流是？"
+   },
+   "zh": "长江全长约6300公里，是中国第一长河、亚洲最长的河流。",
+   "en": "The Yangtze is about 6,300 km long, China's longest river and the longest in Asia."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Chang'an, the eastern start of the Han-Tang Silk Road, is which city today?",
+    "zh": "汉唐丝绸之路的东方起点、古都长安是今天的？"
+   },
+   "zh": "长安即今陕西西安，是汉唐都城与丝绸之路的东方起点。",
+   "en": "Chang'an is today's Xi'an in Shaanxi, the Han-Tang capital and eastern start of the Silk Road."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which is the Eastern Great Mountain among China's Five Great Mountains?",
+    "zh": "中国“五岳”中的东岳是？"
+   },
+   "zh": "五岳中东岳为泰山，自古为帝王封禅之地。",
+   "en": "Among the Five Great Mountains, Mount Tai is the Eastern peak, long a site of imperial feng-shan rites."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Ancient 'Central Plains' roughly refers to the middle-lower reaches of which river?",
+    "zh": "古代“中原”大致指哪条河的中下游地区？"
+   },
+   "zh": "古代“中原”主要指黄河中下游的河南一带及周边地区。",
+   "en": "The 'Central Plains' mainly refers to the middle-lower Yellow River region around Henan and nearby areas."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which plain does the Dujiangyan irrigation project water?",
+    "zh": "都江堰水利工程灌溉的是哪一片平原？"
+   },
+   "zh": "都江堰使成都平原水旱从人，成就了“天府之国”。",
+   "en": "Dujiangyan made the Chengdu Plain flood- and drought-proof, creating the 'Land of Abundance'."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The 'Land of Abundance' of old mainly refers to which region today?",
+    "zh": "古人称为“天府之国”的主要是今天的哪个地区？"
+   },
+   "zh": "因都江堰之利，成都平原物产丰饶，被称为“天府之国”。",
+   "en": "Thanks to Dujiangyan, the Chengdu Plain was rich in produce and called the 'Land of Abundance'."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "At the west end of the Hexi Corridor, which Silk Road pass is paired with the Jade Gate Pass?",
+    "zh": "河西走廊西端、丝路要道上与玉门关并称的关隘是？"
+   },
+   "zh": "“西出阳关无故人”，阳关与玉门关同为丝路要隘。",
+   "en": "'West of the Yang Pass there are no old friends' — Yang Pass and the Jade Gate Pass were both key Silk Road passes."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "What is the overall pattern of China's terrain?",
+    "zh": "中国地势的总体特征是？"
+   },
+   "zh": "中国地势西高东低，大致呈三级阶梯状下降。",
+   "en": "China's terrain is high in the west and low in the east, descending in roughly three great steps."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The rough dividing line between north and south China's agriculture and climate is along which line?",
+    "zh": "古代南北方农业(稻作与粟麦)与气候的分界线大致是？"
+   },
+   "zh": "秦岭—淮河一线是中国重要的南北地理分界线。",
+   "en": "The Qinling-Huai River line is China's major north-south geographic divide."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The ancient 'Western Regions' mainly meant the land west of the Jade Gate Pass. Which modern-day region did it mainly refer to?",
+    "zh": "古代“西域”主要指玉门关以西、今天的哪个地区及更西？"
+   },
+   "zh": "自汉代起，“西域”主要指玉门关、阳关以西的今新疆及中亚地区。",
+   "en": "Since the Han, the 'Western Regions' mainly referred to today's Xinjiang and Central Asia west of the Jade Gate and Yang passes."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "'Jiangnan' usually refers to the region south of the middle-lower reaches of which great river?",
+    "zh": "古代“江南”通常指哪条大河中下游以南地区？"
+   },
+   "zh": "“江南”通常指长江中下游以南、气候温润富庶的地区。",
+   "en": "'Jiangnan' usually means the mild, prosperous region south of the middle-lower Yangtze."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which Song-Yuan port, the old 'Citong Port', was hailed as the greatest port of the East?",
+    "zh": "宋元时期被誉为“东方第一大港”、即古“刺桐港”的是？"
+   },
+   "zh": "泉州古称刺桐港，宋元时为海上丝绸之路的重要港口。",
+   "en": "Quanzhou, anciently Citong Port, was a major port of the Maritime Silk Road in the Song and Yuan."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Qin capital Xianyang was near which city today?",
+    "zh": "秦朝的都城咸阳位于今天哪座城市附近？"
+   },
+   "zh": "秦都咸阳在今陕西西安附近的渭河北岸。",
+   "en": "The Qin capital Xianyang lay near today's Xi'an, on the north bank of the Wei River."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Beijing-Hangzhou Grand Canal links the Hai, Yellow, Huai, Yangtze and which other river system?",
+    "zh": "京杭大运河沟通海河、黄河、淮河、长江和哪条水系？"
+   },
+   "zh": "京杭大运河南端连通钱塘江水系，沟通五大水系。",
+   "en": "The Beijing-Hangzhou Grand Canal connects to the Qiantang River system at its southern end, linking five river systems."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "'Beyond the passes' and 'north of the desert' mainly referred to which region?",
+    "zh": "古代“塞外”“漠北”主要指哪一地理区域？"
+   },
+   "zh": "“塞外”“漠北”主要指长城以北的蒙古高原一带。",
+   "en": "'Beyond the passes' and 'north of the desert' mainly meant the Mongolian Plateau north of the Great Wall."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Zheng He's great fleet mainly gathered and set sail from which port?",
+    "zh": "郑和下西洋的庞大船队主要从哪个港口集结出发？"
+   },
+   "zh": "郑和船队多次从江苏太仓刘家港集结启航下西洋。",
+   "en": "Zheng He's fleet repeatedly assembled and set sail from Liujiagang in Taicang, Jiangsu."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "'Lingnan' refers to the region south of which mountain range (the Five Ridges)?",
+    "zh": "古代“岭南”指哪一山脉(五岭)以南地区？"
+   },
+   "zh": "“岭南”指五岭(南岭)以南，即今广东、广西一带。",
+   "en": "'Lingnan' means south of the Five Ridges (Nanling), today's Guangdong and Guangxi."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which grand Ming pass is the western terminus of the Great Wall?",
+    "zh": "万里长城西端的终点、明代雄关是？"
+   },
+   "zh": "明长城西起嘉峪关，东至山海关。",
+   "en": "The Ming Great Wall runs from Jiayu Pass in the west to Shanhai Pass in the east."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which eastern capital was paired with Chang'an in the Sui and Tang?",
+    "zh": "隋唐两代与都城长安并称的东都(陪都)是？"
+   },
+   "zh": "隋唐以洛阳为东都，与西京长安并重。",
+   "en": "The Sui and Tang made Luoyang the eastern capital, on a par with the western capital Chang'an."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which was China's first unified, centralized dynasty?",
+    "zh": "中国历史上第一个统一的中央集权王朝是？"
+   },
+   "zh": "公元前221年秦统一六国，建立中国第一个统一的中央集权王朝。",
+   "en": "In 221 BC Qin unified the warring states, founding China's first unified centralized dynasty."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which ruler unified the six states and styled himself 'First Emperor'?",
+    "zh": "统一六国、自称“始皇帝”的君主是？"
+   },
+   "zh": "秦王嬴政统一六国后自称“始皇帝”，史称秦始皇。",
+   "en": "After unifying the six states, King Zheng of Qin styled himself 'First Emperor', Qin Shi Huang."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which dynasty is traditionally China's first hereditary ('family rule') dynasty?",
+    "zh": "中国传说中第一个“家天下”(世袭)的朝代是？"
+   },
+   "zh": "夏朝相传由禹之子启建立，开始了王位世袭的“家天下”。",
+   "en": "The Xia, said to be founded by Yu's son Qi, began hereditary kingship, 'all under heaven as family'."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which dynasty produced oracle bone script and highly developed bronzes?",
+    "zh": "出土甲骨文、青铜器高度发达的朝代是？"
+   },
+   "zh": "商朝甲骨文与青铜器(如后母戊鼎)高度发达。",
+   "en": "The Shang had highly developed oracle bone script and bronzes, such as the Houmuwu ding."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which dynasty used enfeoffment, the ritual-music system, and split into Western and Eastern periods?",
+    "zh": "实行分封制、有“礼乐”制度、分东西两期的朝代是？"
+   },
+   "zh": "周朝分西周与东周，实行分封制并形成礼乐文明。",
+   "en": "The Zhou split into Western and Eastern periods, using enfeoffment and forming the ritual-music civilization."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which dynasty sent Zhang Qian to the Western Regions and opened the overland Silk Road?",
+    "zh": "派张骞出使西域、开通陆上丝绸之路的朝代是？"
+   },
+   "zh": "汉武帝派张骞出使西域，开通了陆上丝绸之路。",
+   "en": "Emperor Wu of Han sent Zhang Qian to the Western Regions, opening the overland Silk Road."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was the only officially recognized female emperor in Chinese history?",
+    "zh": "中国历史上唯一的正统女皇帝是？"
+   },
+   "zh": "武则天改国号为周，是中国历史上唯一被广泛承认的女皇帝。",
+   "en": "Wu Zetian changed the dynastic name to Zhou and is the only widely recognized female emperor in Chinese history."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Tang emperor created the 'Reign of Zhenguan'?",
+    "zh": "开创“贞观之治”的唐代皇帝是？"
+   },
+   "zh": "唐太宗李世民在位期间政治清明，史称“贞观之治”。",
+   "en": "Emperor Taizong (Li Shimin) ruled with clarity and good government, known as the Reign of Zhenguan."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "In which dynasty did the 'burning of books and burying of scholars' occur?",
+    "zh": "“焚书坑儒”发生在哪个朝代？"
+   },
+   "zh": "“焚书坑儒”是秦始皇为加强思想控制而采取的措施。",
+   "en": "The burning of books and burying of scholars was a measure by Qin Shi Huang to tighten ideological control."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "What is the early Western Han era of recovery and prosperity called?",
+    "zh": "西汉初年休养生息、出现的盛世史称？"
+   },
+   "zh": "汉文帝、汉景帝轻徭薄赋、与民休息，史称“文景之治”。",
+   "en": "Emperors Wen and Jing lightened taxes and let the people rest, an era called the Rule of Wen and Jing."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which work by Sima Qian is China's first general history in biographical form?",
+    "zh": "司马迁所著、我国第一部纪传体通史是？"
+   },
+   "zh": "《史记》由司马迁所著，被誉为“史家之绝唱，无韵之离骚”。",
+   "en": "The Records of the Grand Historian by Sima Qian is hailed as 'the historian's masterpiece, an unrhymed Li Sao'."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Three Kingdoms were Wei, Shu and which other state?",
+    "zh": "三国鼎立指魏、蜀和哪个政权？"
+   },
+   "zh": "三国指曹魏、蜀汉与孙吴三个政权并立。",
+   "en": "The Three Kingdoms were Cao Wei, Shu Han and Eastern Wu standing in opposition."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was 'draped in the yellow robe' at the Chenqiao Mutiny and founded the Northern Song?",
+    "zh": "陈桥兵变“黄袍加身”、建立北宋的是？"
+   },
+   "zh": "赵匡胤在陈桥驿被部下拥立“黄袍加身”，建立北宋。",
+   "en": "Zhao Kuangyin was draped in the yellow robe by his troops at Chenqiao and founded the Northern Song."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who founded the Yuan dynasty and made Dadu (today's Beijing) the capital?",
+    "zh": "建立元朝、定都大都(今北京)的是？"
+   },
+   "zh": "忽必烈建立元朝，定都大都，是元世祖。",
+   "en": "Kublai Khan founded the Yuan dynasty and made Dadu the capital, Emperor Shizu of Yuan."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was the founding emperor of the Ming (Emperor Taizu)?",
+    "zh": "明朝的开国皇帝(明太祖)是？"
+   },
+   "zh": "朱元璋推翻元朝、建立明朝，是明太祖。",
+   "en": "Zhu Yuanzhang overthrew the Yuan and founded the Ming, becoming Emperor Taizu."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Ming navigator led fleets on seven voyages to the Western Seas?",
+    "zh": "明代率船队七下西洋的航海家是？"
+   },
+   "zh": "明代郑和七下西洋，远航至东南亚、印度洋乃至非洲东海岸。",
+   "en": "Zheng He of the Ming led seven voyages reaching Southeast Asia, the Indian Ocean and the east coast of Africa."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which was the last feudal dynasty in Chinese history?",
+    "zh": "中国历史上最后一个封建王朝是？"
+   },
+   "zh": "清朝是中国历史上最后一个封建王朝，1912年终结。",
+   "en": "The Qing was China's last feudal dynasty, ending in 1912."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was the first of the 'Five Hegemons' of the Spring and Autumn period, strengthening his state by employing Guan Zhong?",
+    "zh": "“春秋五霸”之首、任用管仲改革图强的是？"
+   },
+   "zh": "齐桓公任用管仲改革，“尊王攘夷”，成为春秋首霸。",
+   "en": "Duke Huan of Qi employed Guan Zhong's reforms and 'honored the king to repel the barbarians', becoming the first hegemon."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "What are the seven major states of the Warring States period collectively called?",
+    "zh": "战国时期七个主要诸侯国合称？"
+   },
+   "zh": "战国七雄指齐、楚、燕、韩、赵、魏、秦。",
+   "en": "The Seven Warring States were Qi, Chu, Yan, Han, Zhao, Wei and Qin."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "What is the prosperous early reign of Emperor Xuanzong of Tang called?",
+    "zh": "唐玄宗统治前期政治清明、经济繁荣的盛世史称？"
+   },
+   "zh": "唐玄宗前期年号开元，国力鼎盛，史称“开元盛世”。",
+   "en": "The early reign of Emperor Xuanzong, under the Kaiyuan era name, was so prosperous it is called the Kaiyuan Prosperity."
+  }
+ ],
+ "egypt": [
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Great Pyramid of Giza (the largest) was built for which pharaoh?",
+    "zh": "吉萨大金字塔（最大的一座）是为哪位法老建造的？"
+   },
+   "zh": "吉萨大金字塔约建于公元前2560年，为第四王朝法老胡夫所建。",
+   "en": "The Great Pyramid of Giza, built around 2560 BC, was made for the Fourth Dynasty pharaoh Khufu."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What material originally cased the pyramids, making them shine in the sun?",
+    "zh": "金字塔最初的外表面覆盖着什么材料，使其在阳光下闪耀？"
+   },
+   "zh": "金字塔最初覆有打磨光滑的白色图拉石灰岩，后世大多被剥取移作他用。",
+   "en": "The pyramids were originally cased in polished white Tura limestone, most of which was later stripped for reuse."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "From which plant did ancient Egyptians make their writing material?",
+    "zh": "古埃及人用哪种植物制成书写用的纸？"
+   },
+   "zh": "纸莎草(papyrus)是尼罗河畔的芦苇类植物，其茎被加工成纸草卷书写。",
+   "en": "Papyrus, a reed of the Nile, had its stems processed into scrolls for writing."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which famous stone helped modern scholars decipher Egyptian hieroglyphs?",
+    "zh": "帮助现代学者破译古埃及象形文字的著名石碑是？"
+   },
+   "zh": "罗塞塔石碑以三种文字刻写同一内容，使商博良得以破译象形文字。",
+   "en": "The Rosetta Stone bears the same text in three scripts, enabling Champollion to decipher hieroglyphs."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which river, with its annual flood bringing fertile soil, sustained ancient Egyptian civilization?",
+    "zh": "古埃及文明赖以繁荣、每年泛滥带来沃土的是哪条河？"
+   },
+   "zh": "尼罗河每年泛滥退去后留下肥沃黑土，孕育了古埃及农业文明。",
+   "en": "The Nile's annual flood left fertile black silt, nurturing Egypt's farming civilization."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "What did the Nile flood leave on the fields that made farming fertile?",
+    "zh": "尼罗河泛滥后留在田地上、使耕作丰饶的是什么？"
+   },
+   "zh": "泛滥带来的淤泥黑土极为肥沃，古埃及人因此称自己的土地为「黑土地」(Kemet)。",
+   "en": "The flood's fertile black silt was so rich that Egyptians called their land 'Kemet' (the black land)."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who is traditionally the pharaoh who united Upper and Lower Egypt and founded the First Dynasty?",
+    "zh": "传说中统一上下埃及、开创第一王朝的法老通常被认为是？"
+   },
+   "zh": "美尼斯（常与纳尔迈对应）传说统一上下埃及，约公元前3100年开创第一王朝。",
+   "en": "Menes (often identified with Narmer) is said to have united Upper and Lower Egypt around 3100 BC, founding the First Dynasty."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "In Egyptian afterlife belief, the dead's heart was weighed against what to judge their worthiness?",
+    "zh": "古埃及来世信仰中，亡者之心要与什么称量以判定能否得永生？"
+   },
+   "zh": "在「称心」仪式中，亡者之心与代表真理与秩序的玛特之羽同秤，唯真实者得永生。",
+   "en": "In the 'weighing of the heart', the heart was balanced against Maat's feather of truth; only the truthful gained eternal life."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Giza Sphinx has a lion's body and the head of a what?",
+    "zh": "吉萨狮身人面像是狮身配上什么的头？"
+   },
+   "zh": "大狮身人面像为狮身、人(法老)首。",
+   "en": "The Great Sphinx has a lion's body and a human (pharaoh's) head."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Who designed the Step Pyramid of Djoser at Saqqara?",
+    "zh": "萨卡拉的左塞尔阶梯金字塔由谁设计？"
+   },
+   "zh": "伊姆霍特普设计了阶梯金字塔，是最早的大型石造金字塔。",
+   "en": "Imhotep designed the Step Pyramid, the earliest large stone pyramid."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What was the earliest form of the Egyptian pyramid?",
+    "zh": "埃及金字塔最早的形式是？"
+   },
+   "zh": "阶梯金字塔最早，平滑的真金字塔是后来发展出的。",
+   "en": "The step pyramid came first; smooth-sided 'true' pyramids developed later."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The vast Karnak temple complex was dedicated mainly to which god?",
+    "zh": "宏大的卡尔纳克神庙主要供奉哪位神？"
+   },
+   "zh": "卡尔纳克是底比斯供奉阿蒙-拉的大型崇拜中心。",
+   "en": "Karnak was the great cult centre of Amun-Ra at Thebes."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which pharaoh had the rock temples of Abu Simbel carved?",
+    "zh": "阿布辛贝勒岩窟神庙由哪位法老开凿？"
+   },
+   "zh": "阿布辛贝由拉美西斯二世所建，正面有四尊其本人巨像。",
+   "en": "Ramesses II built Abu Simbel, fronted by four colossal statues of himself."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Where is Hatshepsut's grand terraced mortuary temple?",
+    "zh": "哈特谢普苏特宏伟的阶梯式祭庙位于？"
+   },
+   "zh": "她的阶梯式祭庙在代尔巴哈里，邻近帝王谷。",
+   "en": "Her terraced temple at Deir el-Bahari faces the Nile near the Valley of the Kings."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What is a tall, tapering monument topped by a pyramid-shaped point called?",
+    "zh": "顶端为小金字塔形、细高的纪念石柱称为？"
+   },
+   "zh": "方尖碑由整块花岗岩凿成，立于神庙入口。",
+   "en": "Obelisks were carved from single blocks of granite and raised at temple entrances."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "A temple hall packed with massive columns is a what?",
+    "zh": "神庙中布满巨柱的大厅称为？"
+   },
+   "zh": "卡尔纳克的多柱厅有134根巨柱。",
+   "en": "The hypostyle hall at Karnak has 134 giant columns."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "New Kingdom pharaohs were buried in rock-cut tombs at which site?",
+    "zh": "新王国法老多葬于哪处岩凿陵墓群？"
+   },
+   "zh": "为防盗，新王国法老在帝王谷开凿隐蔽岩墓。",
+   "en": "To deter robbers, New Kingdom kings cut hidden tombs in the Valley of the Kings."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What is the flat-topped, bench-shaped early Egyptian tomb called?",
+    "zh": "金字塔之前那种平顶长方形的早期墓称为？"
+   },
+   "zh": "马斯塔巴是平顶泥砖/石墓，是金字塔的前身。",
+   "en": "The mastaba, a flat-topped mudbrick/stone tomb, preceded the pyramid."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Egyptian temple columns were often carved to resemble which plants?",
+    "zh": "埃及神庙石柱常雕成哪种植物形态？"
+   },
+   "zh": "柱头模仿纸莎草与莲花——尼罗河的神圣植物。",
+   "en": "Column capitals imitated papyrus and lotus, sacred Nile plants."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The massive twin towers flanking a temple gateway are called?",
+    "zh": "神庙正面一对巨大梯形塔门称为？"
+   },
+   "zh": "塔门(pylon)是埃及神庙带双塔的纪念性大门。",
+   "en": "A pylon is the monumental twin-towered gateway of an Egyptian temple."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The three most famous great pyramids stand at?",
+    "zh": "最著名的三座大金字塔位于？"
+   },
+   "zh": "胡夫、卡夫拉、门卡乌拉三座金字塔位于吉萨高原。",
+   "en": "The pyramids of Khufu, Khafre and Menkaure stand on the Giza plateau."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What were the pyramids and great temples mainly built from?",
+    "zh": "金字塔与大型神庙的主要建材是？"
+   },
+   "zh": "纪念性建筑用石灰岩与花岗岩，泥砖用于日常房屋。",
+   "en": "Monuments used limestone and granite; mudbrick was for everyday buildings."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Ordinary Egyptian homes were mostly built from what?",
+    "zh": "古埃及普通民居多用什么建造？"
+   },
+   "zh": "民居用尼罗河泥晒制的泥砖；石头留给陵墓与神庙。",
+   "en": "Houses used sun-dried Nile mudbrick; stone was reserved for tombs and temples."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "For roughly how long did the Great Pyramid remain the tallest structure on earth?",
+    "zh": "吉萨大金字塔保持世界最高建筑纪录约多久？"
+   },
+   "zh": "约146米高，保持世界最高建筑纪录约3800多年。",
+   "en": "At ~146 m it was the world's tallest structure for some 3,800 years."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Granite for obelisks was mainly quarried at?",
+    "zh": "方尖碑所用花岗岩主要采自何处？"
+   },
+   "zh": "阿斯旺采石场为方尖碑与雕像提供坚硬花岗岩。",
+   "en": "Aswan's quarries supplied the hard granite for obelisks and statues."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Great Sphinx faces which direction, toward the sunrise?",
+    "zh": "吉萨狮身人面像面朝哪个方向(迎日出)？"
+   },
+   "zh": "狮身人面像面朝东方，迎向初升的太阳。",
+   "en": "The Sphinx faces east toward the rising sun."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What was the purpose of mummification?",
+    "zh": "古埃及制作木乃伊的目的是？"
+   },
+   "zh": "保存肉身是为了让灵魂在来世得以存续。",
+   "en": "Egyptians preserved the body so the soul could live on in the afterlife."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Where were the organs removed during mummification stored?",
+    "zh": "木乃伊制作中取出的内脏存放于？"
+   },
+   "zh": "肝、肺、胃、肠分别存于四个卡诺匹斯罐。",
+   "en": "Liver, lungs, stomach and intestines were kept in four canopic jars."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What is the collection of spells to guide the dead through the afterlife called?",
+    "zh": "引导亡者通过来世的咒文合集称为？"
+   },
+   "zh": "《亡灵书》是写在纸草上的丧葬咒文集。",
+   "en": "The Book of the Dead is a collection of funerary spells written on papyrus."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Who was the chief sun god of ancient Egypt?",
+    "zh": "古埃及的主要太阳神是？"
+   },
+   "zh": "太阳神拉每天乘船划过天空。",
+   "en": "Ra, the sun god, sailed across the sky each day."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which green-skinned god ruled the underworld and rebirth?",
+    "zh": "掌管冥界与重生、绿肤的神是？"
+   },
+   "zh": "奥西里斯司掌死亡与重生，常以绿肤示人。",
+   "en": "Osiris, god of the dead and rebirth, is shown with green skin."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The jackal-headed god of embalming and tombs was?",
+    "zh": "胡狼头、司掌防腐与墓葬的神是？"
+   },
+   "zh": "胡狼头的阿努比斯掌管防腐与亡者。",
+   "en": "Anubis, the jackal-headed god, oversaw embalming and the dead."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The falcon-headed god, son of Osiris and Isis, was?",
+    "zh": "鹰头、奥西里斯与伊西斯之子的神是？"
+   },
+   "zh": "鹰头的天空之神荷鲁斯与王权相关。",
+   "en": "Horus, the falcon-headed sky god, was linked to kingship."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The ibis-headed god of writing and wisdom was?",
+    "zh": "朱鹭头、司掌书写与智慧的神是？"
+   },
+   "zh": "朱鹭头的托特是书吏与智慧的守护神。",
+   "en": "Thoth, the ibis-headed god, was patron of scribes and wisdom."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The looped cross symbol meaning 'life' is the?",
+    "zh": "形似带环十字、象征生命的符号是？"
+   },
+   "zh": "安卡(带环十字)象征生命。",
+   "en": "The ankh, a looped cross, symbolised life."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The beetle amulet symbolising rebirth was the?",
+    "zh": "象征重生的甲虫护身符是？"
+   },
+   "zh": "圣甲虫(蜣螂)象征太阳每晨重生。",
+   "en": "The scarab (dung beetle) symbolised the sun's rebirth each morning."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which animal, linked to the goddess Bastet, was sacred to Egyptians?",
+    "zh": "与女神巴斯特相关、被古埃及视为神圣的动物是？"
+   },
+   "zh": "猫与巴斯特相关，受保护，常被制成木乃伊。",
+   "en": "Cats, associated with Bastet, were protected and often mummified."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The oval ring enclosing a royal name in hieroglyphs is a?",
+    "zh": "象形文字中框住法老名字的椭圆框称为？"
+   },
+   "zh": "法老之名写在椭圆形的王名圈内。",
+   "en": "A royal name was written inside an oval cartouche."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The protective eye symbol of healing is the Eye of?",
+    "zh": "象征保护与康复的眼睛符号是「___之眼」？"
+   },
+   "zh": "荷鲁斯之眼(乌加特)象征保护与康复。",
+   "en": "The Eye of Horus (wedjat) symbolised protection and healing."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The black cosmetic Egyptians lined their eyes with was?",
+    "zh": "古埃及人用以画眼的黑色化妆品是？"
+   },
+   "zh": "科尔眼线既美观又能减弱阳光眩光。",
+   "en": "Kohl eyeliner adorned the eyes and reduced sun glare."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Besides papyrus, scribes often wrote notes on?",
+    "zh": "除纸草外，书吏常在什么上书写记账？"
+   },
+   "zh": "廉价的陶片/石片(ostraca)用于记事与草图。",
+   "en": "Cheap pottery/stone flakes (ostraca) were used for notes and sketches."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The simplified cursive everyday script (vs formal hieroglyphs) was?",
+    "zh": "比象形文字更简便、日常所用的草写体是？"
+   },
+   "zh": "僧侣体是象形文字的草写简体，多用于纸草。",
+   "en": "Hieratic was a cursive shorthand of hieroglyphs used on papyrus."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "A popular ancient Egyptian board game was?",
+    "zh": "古埃及流行的棋盘游戏是？"
+   },
+   "zh": "塞尼特是一种竞走式棋盘游戏，流行数千年。",
+   "en": "Senet, a race-style board game, was played for millennia."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which concept of truth, balance and cosmic order was central to Egyptian thought?",
+    "zh": "代表真理、平衡与宇宙秩序、居古埃及思想核心的概念(女神)是？"
+   },
+   "zh": "玛特化身真理、正义与宇宙秩序，是法老必须维护的。",
+   "en": "Maat embodied truth, justice and the cosmic order the pharaoh must uphold."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "How did Egyptians regard the pharaoh?",
+    "zh": "古埃及人如何看待法老？"
+   },
+   "zh": "法老被视为在世之神，是神与人之间的中介。",
+   "en": "The pharaoh was seen as a god on earth, mediator between gods and people."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "In Egyptian belief, the 'life-force' part of the soul was the?",
+    "zh": "古埃及灵魂观中代表「生命力」的部分称为？"
+   },
+   "zh": "卡是生命力，死后仍需供养。",
+   "en": "The Ka was the vital life-force that needed sustenance after death."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The mobile soul shown as a human-headed bird was the?",
+    "zh": "以人首鸟身表现、可离体活动的灵魂部分是？"
+   },
+   "zh": "巴以人首鸟身表现，可在两界间往来。",
+   "en": "The Ba, depicted as a human-headed bird, could move between worlds."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Egyptian underworld, realm of the dead, was called?",
+    "zh": "古埃及神话中亡者所往的冥界称为？"
+   },
+   "zh": "杜阿特是亡者必须穿越的冥界。",
+   "en": "The Duat was the underworld the dead journeyed through."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which god presided over the final judgment of the dead?",
+    "zh": "在来世审判中主持「称心」的神是？"
+   },
+   "zh": "奥西里斯在「双重真理之厅」审判亡者。",
+   "en": "Osiris judged the dead in the Hall of Two Truths."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Pharaoh Akhenaten promoted near-exclusive worship of which deity?",
+    "zh": "法老阿肯那顿推行近乎独尊哪一神？"
+   },
+   "zh": "阿肯那顿尊崇阿吞，是迈向一神教的早期尝试。",
+   "en": "Akhenaten elevated the Aten, an early move toward monotheism."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "How did Egyptians view the afterlife?",
+    "zh": "古埃及人对来世的基本信念是？"
+   },
+   "zh": "来世被想象为尘世生活的理想化延续。",
+   "en": "The afterlife was imagined as an idealised continuation of life on earth."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "If the heart was heavier than Maat's feather, it was devoured by?",
+    "zh": "若亡者之心比玛特之羽更重(有罪)，会被谁吞噬？"
+   },
+   "zh": "阿米特(吞魂兽)吞食因罪而沉重的心。",
+   "en": "Ammit, 'devourer of the dead', ate hearts weighed down by sin."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Small figurines buried to work for the dead in the afterlife were?",
+    "zh": "随葬、在来世替亡者劳作的小俑称为？"
+   },
+   "zh": "沙伯提俑会在来世替亡者劳作。",
+   "en": "Shabti figurines would magically labour for the deceased."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "A major creation myth centred on the sun god Atum at which city?",
+    "zh": "以太阳神阿图姆为中心的创世神话之城是？"
+   },
+   "zh": "赫利奥波利斯是太阳神崇拜与一则创世神话的中心。",
+   "en": "Heliopolis was the cult centre of the sun god and a creation myth."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The pharaoh's sacred duty was to uphold Maat against what?",
+    "zh": "法老的神圣职责是维护玛特(秩序)、抵御什么？"
+   },
+   "zh": "法老须维护玛特(秩序)、遏制伊斯费特(混乱)。",
+   "en": "Kings had to maintain Maat (order) and hold back Isfet (chaos)."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Why did Egyptians preserve the body so carefully?",
+    "zh": "为何古埃及人如此执着于保存尸身？"
+   },
+   "zh": "卡与巴需要完整的肉身以辨认归依。",
+   "en": "The Ka and Ba needed an intact body to recognise and return to."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The 'negative confession' (denying sins) was recited where?",
+    "zh": "「否定告白」(逐条否认罪行)在何处诵念？"
+   },
+   "zh": "亡者在奥西里斯与众判官前诵念否定告白。",
+   "en": "The dead recited the negative confession before Osiris and the judges."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "In myth, by night the sun god Ra sailed through the?",
+    "zh": "神话中太阳神拉夜间航行于？"
+   },
+   "zh": "拉白天过天空、夜间穿冥界，每晨重生。",
+   "en": "Ra crossed the sky by day and the Duat by night, reborn each dawn."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "A living, reigning pharaoh was identified with which god?",
+    "zh": "在世执政的法老常被等同于哪位神？"
+   },
+   "zh": "在世的法老被视为荷鲁斯的化身。",
+   "en": "The living king was the embodiment of Horus."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "After death, a pharaoh was identified with which god of rebirth?",
+    "zh": "法老死后常被等同于哪位重生之神？"
+   },
+   "zh": "法老死后化为掌管复活的奥西里斯。",
+   "en": "In death the king became Osiris, lord of resurrection."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The goddess Maat is identified by which emblem on her head?",
+    "zh": "真理女神玛特头戴的标志物是？"
+   },
+   "zh": "玛特头戴鸵鸟羽毛，亡者之心即与此羽同秤。",
+   "en": "Maat wears an ostrich feather, against which hearts were weighed."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Egyptians treated the Nile flood as a divine gift, showing a worldview that was?",
+    "zh": "古埃及人将尼罗河泛滥视为神的恩赐，反映其世界观？"
+   },
+   "zh": "自然、诸神与宇宙秩序(玛特)在埃及思想中密不可分。",
+   "en": "Nature, gods and cosmic order (Maat) were inseparable in Egyptian thought."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "In which direction does the Nile flow?",
+    "zh": "尼罗河的流向是？"
+   },
+   "zh": "尼罗河自南向北流，注入地中海。",
+   "en": "The Nile flows north, emptying into the Mediterranean."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Geographically, 'Upper Egypt' lies to the?",
+    "zh": "「上埃及」在地理上位于？"
+   },
+   "zh": "上埃及指尼罗河上游的南部河谷。",
+   "en": "Upper Egypt is the southern, upriver part of the Nile valley."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "'Lower Egypt' refers mainly to the Nile's?",
+    "zh": "「下埃及」主要指尼罗河的？"
+   },
+   "zh": "下埃及是河水散流的北部尼罗河三角洲。",
+   "en": "Lower Egypt is the northern Nile Delta where the river fans out."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Egyptians called the fertile land 'Kemet' (black land); the desert was the?",
+    "zh": "埃及人称沃土为「黑土地」(Kemet)，称沙漠为？"
+   },
+   "zh": "德舍瑞特(红土地)是田野之外贫瘠的沙漠。",
+   "en": "Deshret, the 'red land', was the barren desert beyond the fields."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The rocky rapids that interrupt navigation on the Nile are called?",
+    "zh": "尼罗河上阻碍航行的岩石急流段称为？"
+   },
+   "zh": "瀑布(急滩)是难以航行的岩石河段。",
+   "en": "Cataracts (rocky rapids) marked stretches that were hard to sail."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The gold-rich region directly south of Egypt was?",
+    "zh": "埃及正南、盛产黄金的地区是？"
+   },
+   "zh": "埃及以南的努比亚出产黄金与贸易品。",
+   "en": "Nubia, south of Egypt, supplied gold and trade goods."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which sea lies to Egypt's north?",
+    "zh": "埃及北临哪片海？"
+   },
+   "zh": "尼罗河三角洲向北通往地中海。",
+   "en": "The Nile delta opens onto the Mediterranean to the north."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which sea lies to Egypt's east?",
+    "zh": "埃及东侧的海是？"
+   },
+   "zh": "红海位于埃及东侧。",
+   "en": "The Red Sea borders Egypt to the east."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which peninsula links Egypt to Asia?",
+    "zh": "连接埃及与亚洲的半岛是？"
+   },
+   "zh": "西奈半岛连接埃及(非洲)与亚洲。",
+   "en": "The Sinai Peninsula bridges Egypt (Africa) and Asia."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The New Kingdom capital, centre of Amun worship, was?",
+    "zh": "新王国时期以阿蒙崇拜为中心的都城是？"
+   },
+   "zh": "底比斯(今卢克索)是新王国的大都城。",
+   "en": "Thebes (modern Luxor) was the great New Kingdom capital."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Old Kingdom capital, near the pyramids, was?",
+    "zh": "古王国时期靠近金字塔群的都城是？"
+   },
+   "zh": "孟菲斯邻近吉萨/萨卡拉，是古王国都城。",
+   "en": "Memphis, near Giza/Saqqara, was the Old Kingdom capital."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which port city, founded by Alexander, became a great Hellenistic centre with a famous library?",
+    "zh": "亚历山大大帝所建、以大图书馆闻名的希腊化港城是？"
+   },
+   "zh": "亚历山大城以大图书馆与灯塔成为学术中心。",
+   "en": "Alexandria became a hub of learning with its great Library and lighthouse."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Nile flood season in the Egyptian calendar was called?",
+    "zh": "古埃及历法中尼罗河泛滥的季节称为？"
+   },
+   "zh": "阿赫特为泛滥季，其后为播种与收获季。",
+   "en": "Akhet was the inundation season; then came sowing and harvest."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which fertile lake-and-oasis region lies southwest of the Nile?",
+    "zh": "尼罗河西南、灌溉发达的低地绿洲是？"
+   },
+   "zh": "法尤姆洼地是灌溉良好、肥沃的地区。",
+   "en": "The Faiyum depression was a fertile, well-watered region."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Where did the vast majority of ancient Egyptians live?",
+    "zh": "绝大多数古埃及人聚居于何处？"
+   },
+   "zh": "人口聚居于尼罗河谷与三角洲那条狭长的绿带。",
+   "en": "Settlement clung to the thin green ribbon of the Nile valley and delta."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "How did the surrounding desert benefit Egypt?",
+    "zh": "环绕埃及的沙漠在安全上起到什么作用？"
+   },
+   "zh": "两侧的沙漠使埃及不易被外敌入侵。",
+   "en": "Deserts on either side shielded Egypt from easy invasion."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Aswan marked Egypt's traditional southern frontier near the?",
+    "zh": "阿斯旺一带是古埃及传统南疆，邻近尼罗河的？"
+   },
+   "zh": "阿斯旺的第一瀑布是传统的南部边界。",
+   "en": "The First Cataract at Aswan was the traditional southern border."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The 'Double Crown' symbolising a united Egypt combined which two crowns?",
+    "zh": "象征上下埃及统一的「双重冠」由哪两顶冠合成？"
+   },
+   "zh": "双重冠由上埃及白冠与下埃及红冠合成。",
+   "en": "The Double Crown joined the White Crown of Upper Egypt and Red Crown of Lower Egypt."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The three great eras of stability were the Old, Middle and ___ Kingdom.",
+    "zh": "古埃及三大稳定时期为古王国、中王国和？"
+   },
+   "zh": "古王国、中王国、新王国是三大统一盛期。",
+   "en": "Old, Middle and New Kingdoms were the three great unified eras."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Old Kingdom is best known as the age of?",
+    "zh": "古王国时期最以何著称？"
+   },
+   "zh": "古王国是大规模建造金字塔的时代。",
+   "en": "The Old Kingdom was the great pyramid-building age."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which female ruler reigned as king and built the temple at Deir el-Bahari?",
+    "zh": "以君主身份统治、营建代尔巴哈里祭庙的女法老是？"
+   },
+   "zh": "哈特谢普苏特是少数女法老之一，治世繁荣。",
+   "en": "Hatshepsut, one of few female pharaohs, ruled prosperously."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which boy-king's nearly intact tomb was found in 1922?",
+    "zh": "1922年其近乎完整陵墓被发现的少年法老是？"
+   },
+   "zh": "图坦卡蒙近乎完整的陵墓1922年被发现，震惊世界。",
+   "en": "Tutankhamun's intact tomb, found in 1922, dazzled the world."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who discovered Tutankhamun's tomb in 1922?",
+    "zh": "1922年发现图坦卡蒙陵墓的考古学家是？"
+   },
+   "zh": "英国考古学家霍华德·卡特于1922年发掘了该墓。",
+   "en": "British archaeologist Howard Carter uncovered the tomb in 1922."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which long-reigning warrior pharaoh fought at Kadesh and built Abu Simbel?",
+    "zh": "在位极长、打过卡迭石之战并建阿布辛贝的法老是？"
+   },
+   "zh": "拉美西斯二世在位约66年，是伟大的建造者与战士。",
+   "en": "Ramesses II reigned ~66 years and was a great builder and warrior."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Ramesses II's Battle of Kadesh was fought against which people?",
+    "zh": "拉美西斯二世的卡迭石之战对手是？"
+   },
+   "zh": "卡迭石之战(约公元前1274年)对手是赫梯人，后促成早期和约。",
+   "en": "Kadesh (c. 1274 BC) was fought against the Hittites; it led to an early peace treaty."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which pharaoh moved the capital to Amarna and promoted the Aten?",
+    "zh": "迁都阿玛尔那、推行阿吞崇拜的法老是？"
+   },
+   "zh": "阿肯那顿建阿玛尔那新都并推行阿吞崇拜。",
+   "en": "Akhenaten founded Amarna and promoted Aten worship."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Akhenaten's famous queen, known from a celebrated bust, was?",
+    "zh": "阿肯那顿之妻、以著名半身像闻名的王后是？"
+   },
+   "zh": "王后娜芙蒂蒂以其彩绘石灰岩半身像闻名。",
+   "en": "Queen Nefertiti is famous from her painted limestone bust."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was the last active pharaoh of ancient Egypt?",
+    "zh": "古埃及最后一位实际统治的法老是？"
+   },
+   "zh": "托勒密王朝的克娄巴特拉七世是最后一位实际统治的法老。",
+   "en": "Cleopatra VII, of the Ptolemaic line, was the last active pharaoh."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Ptolemaic dynasty that ruled Egypt descended from a general of?",
+    "zh": "统治埃及的托勒密王朝源自谁麾下的将领？"
+   },
+   "zh": "亚历山大的部将托勒密在其死后开创了该王朝。",
+   "en": "Ptolemy, a general of Alexander, founded the dynasty after Alexander's death."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which foreign people ruled the Delta during the Second Intermediate Period?",
+    "zh": "第二中间期统治三角洲的外来族群是？"
+   },
+   "zh": "来自累范特的希克索斯人曾统治三角洲，后被逐出。",
+   "en": "The Hyksos, from the Levant, ruled the Delta before being expelled."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Egyptian hieroglyphs were deciphered in 1822 by?",
+    "zh": "古埃及象形文字于1822年由谁破译？"
+   },
+   "zh": "商博良于1822年借罗塞塔石碑破译了象形文字。",
+   "en": "Jean-François Champollion cracked hieroglyphs using the Rosetta Stone in 1822."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Rosetta Stone was found during whose 1799 campaign in Egypt?",
+    "zh": "罗塞塔石碑是在谁的1799年埃及远征中被发现？"
+   },
+   "zh": "法军在拿破仑的埃及远征中发现了罗塞塔石碑。",
+   "en": "French soldiers found the Rosetta Stone during Napoleon's Egyptian campaign."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Roughly how long did ancient Egyptian civilization endure?",
+    "zh": "古埃及文明大约延续了多久？"
+   },
+   "zh": "自约公元前3100年统一到公元前30年被罗马征服，约三千年。",
+   "en": "From unification (~3100 BC) to Roman conquest (30 BC) is roughly 3,000 years."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "In 30 BC Egypt finally became a province of which empire?",
+    "zh": "公元前30年埃及最终成为哪个帝国的行省？"
+   },
+   "zh": "公元前30年克娄巴特拉死后，埃及沦为罗马行省。",
+   "en": "After Cleopatra's death in 30 BC, Egypt became a Roman province."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Cleopatra VII famously allied with which two Romans?",
+    "zh": "克娄巴特拉七世先后与哪两位罗马人结盟？"
+   },
+   "zh": "克娄巴特拉先后与凯撒、马克·安东尼结盟。",
+   "en": "Cleopatra allied (and had relationships) with Julius Caesar and then Mark Antony."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "How were human figures typically shown in Egyptian painting?",
+    "zh": "古埃及人物绘画的典型表现手法是？"
+   },
+   "zh": "埃及绘画用组合视角：头与腿侧面，躯干与眼正面。",
+   "en": "Egyptian art used a composite view: profile head and legs with a front-on torso and eye."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which empire conquered Egypt in 525 BC, before the Greeks and Romans?",
+    "zh": "在希腊、罗马之前，于公元前525年征服埃及的帝国是？"
+   },
+   "zh": "公元前525年波斯王冈比西斯二世征服埃及。",
+   "en": "The Persians under Cambyses II conquered Egypt in 525 BC."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Greek conqueror took Egypt in 332 BC, welcomed as a liberator from Persia?",
+    "zh": "公元前332年被视为解放者、从波斯手中夺取埃及的希腊统帅是？"
+   },
+   "zh": "公元前332年亚历山大大帝夺取埃及并建亚历山大城。",
+   "en": "Alexander the Great took Egypt in 332 BC and founded Alexandria."
+  }
+ ],
+ "greece": [
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "'Know thyself' and the method of probing questions are most associated with which Greek philosopher?",
+    "zh": "「认识你自己」与诘问式追问法，与哪位古希腊哲人关联最深？"
+   },
+   "zh": "苏格拉底以诘问法启发思辨，「认识你自己」是其精神写照。",
+   "en": "Socrates inspired inquiry through questioning; 'know thyself' captures his spirit."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Who was Plato's student and the tutor of Alexander the Great?",
+    "zh": "柏拉图的学生、亚历山大大帝的老师是哪位哲学家？"
+   },
+   "zh": "亚里士多德师从柏拉图，并曾任亚历山大之师，奠定众多学科基础。",
+   "en": "Aristotle studied under Plato and tutored Alexander, laying the foundations of many disciplines."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "In which Greek city-state did democracy first develop?",
+    "zh": "民主制度最早在以下哪个古希腊城邦发展起来？"
+   },
+   "zh": "雅典于约公元前508年发展出民主，公民于集会广场议事。",
+   "en": "Athens developed democracy around 508 BC, with citizens deliberating in the assembly."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "In which year BC did the ancient Olympic Games traditionally begin?",
+    "zh": "古代奥林匹克运动会传统上始于公元前哪一年？"
+   },
+   "zh": "古代奥运会始于公元前776年，于奥林匹亚为荣耀宙斯而举办。",
+   "en": "The ancient Olympics began in 776 BC at Olympia, honoring Zeus."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which temple on the Athenian Acropolis honored the patron goddess Athena?",
+    "zh": "雅典卫城上供奉守护神雅典娜的神庙是？"
+   },
+   "zh": "帕特农神庙(Parthenon)是雅典卫城供奉雅典娜的多立克式神庙杰作。",
+   "en": "The Parthenon is the Doric masterpiece on the Acropolis dedicated to Athena."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which 490 BC battle saw Greece repel the first Persian invasion?",
+    "zh": "公元前490年希腊击退波斯第一次入侵的著名战役是？"
+   },
+   "zh": "马拉松战役中雅典击退波斯，「马拉松」长跑即源于报捷传说。",
+   "en": "At Marathon, Athens repelled the Persians; the marathon race comes from the legend of the messenger."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The three classical Greek column orders are Doric, Ionic and which third?",
+    "zh": "古希腊三种古典柱式为多立克、爱奥尼和哪一种？"
+   },
+   "zh": "第三种是科林斯柱式，柱头饰以繁复的莨苕叶。",
+   "en": "The third order is Corinthian, with ornate acanthus-leaf capitals."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "On which Athenian citadel does the Parthenon stand?",
+    "zh": "帕特农神庙坐落于雅典的哪座卫城高地？"
+   },
+   "zh": "帕特农神庙矗立于雅典神圣的卫城高地之上。",
+   "en": "The Parthenon crowns the Acropolis, the sacred rocky citadel of Athens."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What was the typical shape of a Greek open-air theatre?",
+    "zh": "古希腊露天剧场的典型形制是？"
+   },
+   "zh": "希腊剧场为依山开凿的半圆形阶梯座席，利于声学。",
+   "en": "Greek theatres were semicircular tiers carved into hillsides for acoustics."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The marketplace and civic centre of a Greek city was the?",
+    "zh": "古希腊城邦的市集与公共活动中心称为？"
+   },
+   "zh": "阿戈拉是露天市集，也是公共生活的中心。",
+   "en": "The agora was the open marketplace and heart of public life."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The colossal statue of Zeus at Olympia (a Wonder) was sculpted by?",
+    "zh": "奥林匹亚的宙斯巨像(古代七大奇迹之一)出自哪位雕刻家？"
+   },
+   "zh": "菲狄亚斯雕造了奥林匹亚宙斯像，并主持帕特农雕饰。",
+   "en": "Phidias sculpted the Statue of Zeus at Olympia and oversaw the Parthenon sculptures."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Doric columns are characterised as?",
+    "zh": "多立克柱式的特点是？"
+   },
+   "zh": "多立克柱式朴素粗壮，无柱础，直立于台基上。",
+   "en": "The Doric order is plain, sturdy and sits directly on the platform without a base."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Ionic columns are recognised by their?",
+    "zh": "爱奥尼柱式以什么特征著称？"
+   },
+   "zh": "爱奥尼柱头有一对螺旋涡卷。",
+   "en": "Ionic capitals have a pair of spiral volutes."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Corinthian capitals are decorated with which leaves?",
+    "zh": "科林斯柱式柱头以什么叶饰装饰？"
+   },
+   "zh": "科林斯柱头雕满莨苕叶。",
+   "en": "Corinthian capitals are wreathed in carved acanthus leaves."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Parthenon was built mainly of which material?",
+    "zh": "帕特农神庙主要由什么材料建成？"
+   },
+   "zh": "帕特农神庙以洁白的彭忒利大理石建成。",
+   "en": "The Parthenon was built of gleaming Pentelic marble."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The subtle column bulge Greeks used to correct an optical illusion is called?",
+    "zh": "希腊人使柱身略鼓以矫正视觉错觉的处理称为？"
+   },
+   "zh": "Entasis 是柱身略呈凸弧，使其看起来笔直。",
+   "en": "Entasis is the slight convex curve given to columns so they look straight."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The triangular gable above a temple façade, often filled with sculpture, is the?",
+    "zh": "神庙正立面三角形山墙(常饰雕刻)称为？"
+   },
+   "zh": "山花是三角形山墙，常承载浮雕。",
+   "en": "The pediment is the triangular gable, often holding relief sculpture."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The sculpted band running around a temple above the columns is the?",
+    "zh": "神庙柱上方环绕的浮雕带称为？"
+   },
+   "zh": "中楣是柱上方水平的浮雕带。",
+   "en": "The frieze is the horizontal band of relief above the columns."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "A row of columns surrounding a Greek temple is a?",
+    "zh": "环绕希腊神庙四周的列柱称为？"
+   },
+   "zh": "列柱廊是环绕神庙的柱列。",
+   "en": "A peristyle is the colonnade encircling the temple."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The monumental gateway to the Athenian Acropolis is the?",
+    "zh": "雅典卫城的纪念性大门称为？"
+   },
+   "zh": "山门(Propylaea)是通往卫城的宏伟柱廊式大门。",
+   "en": "The Propylaea is the grand columned gateway to the Acropolis."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which Acropolis temple has a porch supported by sculpted maidens (caryatids)?",
+    "zh": "卫城上以「少女像柱(女像柱)」门廊著称的神庙是？"
+   },
+   "zh": "厄瑞克忒翁以其女像柱门廊闻名。",
+   "en": "The Erechtheion is famed for its Porch of the Caryatids."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "A sculpted female figure used in place of a column is a?",
+    "zh": "以女性人像充当立柱的构件称为？"
+   },
+   "zh": "女像柱是以盛装女性像充当建筑支撑的构件。",
+   "en": "A caryatid is a draped female figure serving as an architectural support."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The footrace track at Olympia gave its name to which structure?",
+    "zh": "奥林匹亚举行赛跑的跑道为哪种建筑命名？"
+   },
+   "zh": "斯塔狄翁是赛跑跑道，「体育场(stadium)」一词即源于此。",
+   "en": "The stadion was the running track; the word gave us 'stadium'."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The grid-plan layout of Greek cities is attributed to?",
+    "zh": "古希腊棋盘式城市规划常归功于谁？"
+   },
+   "zh": "米利都的希波丹姆被视为棋盘式城市规划之父。",
+   "en": "Hippodamus of Miletus is credited with the rational grid city plan."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "In which century BC was the Parthenon built (the age of Pericles)?",
+    "zh": "帕特农神庙建于公元前哪个世纪(伯里克利时代)？"
+   },
+   "zh": "帕特农神庙建于公元前5世纪中叶的伯里克利时代。",
+   "en": "The Parthenon was built in the mid-5th century BC under Pericles."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which poet is traditionally credited with the Iliad and the Odyssey?",
+    "zh": "史诗《伊利亚特》《奥德赛》相传的作者是？"
+   },
+   "zh": "荷马被传为《伊利亚特》与《奥德赛》的作者。",
+   "en": "Homer is the traditional author of the Iliad and the Odyssey."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Greek drama had two main genres: tragedy and?",
+    "zh": "古希腊戏剧的两大类型为悲剧和？"
+   },
+   "zh": "希腊戏剧以悲剧与喜剧为两大类型。",
+   "en": "Greek theatre centred on tragedy and comedy."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which tragedian wrote Oedipus Rex?",
+    "zh": "写《俄狄浦斯王》的著名悲剧诗人是？"
+   },
+   "zh": "悲剧大师索福克勒斯著有《俄狄浦斯王》。",
+   "en": "Sophocles, a great tragedian, wrote Oedipus Rex."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Who was the master of Greek (Old) comedy?",
+    "zh": "古希腊(旧)喜剧的代表大师是？"
+   },
+   "zh": "阿里斯托芬是雅典伟大的喜剧诗人。",
+   "en": "Aristophanes is the great comic playwright of Athens."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "On which mountain did the Greek gods dwell?",
+    "zh": "希腊神话中众神居住于哪座山？"
+   },
+   "zh": "奥林匹斯诸神被认为居于奥林匹斯山巅。",
+   "en": "The Olympian gods were said to live atop Mount Olympus."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Who was the king of the Greek gods?",
+    "zh": "希腊神话中的众神之王是？"
+   },
+   "zh": "天空与雷霆之神宙斯统御奥林匹斯众神。",
+   "en": "Zeus, god of sky and thunder, ruled the Olympian gods."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The goddess of wisdom and patron of Athens was?",
+    "zh": "智慧女神、雅典的守护神是？"
+   },
+   "zh": "智慧女神雅典娜是雅典守护神，帕特农即为她而建。",
+   "en": "Athena, goddess of wisdom, was patron of Athens (hence the Parthenon)."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Who was the Greek god of the sea?",
+    "zh": "希腊神话中的海洋之神是？"
+   },
+   "zh": "波塞冬掌管海洋与地震。",
+   "en": "Poseidon ruled the sea and earthquakes."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which physician is called the 'father of medicine'?",
+    "zh": "被尊为「医学之父」的古希腊医师是？"
+   },
+   "zh": "希波克拉底奠定理性医学，「希波克拉底誓言」以其命名。",
+   "en": "Hippocrates founded rational medicine; the Hippocratic Oath bears his name."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Who wrote the Histories and is called the 'father of history'?",
+    "zh": "著《历史》、被称「历史之父」的是？"
+   },
+   "zh": "希罗多德被称「历史之父」，记述了希波战争。",
+   "en": "Herodotus, the 'father of history', chronicled the Greco-Persian Wars."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which mathematician wrote the Elements, the basis of geometry?",
+    "zh": "著《几何原本》、奠定几何学的是？"
+   },
+   "zh": "欧几里得的《几何原本》系统化几何学，影响两千年。",
+   "en": "Euclid's Elements systematised geometry for two millennia."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Syracusan mathematician supposedly cried 'Eureka'?",
+    "zh": "据传高呼「尤里卡(Eureka)」的叙拉古数学家是？"
+   },
+   "zh": "阿基米德发现浮力原理时据传高呼「尤里卡」。",
+   "en": "Archimedes, discovering buoyancy, is said to have cried 'Eureka'."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The famous theorem about right triangles is named after?",
+    "zh": "关于直角三角形的著名定理以谁命名？"
+   },
+   "zh": "毕达哥拉斯定理(勾股定理)描述直角三角形三边关系。",
+   "en": "The Pythagorean theorem relates the sides of a right triangle."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The ancient Olympic Games were held every how many years?",
+    "zh": "古代奥林匹克运动会每隔几年举办一次？"
+   },
+   "zh": "奥运会每四年一届，这一周期称为「奥林匹亚德」。",
+   "en": "The Olympics were held every four years, a span called an Olympiad."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The celebrated lyric poetess from the island of Lesbos was?",
+    "zh": "莱斯博斯岛的著名女抒情诗人是？"
+   },
+   "zh": "莱斯博斯岛的萨福以抒情诗闻名。",
+   "en": "Sappho of Lesbos was renowned for her lyric poetry."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Greek alphabet was adapted from which people's script?",
+    "zh": "希腊字母改编自哪个民族的文字？"
+   },
+   "zh": "希腊人改编腓尼基字母并加入元音。",
+   "en": "The Greeks adapted the Phoenician alphabet, adding vowels."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What prize did victors of the ancient Olympics receive?",
+    "zh": "古代奥运冠军获得的奖赏是？"
+   },
+   "zh": "奥运优胜者获颁野橄榄枝编成的花环。",
+   "en": "Olympic victors were crowned with a wreath of wild olive."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What did actors wear in Greek theatre?",
+    "zh": "古希腊戏剧演员表演时佩戴什么？"
+   },
+   "zh": "演员佩戴表情面具，使少数人可分饰多角。",
+   "en": "Actors wore expressive masks so a few could play many roles."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Socrates' method of teaching through questioning is the?",
+    "zh": "苏格拉底以问答诘问启发思辨的方法称为？"
+   },
+   "zh": "苏格拉底诘问法以不断追问来检验观念。",
+   "en": "The Socratic method probes ideas through persistent questioning."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Plato founded a school in Athens called the?",
+    "zh": "柏拉图在雅典创办的学园称为？"
+   },
+   "zh": "柏拉图的学园(Academy)是「学术」一词之源。",
+   "en": "Plato's Academy gave us the word 'academic'."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Aristotle founded which school of philosophy?",
+    "zh": "亚里士多德创办的学校是？"
+   },
+   "zh": "亚里士多德在吕克昂讲学，边走边教(逍遥学派)。",
+   "en": "Aristotle taught at the Lyceum, walking as he lectured (Peripatetic)."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Plato's famous work on the ideal state is?",
+    "zh": "柏拉图论述理想国家的名著是？"
+   },
+   "zh": "柏拉图《理想国》探讨正义与由哲人王统治的理想城邦。",
+   "en": "Plato's Republic explores justice and the ideal city ruled by philosopher-kings."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Plato taught that true reality lies in eternal what?",
+    "zh": "柏拉图认为真实存在于永恒的什么之中？"
+   },
+   "zh": "柏拉图的理念论认为完美永恒的「相」才是真实。",
+   "en": "Plato's Theory of Forms holds that perfect, eternal Forms are the true reality."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The 'allegory of the cave' was told by which philosopher?",
+    "zh": "「洞穴寓言」出自哪位哲学家？"
+   },
+   "zh": "柏拉图的洞穴寓言(《理想国》)对照幻象与真知。",
+   "en": "Plato's cave allegory (in the Republic) contrasts illusion with true knowledge."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which pre-Socratic taught that 'everything flows' and change is constant?",
+    "zh": "主张「万物流变」、变化恒在的前苏格拉底哲人是？"
+   },
+   "zh": "赫拉克利特说人不能两次踏入同一条河。",
+   "en": "Heraclitus said you cannot step into the same river twice."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which philosopher proposed that everything is made of indivisible atoms?",
+    "zh": "提出「万物由不可分的原子构成」的古希腊哲学家是？"
+   },
+   "zh": "德谟克利特提出了早期的原子论。",
+   "en": "Democritus advanced an early atomic theory of matter."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Thales, often called the first philosopher, said the basic substance was?",
+    "zh": "被视为第一位哲学家的泰勒斯认为万物本原是？"
+   },
+   "zh": "米利都的泰勒斯认为水是万物的本原。",
+   "en": "Thales of Miletus held that water was the fundamental substance."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The school founded by Zeno, teaching virtue and acceptance of fate, was?",
+    "zh": "芝诺创立、主张德行与顺应命运的学派是？"
+   },
+   "zh": "斯多葛派主张自制，依理性与自然而生活。",
+   "en": "Stoicism taught self-mastery and living in accord with reason and nature."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Epicurus taught that happiness comes from?",
+    "zh": "伊壁鸠鲁认为幸福来自？"
+   },
+   "zh": "伊壁鸠鲁追求心灵宁静(ataraxia)，以适度快乐与无惧达成。",
+   "en": "Epicurus sought ataraxia: tranquillity through modest pleasures and freedom from fear."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Cynic philosopher reputedly lived in a large jar and mocked convention?",
+    "zh": "据传住在大桶里、蔑视世俗的犬儒派哲人是？"
+   },
+   "zh": "犬儒派的第欧根尼生活简朴，蔑视世俗礼法。",
+   "en": "Diogenes the Cynic lived simply and scorned social conventions."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Aristotle's ethics aimed at achieving which highest good?",
+    "zh": "亚里士多德伦理学以达到哪种至善为目标？"
+   },
+   "zh": "亚里士多德视「幸福(eudaimonia)」——经由德行的充盈——为人生目标。",
+   "en": "Aristotle held eudaimonia, flourishing through virtue, to be the goal of life."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Aristotle is credited with founding the systematic study of?",
+    "zh": "亚里士多德被认为系统创立了哪门学问(三段论)？"
+   },
+   "zh": "亚里士多德创立了形式逻辑，包括三段论。",
+   "en": "Aristotle founded formal logic, including the syllogism."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Socrates was condemned to death by drinking?",
+    "zh": "苏格拉底被判死刑后饮下的是？"
+   },
+   "zh": "苏格拉底以「蛊惑青年」罪被判死，饮毒堇汁而亡。",
+   "en": "Sentenced for 'corrupting the youth', Socrates drank hemlock."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Plato was a student of which philosopher?",
+    "zh": "柏拉图师从哪位哲人？"
+   },
+   "zh": "柏拉图师从苏格拉底，后又教导亚里士多德。",
+   "en": "Plato studied under Socrates and later taught Aristotle."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Who said 'Man is the measure of all things'?",
+    "zh": "「人是万物的尺度」出自哪位智者？"
+   },
+   "zh": "这句相对主义名言出自智者普罗泰戈拉。",
+   "en": "The relativist maxim is attributed to the sophist Protagoras."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Teachers of rhetoric for pay, criticised by Socrates, were the?",
+    "zh": "收费教授修辞、被苏格拉底批评的一类人称为？"
+   },
+   "zh": "智者收费教授辩说之术，苏格拉底质疑其相对主义。",
+   "en": "The Sophists taught persuasion for fees; Socrates challenged their relativism."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The island-dotted sea at the heart of the Greek world is the?",
+    "zh": "古希腊世界中心、岛屿众多的海是？"
+   },
+   "zh": "爱琴海介于希腊与小亚细亚之间，遍布希腊岛屿。",
+   "en": "The Aegean, between Greece and Asia Minor, was studded with Greek islands."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Greece occupies the southern tip of which European peninsula?",
+    "zh": "希腊位于哪座欧洲半岛的南端？"
+   },
+   "zh": "希腊位于巴尔干半岛南端。",
+   "en": "Greece lies at the south of the Balkan Peninsula."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Greek landscape is mostly?",
+    "zh": "希腊的地形以什么为主？"
+   },
+   "zh": "崎岖山地把希腊分割成许多小区域。",
+   "en": "Rugged mountains divide Greece into many small regions."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The mountainous terrain encouraged Greeks to organise into?",
+    "zh": "多山地形促使希腊人形成怎样的政治组织？"
+   },
+   "zh": "山地使各社区相互隔离，形成雅典、斯巴达等独立城邦。",
+   "en": "Mountains isolated communities into independent poleis like Athens and Sparta."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The large southern peninsula of Greece (home to Sparta) is the?",
+    "zh": "希腊南部的大半岛(斯巴达所在)是？"
+   },
+   "zh": "伯罗奔尼撒经科林斯地峡相连，是斯巴达与科林斯所在。",
+   "en": "The Peloponnese, joined by the Isthmus of Corinth, held Sparta and Corinth."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Athens lay in which region of Greece?",
+    "zh": "雅典位于希腊哪个地区？"
+   },
+   "zh": "雅典是阿提卡地区的中心城市。",
+   "en": "Athens was the chief city of the region of Attica."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Where were the ancient Olympic Games held?",
+    "zh": "古代奥运会的圣地是？"
+   },
+   "zh": "奥运会在伯罗奔尼撒的奥林匹亚举办。",
+   "en": "The Games were held at Olympia in the Peloponnese."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Site of the famous oracle of Apollo?",
+    "zh": "著名的阿波罗神谕所在地是？"
+   },
+   "zh": "德尔斐是皮提亚女祭司所在，最受尊崇的希腊神谕地。",
+   "en": "Delphi, seat of the Pythia, was the most revered Greek oracle."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "At which narrow pass did 300 Spartans make their famous stand against Persia?",
+    "zh": "300名斯巴达勇士抗击波斯的狭窄关隘是？"
+   },
+   "zh": "公元前480年列奥尼达率斯巴达人在温泉关死守。",
+   "en": "At Thermopylae (480 BC) Leonidas and the Spartans held the pass."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Greek colonies spread around which two seas?",
+    "zh": "古希腊人沿哪两片海广建殖民地？"
+   },
+   "zh": "希腊人在地中海与黑海沿岸广建殖民地。",
+   "en": "Greeks founded colonies all around the Mediterranean and the Black Sea."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Because of their seas and mountains, the Greeks excelled at?",
+    "zh": "受山海地形影响，希腊人尤其擅长？"
+   },
+   "zh": "耕地有限，希腊人转向海洋经营贸易与殖民。",
+   "en": "With little farmland, Greeks turned to the sea for trade and colonisation."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The largest Greek island, home of the Minoan civilization, was?",
+    "zh": "米诺斯文明所在、希腊最大的岛是？"
+   },
+   "zh": "克里特岛是青铜时代米诺斯文明的中心。",
+   "en": "Crete was the centre of the Bronze Age Minoan civilization."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Where did the Greek fleet decisively beat Persia in a 480 BC sea battle?",
+    "zh": "公元前480年希腊舰队决定性击败波斯的海战发生于？"
+   },
+   "zh": "萨拉米斯海战(公元前480年)重创波斯舰队。",
+   "en": "The naval Battle of Salamis (480 BC) crippled the Persian fleet."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The narrow neck of land linking the Peloponnese to the mainland is the?",
+    "zh": "连接伯罗奔尼撒与希腊本土的狭窄地峡是？"
+   },
+   "zh": "科林斯地峡把伯罗奔尼撒与希腊中部相连。",
+   "en": "The Isthmus of Corinth joins the Peloponnese to central Greece."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Athens' great rival, a militaristic city-state, was?",
+    "zh": "与雅典争霸、以尚武著称的城邦是？"
+   },
+   "zh": "尚武的斯巴达是雅典的主要对手。",
+   "en": "Sparta, a warrior society, was Athens' great rival."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The region north of Greece, homeland of Philip and Alexander, was?",
+    "zh": "希腊北部、腓力与亚历山大的故乡是？"
+   },
+   "zh": "希腊以北的马其顿出了腓力二世与亚历山大大帝。",
+   "en": "Macedonia, north of Greece, produced Philip II and Alexander the Great."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Daughter settlements founded by Greek city-states abroad were called?",
+    "zh": "希腊城邦向外建立的子城/殖民地称为？"
+   },
+   "zh": "人口过剩的城邦向海外派出殖民地(apoikia)。",
+   "en": "Overcrowded cities sent out colonies (apoikiai) around the seas."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which crops suited Greece's Mediterranean climate?",
+    "zh": "适合希腊地中海气候、广泛种植的作物是？"
+   },
+   "zh": "橄榄与葡萄(油与酒)适应希腊干燥气候。",
+   "en": "Olives and grapes (oil and wine) thrived in Greece's dry climate."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The sea between Greece and Italy is the?",
+    "zh": "希腊与意大利之间的海是？"
+   },
+   "zh": "爱奥尼亚海在希腊以西，邻近意大利。",
+   "en": "The Ionian Sea lies west of Greece, toward Italy."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "What did the ancient Greeks call themselves and their land?",
+    "zh": "古希腊人如何称呼自己与他们的土地？"
+   },
+   "zh": "希腊人自称「希腊人(Hellenes)」，称其地为「希腊(Hellas)」。",
+   "en": "The Greeks called themselves Hellenes and their land Hellas."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The series of wars between Greece and Persia are called?",
+    "zh": "希腊与波斯之间的系列战争史称？"
+   },
+   "zh": "希波战争(公元前5世纪)包括马拉松、温泉关与萨拉米斯之战。",
+   "en": "The Greco-Persian Wars (5th c. BC) included Marathon, Thermopylae and Salamis."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The long war between Athens and Sparta was the?",
+    "zh": "雅典与斯巴达之间的长期战争是？"
+   },
+   "zh": "伯罗奔尼撒战争(公元前431-404年)终结了雅典的黄金时代。",
+   "en": "The Peloponnesian War (431-404 BC) ended Athens' golden age."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which leader presided over Athens' golden age (when the Parthenon was built)?",
+    "zh": "雅典黄金时代(建造帕特农)的领袖是？"
+   },
+   "zh": "伯里克利领导雅典走向文化与民主的鼎盛。",
+   "en": "Pericles led Athens at its cultural and democratic height."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who reformed Athens around 508 BC, laying the basis of its democracy?",
+    "zh": "约公元前508年以改革奠定雅典民主基础的是？"
+   },
+   "zh": "克里斯提尼的改革(约公元前508年)被视为雅典民主的奠基。",
+   "en": "Cleisthenes' reforms (~508 BC) are seen as the foundation of Athenian democracy."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which early Athenian lawgiver reformed debt and class divisions?",
+    "zh": "早期以「解负令」等改革著称的雅典立法者是？"
+   },
+   "zh": "梭伦的改革减轻债务奴役，重组了雅典社会。",
+   "en": "Solon's reforms eased debt slavery and reorganised Athenian society."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Macedonian king unified Greece and was Alexander's father?",
+    "zh": "统一希腊、亚历山大之父的马其顿国王是？"
+   },
+   "zh": "马其顿的腓力二世征服希腊城邦，是亚历山大之父。",
+   "en": "Philip II of Macedon subdued the Greek city-states and was Alexander's father."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Alexander the Great's empire reached as far east as?",
+    "zh": "亚历山大大帝的帝国东扩至？"
+   },
+   "zh": "亚历山大的征服东抵印度的印度河。",
+   "en": "Alexander's conquests reached the Indus River in India."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Persian king did Alexander defeat?",
+    "zh": "亚历山大击败了哪位波斯国王？"
+   },
+   "zh": "亚历山大击败大流士三世，终结了波斯帝国。",
+   "en": "Alexander defeated Darius III, ending the Persian Empire."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The blend of Greek and Eastern culture after Alexander is called the?",
+    "zh": "亚历山大之后希腊文化与东方融合的时代称为？"
+   },
+   "zh": "希腊化时代在亚历山大之后将希腊文化传播到东方。",
+   "en": "The Hellenistic age spread Greek culture across the East after Alexander."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Spartan king led the 300 at Thermopylae?",
+    "zh": "温泉关战死的300斯巴达人由哪位国王率领？"
+   },
+   "zh": "列奥尼达国王率斯巴达人在温泉关血战至死。",
+   "en": "King Leonidas led the Spartans in their last stand at Thermopylae."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Athenian built the navy that won at Salamis?",
+    "zh": "主张建立海军、赢得萨拉米斯海战的雅典人是？"
+   },
+   "zh": "地米斯托克利扩建雅典舰队，并率其在萨拉米斯获胜。",
+   "en": "Themistocles built up the Athenian fleet and led it to victory at Salamis."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The earliest Aegean civilization, based on Crete, was the?",
+    "zh": "克里特岛上最早的爱琴文明是？"
+   },
+   "zh": "米诺斯文明在青铜时代兴盛于克里特岛。",
+   "en": "The Minoan civilization flourished on Crete in the Bronze Age."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The mainland Bronze Age Greek civilization (Agamemnon, Lion Gate) was the?",
+    "zh": "以阿伽门农、狮子门著称的希腊青铜时代文明是？"
+   },
+   "zh": "迈锡尼是希腊本土好战的青铜时代文明。",
+   "en": "The Mycenaeans were the warlike Bronze Age culture of mainland Greece."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "In Homer's Iliad, the Greeks besieged which city?",
+    "zh": "荷马《伊利亚特》中希腊人围攻的城是？"
+   },
+   "zh": "《伊利亚特》讲述希腊人围攻特洛伊。",
+   "en": "The Iliad tells of the Greek siege of Troy."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Spartan society was organised primarily around?",
+    "zh": "斯巴达社会的组织核心是？"
+   },
+   "zh": "斯巴达自七岁起培养男孩，过严苛的军事生活。",
+   "en": "Sparta raised boys from age seven for a life of military discipline."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Athenian democracy was a form of?",
+    "zh": "雅典的民主属于哪种形式？"
+   },
+   "zh": "公民在公民大会上亲自投票，是一种直接民主。",
+   "en": "Citizens voted directly in the Assembly — a direct democracy."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was excluded from citizenship in Athenian democracy?",
+    "zh": "雅典民主中被排除在公民权之外的是？"
+   },
+   "zh": "只有成年自由男性公民可投票；妇女、奴隶、外邦人被排除。",
+   "en": "Only free adult male citizens could vote; women, slaves and foreigners could not."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "At which 338 BC battle did Philip II defeat the allied Greek city-states?",
+    "zh": "公元前338年腓力二世击败希腊城邦联军的战役是？"
+   },
+   "zh": "喀罗尼亚战役(公元前338年)使腓力二世掌控希腊。",
+   "en": "At Chaeronea (338 BC) Philip II secured Macedonian control over Greece."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "After Alexander died, his empire was divided among his?",
+    "zh": "亚历山大死后，他的帝国被什么人瓜分？"
+   },
+   "zh": "亚历山大的部将(继业者)将帝国瓜分为相互争霸的王国。",
+   "en": "Alexander's generals, the Diadochi, carved his empire into rival kingdoms."
+  }
+ ],
+ "rome": [
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "What large structure did Rome build to span valleys and carry water into cities?",
+    "zh": "罗马用于跨越山谷、引水入城的大型工程结构称为？"
+   },
+   "zh": "罗马渡槽(aqueduct)以拱券结构引水千里，是其工程成就的代表。",
+   "en": "Roman aqueducts carried water over long distances on arches, a hallmark of their engineering."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which iconic Roman building seated about 50,000 spectators for gladiatorial games?",
+    "zh": "可容纳约5万观众、举办角斗的罗马标志性建筑是？"
+   },
+   "zh": "罗马斗兽场(Colosseum)以混凝土与拱券建造，可容约5万观众。",
+   "en": "The Colosseum, built of concrete and arches, seated about 50,000 spectators."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "In which year BC was the Roman Republic traditionally founded?",
+    "zh": "罗马共和国传统上建立于公元前哪一年？"
+   },
+   "zh": "罗马共和国约于公元前509年建立，以元老院与法律治国。",
+   "en": "The Roman Republic was founded around 509 BC, governed by the Senate and law."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "In which year AD is the Western Roman Empire usually said to have fallen?",
+    "zh": "西罗马帝国通常被认为于公元哪一年灭亡？"
+   },
+   "zh": "公元476年末代西罗马皇帝被废，传统上视为西罗马帝国灭亡。",
+   "en": "In 476 AD the last Western Roman emperor was deposed, traditionally marking the empire's fall."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What was the official language of Rome and the source of the Romance languages (French, Italian, Spanish)?",
+    "zh": "罗马帝国的官方语言、罗曼语族(法/意/西等)之源是？"
+   },
+   "zh": "拉丁语为罗马官方语言，后演化出法语、意大利语、西班牙语等罗曼语族。",
+   "en": "Latin was Rome's official language and evolved into the Romance languages."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "'All roads lead to ___' — which city completes the proverb?",
+    "zh": "谚语「条条大路通___」中的城市是？"
+   },
+   "zh": "罗马道路网以罗马为中心向全境辐射，故有「条条大路通罗马」。",
+   "en": "Rome's road network radiated from the city, giving rise to 'all roads lead to Rome'."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which semicircular structural element let Romans span large openings?",
+    "zh": "使罗马能跨越大跨度开口的半圆形结构元素是？"
+   },
+   "zh": "罗马人精于拱券，得以建造桥梁、渡槽与拱顶。",
+   "en": "Mastery of the arch let Romans build bridges, aqueducts and vaults."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which revolutionary building material let Romans cast huge domes and vaults?",
+    "zh": "使罗马能浇筑巨大穹顶与拱的革命性材料是？"
+   },
+   "zh": "罗马混凝土使万神殿等大穹顶成为可能。",
+   "en": "Roman concrete (opus caementicium) enabled domes like the Pantheon."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which domed temple to all the gods still stands intact in Rome?",
+    "zh": "罗马供奉众神、至今保存完好的大穹顶建筑是？"
+   },
+   "zh": "万神殿的混凝土穹顶屹立近一千九百年。",
+   "en": "The Pantheon's concrete dome has survived nearly 1,900 years."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Pantheon's roof is a dome pierced by a central opening called the?",
+    "zh": "万神殿屋顶是带中央开口的穹顶，该开口称为？"
+   },
+   "zh": "穹顶顶端的圆洞「oculus」是殿内唯一的采光口。",
+   "en": "The oculus is the round opening at the dome's apex, its only light source."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Large Roman public bathing-and-social complexes were called?",
+    "zh": "罗马兼具洗浴与社交的大型公共设施称为？"
+   },
+   "zh": "公共浴场是宏大的洗浴建筑，也是罗马社交中心。",
+   "en": "The thermae were vast bath complexes, hubs of Roman social life."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Where were chariot races held in Rome?",
+    "zh": "罗马举行战车赛的大型场所是？"
+   },
+   "zh": "马克西穆斯竞技场是罗马巨大的战车竞速场。",
+   "en": "The Circus Maximus was Rome's huge chariot-racing stadium."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "A Roman triumphal arch commemorated what?",
+    "zh": "罗马凯旋门用于纪念什么？"
+   },
+   "zh": "凯旋门为庆祝凯旋的将领与皇帝而建。",
+   "en": "Triumphal arches celebrated victorious generals and emperors."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The political and civic heart of ancient Rome was the?",
+    "zh": "古罗马的政治与公共中心是？"
+   },
+   "zh": "罗马广场是公共、宗教与政治生活的中心。",
+   "en": "The Roman Forum was the centre of public, religious and political life."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Colosseum's formal name is the?",
+    "zh": "斗兽场的正式名称是？"
+   },
+   "zh": "由弗拉维王朝皇帝兴建，正式名为弗拉维圆形剧场。",
+   "en": "Built by the Flavian emperors, it is properly the Flavian Amphitheatre."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Roman roads were notably built how?",
+    "zh": "罗马大道的修筑特点是？"
+   },
+   "zh": "罗马道路笔直，以分层石基修筑，经久耐用。",
+   "en": "Roman roads ran straight on a layered stone foundation for durability."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The multi-story apartment blocks ordinary Romans lived in were?",
+    "zh": "罗马平民居住的多层公寓楼称为？"
+   },
+   "zh": "因苏拉是罗马城中拥挤的多层公寓楼。",
+   "en": "Insulae were crowded multi-story apartment blocks in Roman cities."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "A wealthy Roman's private townhouse was a?",
+    "zh": "罗马富人的城市私宅称为？"
+   },
+   "zh": "多穆斯是罗马富裕家庭的独户城市宅邸。",
+   "en": "The domus was the single-family townhouse of well-off Romans."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which column records Trajan's wars in a spiral relief?",
+    "zh": "以螺旋浮雕记述图拉真战功的纪念柱是？"
+   },
+   "zh": "图拉真柱以螺旋浮雕记述其达契亚战争。",
+   "en": "Trajan's Column spirals with reliefs of his Dacian campaigns."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Roman aqueducts moved water using?",
+    "zh": "罗马渡槽输水依靠什么动力？"
+   },
+   "zh": "渡槽依精心设计的坡度，靠重力使水自流。",
+   "en": "Aqueducts relied on a carefully graded slope so water flowed by gravity."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Besides the Greek orders, Romans added which two column orders?",
+    "zh": "在希腊三柱式之外，罗马发展出哪两种柱式？"
+   },
+   "zh": "罗马增加了朴素的塔斯干与华丽的复合柱式。",
+   "en": "Rome added the plain Tuscan and the ornate Composite orders."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The underground burial galleries of early Christians in Rome were the?",
+    "zh": "罗马早期基督徒的地下墓道称为？"
+   },
+   "zh": "地下墓穴是早期基督徒开凿的隧道式墓地。",
+   "en": "Catacombs were tunnelled cemeteries used by early Christians."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The huge awning that shaded spectators in the Colosseum was the?",
+    "zh": "斗兽场为观众遮阳的大型篷幕称为？"
+   },
+   "zh": "由水手操纵的「velarium」是可收放的遮阳篷。",
+   "en": "Sailors operated the velarium, a retractable awning over the arena."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which defensive wall did Rome build across northern Britain?",
+    "zh": "罗马在不列颠北部修筑的防御长墙是？"
+   },
+   "zh": "哈德良长城标志着帝国在不列颠的北部边界。",
+   "en": "Hadrian's Wall marked the empire's northern frontier in Britain."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Latin evolved into which family of modern languages?",
+    "zh": "拉丁语演化出哪一现代语族(法/意/西/葡/罗)？"
+   },
+   "zh": "拉丁语演化出意、法、西等罗曼语族语言。",
+   "en": "Latin gave rise to the Romance languages: Italian, French, Spanish, etc."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman numeral V represents which number?",
+    "zh": "罗马数字 V 代表哪个数？"
+   },
+   "zh": "罗马数字中 V 表示 5。",
+   "en": "V is 5 in Roman numerals."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman numeral X represents which number?",
+    "zh": "罗马数字 X 代表哪个数？"
+   },
+   "zh": "罗马数字中 X 表示 10。",
+   "en": "X is 10 in Roman numerals."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman numeral C represents which number?",
+    "zh": "罗马数字 C 代表哪个数？"
+   },
+   "zh": "罗马数字中 C 表示 100(centum)。",
+   "en": "C is 100 (centum) in Roman numerals."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman numeral M represents which number?",
+    "zh": "罗马数字 M 代表哪个数？"
+   },
+   "zh": "罗马数字中 M 表示 1000(mille)。",
+   "en": "M is 1000 (mille) in Roman numerals."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Roman gladiators fought in which kind of building?",
+    "zh": "罗马角斗士搏斗的场所是？"
+   },
+   "zh": "角斗士在斗兽场等圆形竞技场中搏斗。",
+   "en": "Gladiators fought in amphitheatres like the Colosseum."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Roman epic by Virgil tells of Aeneas and Rome's origins?",
+    "zh": "维吉尔歌颂罗马起源、讲述埃涅阿斯的史诗是？"
+   },
+   "zh": "维吉尔的《埃涅阿斯纪》把罗马起源接到特洛伊英雄埃涅阿斯。",
+   "en": "Virgil's Aeneid links Rome's founding to the Trojan hero Aeneas."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Julius Caesar's calendar reform produced which calendar?",
+    "zh": "尤利乌斯·凯撒改革历法形成的是？"
+   },
+   "zh": "凯撒于公元前46年推行儒略历。",
+   "en": "Caesar introduced the Julian calendar in 46 BC."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The month 'July' is named after whom?",
+    "zh": "英文七月(July)得名于谁？"
+   },
+   "zh": "七月(Julius)以尤利乌斯·凯撒命名。",
+   "en": "July (Julius) honours Julius Caesar."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The month 'August' is named after whom?",
+    "zh": "英文八月(August)得名于谁？"
+   },
+   "zh": "八月以首位皇帝奥古斯都命名。",
+   "en": "August honours the first emperor, Augustus."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman king of the gods (equivalent to Greek Zeus) was?",
+    "zh": "罗马神话中的众神之王(对应宙斯)是？"
+   },
+   "zh": "天空与雷霆之神朱庇特是罗马众神之王。",
+   "en": "Jupiter, god of sky and thunder, was king of the Roman gods."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman god of war (equivalent to Greek Ares) was?",
+    "zh": "罗马战神(对应阿瑞斯)是？"
+   },
+   "zh": "战神马尔斯也被视为罗慕路斯之父。",
+   "en": "Mars, god of war, was also seen as father of Romulus."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman goddess of love (equivalent to Greek Aphrodite) was?",
+    "zh": "罗马爱神(对应阿芙洛狄忒)是？"
+   },
+   "zh": "维纳斯是罗马的爱与美之女神。",
+   "en": "Venus was the Roman goddess of love and beauty."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The policy of appeasing the masses was 'bread and ___'?",
+    "zh": "安抚民众的政策「面包与___」？"
+   },
+   "zh": "「面包与竞技」指以免费粮食与竞技表演安抚民众。",
+   "en": "'Bread and circuses' described free grain and games to keep the people content."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "What did Romans commonly write on for everyday notes?",
+    "zh": "罗马人日常书写常用的可擦写工具是？"
+   },
+   "zh": "可反复擦写的蜡板与铁笔用于记事与习字。",
+   "en": "Reusable wax tablets and a stylus served for notes and schoolwork."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The toga was the distinctive garment of which group?",
+    "zh": "托加长袍是哪类罗马人的标志性服饰？"
+   },
+   "zh": "托加是自由男性罗马公民的正式服饰。",
+   "en": "The toga was the formal dress of free male Roman citizens."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Under which emperor did Christianity become the state religion (380 AD)?",
+    "zh": "基督教成为罗马国教(公元380年)是在哪位皇帝时？"
+   },
+   "zh": "狄奥多西一世于公元380年将基督教定为国教。",
+   "en": "Theodosius I made Christianity the state religion in 380 AD."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Roman mosaics and frescoes mainly decorated?",
+    "zh": "罗马的马赛克与壁画主要装饰？"
+   },
+   "zh": "马赛克地面与壁画装点罗马住宅与浴场。",
+   "en": "Mosaic floors and wall frescoes adorned Roman homes and baths."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Roman standard 'SPQR' stands for?",
+    "zh": "罗马旗号「SPQR」意为？"
+   },
+   "zh": "SPQR 即「元老院与罗马人民(Senatus Populusque Romanus)」。",
+   "en": "SPQR = Senatus Populusque Romanus, 'the Senate and People of Rome'."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Stoic Roman emperor wrote the Meditations?",
+    "zh": "著《沉思录》的斯多葛派罗马皇帝是？"
+   },
+   "zh": "「哲学家皇帝」马可·奥勒留写下斯多葛派《沉思录》。",
+   "en": "Marcus Aurelius, the 'philosopher emperor', wrote the Stoic Meditations."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Stoic statesman and writer tutored the young Nero?",
+    "zh": "斯多葛派政治家与作家、曾任尼禄之师的是？"
+   },
+   "zh": "斯多葛派代表小塞内卡曾任尼禄的老师与顾问。",
+   "en": "Seneca the Younger, a leading Stoic, was Nero's tutor and advisor."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which former slave became a famous Stoic philosopher (the Discourses)?",
+    "zh": "出身奴隶、后成为著名斯多葛派哲人(《谈话录》)的是？"
+   },
+   "zh": "爱比克泰德出身奴隶，倡导斯多葛式地接纳无法掌控之事。",
+   "en": "Epictetus, born a slave, taught Stoic acceptance of what we cannot control."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which philosophy was most influential among the Roman elite?",
+    "zh": "在罗马上层中最具影响力的哲学流派是？"
+   },
+   "zh": "强调责任与理性的斯多葛派契合罗马统治阶层。",
+   "en": "Stoicism, stressing duty and reason, suited the Roman governing class."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which great orator championed natural law and the Republic?",
+    "zh": "罗马大演说家、阐扬自然法与共和理念的是？"
+   },
+   "zh": "西塞罗捍卫共和，并把希腊哲学译介为拉丁文。",
+   "en": "Cicero defended the Republic and helped pass Greek philosophy into Latin."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Roman law that applied to all peoples by reason was called?",
+    "zh": "罗马法中「基于理性、适用于所有民族」的法称为？"
+   },
+   "zh": "万民法被认为凭理性适用于一切民族。",
+   "en": "The ius gentium was law held to apply to all peoples through reason."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The great codification of Roman law under Justinian is the?",
+    "zh": "查士丁尼主持编纂的罗马法大全称为？"
+   },
+   "zh": "查士丁尼的《民法大全》保存并系统化了罗马法。",
+   "en": "Justinian's Corpus Juris Civilis preserved and systematised Roman law."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Rome's earliest written code of law was the?",
+    "zh": "罗马最早的成文法是？"
+   },
+   "zh": "《十二铜表法》(约公元前450年)是罗马最早的成文法。",
+   "en": "The Twelve Tables (~450 BC) were Rome's first written laws."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "A legal principle rooted in Roman thought holds the accused is innocent until?",
+    "zh": "源自罗马法精神的原则「未经证实有罪即___」？"
+   },
+   "zh": "无罪推定原则与罗马法理一脉相承。",
+   "en": "The presumption of innocence echoes Roman legal reasoning."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which Roman poet expounded atomism in 'On the Nature of Things'?",
+    "zh": "阐发原子论、著《物性论》的伊壁鸠鲁派罗马诗人是？"
+   },
+   "zh": "卢克莱修《物性论》以诗体阐述伊壁鸠鲁的原子论。",
+   "en": "Lucretius' De Rerum Natura set out Epicurean atomism in verse."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Roman virtue of dutiful devotion to gods, country and family was?",
+    "zh": "罗马推崇的「对神、国、家之责任」美德称为？"
+   },
+   "zh": "pietas 指对神、国与家的虔敬尽责。",
+   "en": "Pietas was dutiful respect toward gods, state and family."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Roman ideal of manly courage and excellence was called?",
+    "zh": "罗马推崇的男子气概与德行(勇毅)称为？"
+   },
+   "zh": "virtus 意为勇毅与德行，是英文「virtue」之源。",
+   "en": "Virtus denoted courage, excellence and manliness — the root of 'virtue'."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Romans adopting Greek gods under new names shows their religion was?",
+    "zh": "罗马把希腊诸神改名沿用，反映其宗教特点是？"
+   },
+   "zh": "罗马宗教乐于吸收并改名沿用外来神祇。",
+   "en": "Roman religion readily absorbed and renamed foreign gods."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Roman state religion centred on?",
+    "zh": "罗马国家宗教的核心是？"
+   },
+   "zh": "罗马奉行多神教与官方祭仪，后期还包含皇帝崇拜。",
+   "en": "Rome practised polytheism with official state cults, later including emperor worship."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Stoicism taught that one should live according to?",
+    "zh": "斯多葛派主张人应依照什么生活？"
+   },
+   "zh": "斯多葛派主张依理性与自然秩序而生活。",
+   "en": "Stoics aimed to live in accordance with reason and the order of nature."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Cicero helped transmit Greek philosophy into which language?",
+    "zh": "西塞罗把希腊哲学译介、传入哪种语言？"
+   },
+   "zh": "西塞罗创制拉丁术语来表达希腊哲学概念。",
+   "en": "Cicero coined Latin terms to render Greek philosophical ideas."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "A popular soldiers' mystery cult in the empire worshipped?",
+    "zh": "帝国时期流行于军人中的密教崇拜对象之一是？"
+   },
+   "zh": "密特拉密教在罗马军人中尤为流行。",
+   "en": "Mithraism, a mystery cult, was especially popular among Roman soldiers."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Latin 'res publica' (root of 'republic') literally means?",
+    "zh": "拉丁语「res publica」(共和国之源)本意是？"
+   },
+   "zh": "res publica 意为「公共事务」，即共有的国家。",
+   "en": "Res publica means 'public matter' — the shared commonwealth."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which emperor legalized Christianity with the Edict of Milan (313 AD)?",
+    "zh": "颁布《米兰敕令》(公元313年)使基督教合法的皇帝是？"
+   },
+   "zh": "君士坦丁的《米兰敕令》(313年)给予基督徒宽容。",
+   "en": "Constantine's Edict of Milan (313 AD) granted toleration to Christians."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Stoic attitude toward fate and hardship was?",
+    "zh": "斯多葛派面对命运与困苦的态度是？"
+   },
+   "zh": "斯多葛派追求平静，接纳无法掌控之事。",
+   "en": "Stoics sought equanimity, accepting what lies beyond their control."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Rome was famously built on how many hills?",
+    "zh": "罗马城建于几座山丘之上？"
+   },
+   "zh": "罗马是「七丘之城」。",
+   "en": "Rome is the 'city of seven hills'."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which river runs through the city of Rome?",
+    "zh": "流经罗马城的河流是？"
+   },
+   "zh": "台伯河流经罗马城。",
+   "en": "The Tiber River flows through Rome."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Rome lies on which peninsula?",
+    "zh": "罗马位于哪座半岛？"
+   },
+   "zh": "罗马位于亚平宁(意大利)半岛。",
+   "en": "Rome sits on the Italian (Apennine) Peninsula."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "What did the Romans call the Mediterranean Sea?",
+    "zh": "罗马人把地中海称为什么？"
+   },
+   "zh": "罗马人称地中海为「我们的海(Mare Nostrum)」。",
+   "en": "Rome called the Mediterranean Mare Nostrum, 'Our Sea'."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Rome's great rival in the western Mediterranean (Punic Wars) was?",
+    "zh": "罗马在西地中海的劲敌(布匿战争对手)是？"
+   },
+   "zh": "北非强国迦太基与罗马进行了布匿战争。",
+   "en": "Carthage, a North African power, fought Rome in the Punic Wars."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Roman province of Gaul corresponds to modern?",
+    "zh": "罗马的「高卢」行省大致对应今天的？"
+   },
+   "zh": "高卢大致相当于今日法国及周边。",
+   "en": "Gaul covered roughly modern France (and nearby areas)."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Roman province of Hispania is modern?",
+    "zh": "罗马的「西斯帕尼亚」对应今天的？"
+   },
+   "zh": "西斯帕尼亚即伊比利亚半岛——今西班牙与葡萄牙。",
+   "en": "Hispania was the Iberian Peninsula — Spain and Portugal."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Roman province of Britannia is modern?",
+    "zh": "罗马的「不列颠尼亚」对应今天的？"
+   },
+   "zh": "不列颠尼亚大致覆盖今英格兰与威尔士。",
+   "en": "Britannia covered much of present-day England and Wales."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "At its height the empire stretched from Britain east to?",
+    "zh": "罗马帝国鼎盛时疆域西起不列颠、东至？"
+   },
+   "zh": "鼎盛时罗马疆域自不列颠延伸至美索不达米亚与埃及。",
+   "en": "At its peak Rome reached from Britain to Mesopotamia and Egypt."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The fortified frontier line of the Roman Empire was the?",
+    "zh": "罗马帝国的边境防线统称为？"
+   },
+   "zh": "limes 是帝国由城墙、堡垒与河流构成的边境防线。",
+   "en": "The limes were the fortified borders (walls, forts, rivers) of the empire."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Rome's main seaport at the mouth of the Tiber was?",
+    "zh": "台伯河口、罗马的主要港口是？"
+   },
+   "zh": "奥斯蒂亚位于台伯河口，是罗马的港口。",
+   "en": "Ostia, at the Tiber's mouth, was Rome's harbour."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which volcano buried Pompeii in 79 AD?",
+    "zh": "公元79年掩埋庞贝城的火山是？"
+   },
+   "zh": "维苏威火山于公元79年喷发，掩埋了庞贝。",
+   "en": "Mount Vesuvius erupted in 79 AD, burying Pompeii."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which city, buried by Vesuvius, is famously well preserved?",
+    "zh": "被维苏威火山灰掩埋、保存惊人的城市是？"
+   },
+   "zh": "庞贝被火山灰封存，留下罗马生活的真实切片。",
+   "en": "Pompeii was preserved under ash, offering a snapshot of Roman life."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "After 395 AD the empire permanently split into Western and?",
+    "zh": "公元395年后罗马帝国永久分裂为西部和？"
+   },
+   "zh": "公元395年帝国分裂为西部与东部(拜占庭)。",
+   "en": "In 395 AD the empire split into Western and Eastern (Byzantine) halves."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The capital of the Eastern Roman (Byzantine) Empire was?",
+    "zh": "东罗马(拜占庭)帝国的都城是？"
+   },
+   "zh": "君士坦丁堡(今伊斯坦布尔)是东部都城。",
+   "en": "Constantinople (modern Istanbul) was the Eastern capital."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Alps shielded the Italian peninsula on which side?",
+    "zh": "阿尔卑斯山在哪个方向护卫意大利半岛？"
+   },
+   "zh": "阿尔卑斯山在北面形成护卫意大利的屏障。",
+   "en": "The Alps form a northern barrier guarding Italy."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Hannibal famously crossed the Alps with?",
+    "zh": "汉尼拔翻越阿尔卑斯山时带着？"
+   },
+   "zh": "汉尼拔率战象翻越阿尔卑斯入侵意大利，名垂史册。",
+   "en": "Hannibal famously led war elephants over the Alps to invade Italy."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Via Appia (Appian Way) connected Rome to?",
+    "zh": "阿庇亚大道(Via Appia)主要连接罗马与？"
+   },
+   "zh": "「道路女王」阿庇亚大道自罗马向南通往意大利南部。",
+   "en": "The Appian Way, the 'queen of roads', ran south from Rome."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The empire encircled which sea, making it almost a 'Roman lake'?",
+    "zh": "罗马帝国环抱哪片海，使之几乎成为「罗马内湖」？"
+   },
+   "zh": "罗马环抱地中海，称之为「我们的海」。",
+   "en": "Rome ringed the Mediterranean, calling it Mare Nostrum."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "By legend, Rome was founded by which twins?",
+    "zh": "传说罗马由哪对孪生兄弟建立？"
+   },
+   "zh": "传说孪生兄弟罗慕路斯与雷穆斯建罗马，罗慕路斯为首王。",
+   "en": "Legend says the twins Romulus and Remus founded Rome; Romulus became its first king."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The traditional founding year of the city of Rome is?",
+    "zh": "罗马城传统的建城年份是？"
+   },
+   "zh": "罗马传统上建城于公元前753年。",
+   "en": "Rome was traditionally founded in 753 BC."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The wars between Rome and Carthage were the?",
+    "zh": "罗马与迦太基之间的战争称为？"
+   },
+   "zh": "三次布匿战争以罗马于公元前146年摧毁迦太基告终。",
+   "en": "The three Punic Wars ended with Rome destroying Carthage in 146 BC."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Carthaginian general crossed the Alps to invade Italy?",
+    "zh": "翻越阿尔卑斯入侵意大利的迦太基统帅是？"
+   },
+   "zh": "迦太基的汉尼拔在第二次布匿战争中经阿尔卑斯入侵意大利。",
+   "en": "Hannibal of Carthage invaded Italy via the Alps in the Second Punic War."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was assassinated on the Ides of March, 44 BC?",
+    "zh": "公元前44年「3月15日」被刺杀的是？"
+   },
+   "zh": "尤利乌斯·凯撒于公元前44年3月15日被元老们刺杀。",
+   "en": "Julius Caesar was assassinated by senators on 15 March 44 BC."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who was the first Roman emperor?",
+    "zh": "罗马的第一位皇帝(终结共和)是？"
+   },
+   "zh": "屋大维于公元前27年成为奥古斯都，是首位皇帝。",
+   "en": "Octavian became Augustus, the first emperor, in 27 BC."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The ~200-year peak of imperial peace and prosperity is called the?",
+    "zh": "罗马帝国鼎盛时约两百年的和平称为？"
+   },
+   "zh": "罗马治世(Pax Romana)是自奥古斯都起的长期和平。",
+   "en": "The Pax Romana was the long peace from Augustus onward."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Under which emperor did the empire reach its greatest territorial extent?",
+    "zh": "帝国疆域达到最大时的皇帝是？"
+   },
+   "zh": "帝国疆域在图拉真时期(公元2世纪初)达到最大。",
+   "en": "The empire was largest under Trajan (early 2nd century AD)."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which emperor moved the capital east and founded Constantinople?",
+    "zh": "迁都东方、建君士坦丁堡的皇帝是？"
+   },
+   "zh": "君士坦丁于公元330年建君士坦丁堡为东部新都。",
+   "en": "Constantine founded Constantinople as a new eastern capital in 330 AD."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Senate was the chief institution of which Roman political era?",
+    "zh": "元老院是罗马哪一政体的核心机构？"
+   },
+   "zh": "元老院是罗马共和国的核心(帝国时期延续但权力削弱)。",
+   "en": "The Senate was central to the Roman Republic (and continued, weaker, under the empire)."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The two chief magistrates elected annually in the Republic were the?",
+    "zh": "罗马共和国每年选出的两位最高执政官称为？"
+   },
+   "zh": "两位每年选出的执政官共同领导共和国。",
+   "en": "Two consuls, elected yearly, jointly headed the Republic."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which officials defended the interests of the plebeians and could veto?",
+    "zh": "罗马维护平民利益、拥有否决权的官职是？"
+   },
+   "zh": "保民官保护平民，并可否决官员的决定。",
+   "en": "Tribunes of the plebs protected commoners and could veto magistrates."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Early Roman social struggle was between patricians and?",
+    "zh": "罗马早期社会斗争的两大阶层是贵族与？"
+   },
+   "zh": "贵族与平民为权利斗争数百年。",
+   "en": "Patricians (nobles) and plebeians (commoners) contested rights for centuries."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which gladiator led a major slave revolt in 73 BC?",
+    "zh": "公元前73年领导大规模奴隶起义的角斗士是？"
+   },
+   "zh": "斯巴达克斯领导了著名的反罗马奴隶起义。",
+   "en": "Spartacus led a famous slave uprising against Rome."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The First Triumvirate included Caesar, Pompey and?",
+    "zh": "「前三头同盟」由凯撒、庞培和谁组成？"
+   },
+   "zh": "凯撒、庞培与克拉苏结成前三头同盟。",
+   "en": "Caesar, Pompey and Crassus formed the First Triumvirate."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "What did Caesar reputedly say on crossing the Rubicon?",
+    "zh": "凯撒渡过卢比孔河时据传说了什么？"
+   },
+   "zh": "公元前49年凯撒渡卢比孔河挑起内战，据传说「骰子已掷下」。",
+   "en": "Crossing the Rubicon (49 BC) into civil war, Caesar said 'the die is cast'."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which infamous emperor was blamed for the Great Fire of Rome (64 AD)?",
+    "zh": "因公元64年罗马大火而声名狼藉的皇帝是？"
+   },
+   "zh": "尼禄被指与公元64年大火有关，并借此迫害基督徒。",
+   "en": "Nero was blamed for the 64 AD fire and persecuted Christians for it."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who deposed the last Western Roman emperor in 476 AD?",
+    "zh": "公元476年废黜末代西罗马皇帝的日耳曼首领是？"
+   },
+   "zh": "日耳曼首领奥多亚塞于公元476年废黜罗慕路斯·奥古斯都鲁斯。",
+   "en": "The Germanic chieftain Odoacer deposed Romulus Augustulus in 476 AD."
+  }
+ ],
+ "trade": [
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Silk Road linked Chang'an in the east with which western city?",
+    "zh": "丝绸之路连接东方的长安与西方的哪座城市？"
+   },
+   "zh": "丝路连接汉唐长安与地中海的罗马，是横贯欧亚的贸易与文化通道。",
+   "en": "The Silk Road linked Han-Tang Chang'an with Rome in the Mediterranean, a route of trade and culture across Eurasia."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "In roughly which Chinese dynasty did the Silk Road open?",
+    "zh": "丝绸之路大致开通于中国的哪个朝代？"
+   },
+   "zh": "丝路约于汉代(公元前2世纪，张骞通西域后)开通并繁荣。",
+   "en": "The Silk Road opened and flourished around the Han (2nd century BC, after Zhang Qian's missions)."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which major religion spread eastward along the Silk Road, blending with local cultures?",
+    "zh": "沿丝路东传、与各地文明交融的主要宗教之一是？"
+   },
+   "zh": "佛教循丝路自天竺(印度)东渐至东亚，与各地文化深度交融。",
+   "en": "Buddhism spread east from India along the Silk Road to East Asia, blending deeply with local cultures."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Eastern Jin monk journeyed west to seek scriptures and wrote 'A Record of Buddhist Kingdoms'?",
+    "zh": "西行求法、著《佛国记》的东晋高僧是？"
+   },
+   "zh": "东晋高僧法显沿丝路西行求法，归国著《佛国记》记述见闻。",
+   "en": "The Eastern Jin monk Faxian traveled west along the Silk Road and wrote 'A Record of Buddhist Kingdoms'."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which 13th-century traveler came to China along the Silk Road and left a famous travelogue?",
+    "zh": "13世纪沿丝路来华、留下著名游记的旅行家是？"
+   },
+   "zh": "威尼斯人马可·波罗13世纪沿丝路来华，其游记影响深远。",
+   "en": "The Venetian Marco Polo came to China along the Silk Road in the 13th century; his travels were hugely influential."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "What was the most representative Chinese good carried west by caravans on the Silk Road?",
+    "zh": "丝路上由东方商队运输、最具代表性的中国商品是？"
+   },
+   "zh": "丝绸是丝路最具代表性的中国商品，「丝绸之路」因此得名。",
+   "en": "Silk was the most representative Chinese good on the route, giving the Silk Road its name."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Roadside inns where Silk Road caravans rested were called?",
+    "zh": "丝路上供商队歇脚的驿站客栈称为？"
+   },
+   "zh": "商队客栈是设防的路边旅店，供商人与牲畜歇息。",
+   "en": "Caravanserais were fortified roadside inns for merchants and their animals."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The great Buddhist cave-temple complex at Dunhuang is the?",
+    "zh": "敦煌著名的佛教石窟群是？"
+   },
+   "zh": "敦煌莫高窟珍藏数百年的丝路佛教艺术。",
+   "en": "The Mogao Caves at Dunhuang hold centuries of Silk Road Buddhist art."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The colossal cliff Buddhas (destroyed in 2001) on the route in Afghanistan were the?",
+    "zh": "阿富汗丝路上、2001年被毁的巨型崖壁大佛是？"
+   },
+   "zh": "巴米扬大佛凿于崖壁，2001年被毁。",
+   "en": "The Bamiyan Buddhas, carved into cliffs, were destroyed in 2001."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The dome-shaped Buddhist relic mound that spread along the route was the?",
+    "zh": "沿丝路传播、半球形供奉舍利的佛教建筑是？"
+   },
+   "zh": "窣堵坡(佛塔)随佛教传播，在东亚演变为塔。",
+   "en": "The stupa, enshrining relics, spread with Buddhism and became the pagoda in East Asia."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which rock-cut Nabataean trade city in Jordan flourished on caravan routes?",
+    "zh": "约旦境内、纳巴泰人凿岩而建、靠商道繁荣的古城是？"
+   },
+   "zh": "佩特拉凿于玫瑰色崖壁，因商队贸易而富庶。",
+   "en": "Petra, carved into rose-red cliffs, grew rich as a caravan trade hub."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which Syrian caravan oasis, the 'Bride of the Desert', thrived on trade?",
+    "zh": "叙利亚沙漠中、号称「沙漠新娘」的商队绿洲城是？"
+   },
+   "zh": "巴尔米拉是连接罗马与东方的富庶商队城。",
+   "en": "Palmyra was a wealthy caravan city linking Rome and the East."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which structure guarded the Chinese (Hexi Corridor) section of the route?",
+    "zh": "守护丝路中国段(河西走廊)的工程是？"
+   },
+   "zh": "长城及其烽燧延伸保护着河西走廊。",
+   "en": "Extensions of the Great Wall and beacon towers protected the Hexi Corridor."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Beacon towers (fenghuo tai) along the route were used to?",
+    "zh": "丝路沿线的烽燧(烽火台)用途是？"
+   },
+   "zh": "烽燧以烽火与狼烟远距离传递警讯。",
+   "en": "Beacon towers relayed warnings by fire and smoke across long distances."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Which Central Asian oasis city (later famed for the Registan) was a great route hub?",
+    "zh": "中亚丝路重镇、后以雷吉斯坦广场闻名的城市是？"
+   },
+   "zh": "撒马尔罕是中亚丝路的繁华交汇点。",
+   "en": "Samarkand was a flourishing crossroads of the Silk Road in Central Asia."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The underground tunnels tapping groundwater to water oases (Persia/Turpan) are?",
+    "zh": "波斯与吐鲁番一带引地下水灌溉绿洲的暗渠是？"
+   },
+   "zh": "坎儿井把地下水暗引至绿洲农田。",
+   "en": "Qanats (karez) carried groundwater underground to oasis farms."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Fortified oasis towns on the route were typically located at?",
+    "zh": "丝路上设防的绿洲城镇多位于？"
+   },
+   "zh": "绿洲城镇聚集于有水源、通关隘之处。",
+   "en": "Oasis towns clustered where water and passes made travel possible."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Mogao Caves are decorated mainly with?",
+    "zh": "莫高窟主要以什么艺术装饰？"
+   },
+   "zh": "敦煌石窟满布佛教壁画与彩塑。",
+   "en": "Dunhuang's caves are filled with Buddhist murals and painted clay sculptures."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The famous passes guarding the Chinese end of the route were?",
+    "zh": "丝路中国段西端的著名关隘是？"
+   },
+   "zh": "玉门关与阳关把守敦煌以西的丝路。",
+   "en": "Yumenguan and Yangguan guarded the route west of Dunhuang."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Buddhist cave-temple architecture spreading from India to China shows?",
+    "zh": "佛教石窟艺术自印度/中亚向东传入中国，体现了？"
+   },
+   "zh": "石窟寺沿丝路东传，并在传播中本地化。",
+   "en": "Grotto temples travelled the route, adapting as they spread east."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Dome and arch construction spread along the route mainly from which direction?",
+    "zh": "拱券与穹顶技术沿丝路主要自哪一方向传播？"
+   },
+   "zh": "拱顶与穹顶技术自罗马、波斯世界向东传播。",
+   "en": "Vaulting and domes spread eastward from the Roman and Persian world."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "Sogdian merchants in China built temples to which (fire-worshipping) religion?",
+    "zh": "在华的粟特商人曾建哪一(拜火)宗教的祠庙？"
+   },
+   "zh": "粟特商人把祆教(拜火)祠庙带入唐代城市。",
+   "en": "Sogdian traders brought Zoroastrian (fire) temples to Tang Chinese cities."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Maritime Silk Road's key Chinese port, famed for its harbour, was?",
+    "zh": "海上丝绸之路在中国的代表性大港是？"
+   },
+   "zh": "泉州(刺桐)是宋元时期海上丝路大港。",
+   "en": "Quanzhou (Citong) was a great Maritime Silk Road port in the Song and Yuan."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "A typical caravanserai was built around a central?",
+    "zh": "商队客栈的典型布局中心是？"
+   },
+   "zh": "房间环绕中央庭院，安置骆驼与货物。",
+   "en": "Rooms ringed a central courtyard where camels and cargo were kept."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The carving style of China's Yungang and Longmen grottoes was influenced by?",
+    "zh": "中国云冈、龙门石窟的造像风格受何影响？"
+   },
+   "zh": "佛教造像风格经丝路自印度与中亚传来。",
+   "en": "Buddhist sculpture styles travelled the route from India and Central Asia."
+  },
+  {
+   "category": "Architecture",
+   "topic": {
+    "en": "The Jade Gate Pass (Yumenguan) was named for the trade in which good?",
+    "zh": "「玉门关」之名与经此输入的哪种商品有关？"
+   },
+   "zh": "和田玉经此关输入，故名「玉门关」。",
+   "en": "Khotan jade entered China through the Jade Gate, giving it its name."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Chinese invention spread west via the route, revolutionising records?",
+    "zh": "经丝路西传、革新书写载体的中国发明是？"
+   },
+   "zh": "造纸术沿丝路西传，改变了书写文化。",
+   "en": "Papermaking spread west along the route, transforming written culture."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Papermaking is said to have spread west after which 751 AD battle (with captured artisans)?",
+    "zh": "造纸术西传据传与公元751年哪场战役(俘虏工匠)有关？"
+   },
+   "zh": "怛罗斯之战(751年)后，被俘的中国造纸工匠促进了技术西传。",
+   "en": "After the Battle of Talas (751 AD), captured Chinese papermakers helped spread the craft."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Besides silk, which prized Chinese product was exported along the route?",
+    "zh": "除丝绸外，中国经丝路输出的珍贵商品还有？"
+   },
+   "zh": "中国瓷器(与茶叶)是重要的东方输出品。",
+   "en": "Chinese porcelain (and tea) were major eastern exports."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which goods commonly came TO China from the west?",
+    "zh": "经丝路自西方输入中国的商品包括？"
+   },
+   "zh": "玻璃器、良马、玉石、香料与羊毛东运入华。",
+   "en": "Glassware, horses, jade, spices and wool flowed east to China."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The plucked lute (pipa) reached China mainly via?",
+    "zh": "琵琶等弹拨乐器传入中国的途径主要是？"
+   },
+   "zh": "琵琶等乐器经丝路自中亚传入中国。",
+   "en": "The pipa and similar lutes entered China from Central Asia along the route."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Persian-origin, fire-revering religion travelled east along the route?",
+    "zh": "源自波斯、以拜火著称、东传入华的宗教是？"
+   },
+   "zh": "以圣火崇拜著称的祆教自波斯东传。",
+   "en": "Zoroastrianism, with its sacred fire, spread east from Persia."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The 'Nestorian' faith that reached Tang China was a branch of which religion?",
+    "zh": "唐代传入中国的「景教」是哪一宗教的分支？"
+   },
+   "zh": "聂斯托利派基督教(景教)经丝路传入唐朝。",
+   "en": "Nestorian Christianity (Jingjiao) reached Tang China via the route."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Manichaeism, which blended several faiths, originated in?",
+    "zh": "融合多教、亦经丝路东传的摩尼教(明教)源自？"
+   },
+   "zh": "摩尼教由摩尼在波斯创立，沿丝路传播。",
+   "en": "Manichaeism, founded by Mani in Persia, spread along the route."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Dunhuang 'library cave' preserved thousands of what?",
+    "zh": "敦煌「藏经洞」保存了数以万计的？"
+   },
+   "zh": "封存的藏经洞藏有数万件多语种写本。",
+   "en": "The sealed library cave held tens of thousands of manuscripts in many languages."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Tang monk journeyed to India for scriptures and inspired 'Journey to the West'?",
+    "zh": "唐代西行天竺取经、《西游记》原型的高僧是？"
+   },
+   "zh": "玄奘西行取经的事迹启发了《西游记》。",
+   "en": "Xuanzang's pilgrimage to India inspired the novel Journey to the West."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Which Chinese drink became a major trade and cultural export?",
+    "zh": "成为重要贸易与文化输出的中国饮品是？"
+   },
+   "zh": "茶作为中国的贸易与文化输出品广为传播。",
+   "en": "Tea spread widely as a Chinese trade and cultural export."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The Sogdians, key Silk Road merchants, had a language that served as a?",
+    "zh": "粟特人作为丝路主要商队，其语言一度充当？"
+   },
+   "zh": "粟特语一度是丝路通行的商贸共同语。",
+   "en": "Sogdian was widely used as a common trade language across the route."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The closely guarded secret of silk production was eventually smuggled to?",
+    "zh": "养蚕缫丝的秘密最终被走私传到？"
+   },
+   "zh": "约公元550年蚕种被走私至拜占庭，打破中国垄断。",
+   "en": "Silkworm eggs were smuggled to Byzantium around 550 AD, breaking China's monopoly."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Grapes and grape-wine reached China mainly from?",
+    "zh": "葡萄与葡萄酒传入中国主要来自？"
+   },
+   "zh": "葡萄与葡萄酒经丝路自西域传入中国。",
+   "en": "Grapes and wine came to China from the Western Regions along the route."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The fusion of Greek and Buddhist art first appeared in which region?",
+    "zh": "希腊与佛教艺术交融、最早出现于哪一地区？"
+   },
+   "zh": "希腊化佛教艺术兴起于犍陀罗，融合希腊与佛教风格。",
+   "en": "Greco-Buddhist art arose in Gandhara, where Greek and Buddhist styles met."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "The 'spices' traded westward chiefly included?",
+    "zh": "经丝路与海路西运的「香料」主要包括？"
+   },
+   "zh": "肉桂、胡椒等香料是高价值的贸易品。",
+   "en": "Spices such as cinnamon and pepper were high-value trade goods."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Camels were prized on the route because they could?",
+    "zh": "骆驼成为丝路「沙漠之舟」是因为它能？"
+   },
+   "zh": "骆驼能数日不饮、负重前行，最适合沙漠。",
+   "en": "Camels could bear heavy loads for days without water — ideal for deserts."
+  },
+  {
+   "category": "Culture",
+   "topic": {
+    "en": "Beyond goods, the Silk Road most importantly spread?",
+    "zh": "丝绸之路传播的不仅是货物，更重要的是？"
+   },
+   "zh": "丝路最深远的影响是思想、信仰与技术的交流。",
+   "en": "The route's deepest legacy was the exchange of ideas, faiths and technology."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which religion spread from India eastward to China, shaping East Asian thought?",
+    "zh": "经丝路自印度东传、深刻影响东亚思想的宗教是？"
+   },
+   "zh": "佛教是经丝路东传、影响最深的信仰。",
+   "en": "Buddhism was the most influential faith carried east along the route."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Which branch of Buddhism spread along the northern route to East Asia?",
+    "zh": "沿北道传入东亚的佛教派别主要是？"
+   },
+   "zh": "大乘佛教沿北道丝路传入中国。",
+   "en": "Mahayana Buddhism predominated along the northern Silk Road into China."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Buddhism teaches that ordinary life is fundamentally marked by?",
+    "zh": "佛教认为人生的基本实相是？"
+   },
+   "zh": "四圣谛之首即「苦」——人生充满苦。",
+   "en": "The First Noble Truth holds that life entails dukkha (suffering)."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Buddhist goal of release from the cycle of rebirth is?",
+    "zh": "佛教追求脱离轮回的终极境界称为？"
+   },
+   "zh": "涅槃是脱离苦与生死轮回的解脱。",
+   "en": "Nirvana is liberation from suffering and the cycle of rebirth."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The endless cycle of birth, death and rebirth in Indian thought is?",
+    "zh": "印度思想中生死流转的轮回称为？"
+   },
+   "zh": "轮回(samsara)是佛教力求超脱的生死循环。",
+   "en": "Samsara is the cycle of rebirth from which Buddhism seeks release."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The principle that one's actions shape future rebirth is?",
+    "zh": "「善恶之行影响未来果报」的概念称为？"
+   },
+   "zh": "业(karma)指行为决定未来的果报。",
+   "en": "Karma is the law that deeds shape one's future condition."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Zoroastrianism views the cosmos as a struggle between?",
+    "zh": "琐罗亚斯德教(祆教)将世界看作什么的斗争？"
+   },
+   "zh": "祆教主张善恶(光明与黑暗)的宇宙斗争。",
+   "en": "Zoroastrianism teaches a cosmic struggle between good and evil."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Zoroastrianism's supreme god of light and wisdom is?",
+    "zh": "琐罗亚斯德教至高的光明智慧之神是？"
+   },
+   "zh": "阿胡拉·马兹达是祆教至高的善神。",
+   "en": "Ahura Mazda is the supreme good god of Zoroastrianism."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Manichaeism taught a sharp dualism of?",
+    "zh": "摩尼教(明教)的核心教义是？"
+   },
+   "zh": "摩尼教视世界为光明与黑暗的斗争。",
+   "en": "Manichaeism saw the world as a battle of light against darkness."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Mani blended elements of which religions?",
+    "zh": "摩尼创立摩尼教，融合了哪些宗教的元素？"
+   },
+   "zh": "摩尼教融合了祆教、基督教与佛教思想。",
+   "en": "Manichaeism drew on Zoroastrian, Christian and Buddhist ideas."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Nestorian Christianity in Tang China was known as?",
+    "zh": "传入唐朝的聂斯托利派基督教在华称为？"
+   },
+   "zh": "聂斯托利派基督教在唐代被称为「景教」。",
+   "en": "Nestorian Christianity was called Jingjiao, the 'Luminous Religion', in Tang China."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Islam later spread along the route beginning in which century AD?",
+    "zh": "伊斯兰教沿丝路传播始于公元几世纪(起于阿拉伯)？"
+   },
+   "zh": "伊斯兰教于7世纪兴起于阿拉伯，沿商路东传。",
+   "en": "Islam arose in 7th-century Arabia and spread east along trade routes."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The exchange of ideas along the route is an early example of?",
+    "zh": "丝路上思想与信仰的交流，是哪种现象的早期范例？"
+   },
+   "zh": "丝路是早期跨文化交流的重要通道。",
+   "en": "The route was a great early channel of cross-cultural exchange."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Xuanzang journeyed to India chiefly to?",
+    "zh": "玄奘西行天竺的主要目的是？"
+   },
+   "zh": "玄奘为求取原典佛经、归国翻译而西行。",
+   "en": "Xuanzang sought original Buddhist texts to bring back and translate."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Bodhisattva ideal of helping all beings to enlightenment belongs to?",
+    "zh": "「菩萨救度众生」的理想属于哪一佛教传统？"
+   },
+   "zh": "救度众生的菩萨理想是大乘佛教的核心。",
+   "en": "The Bodhisattva who saves all beings is central to Mahayana Buddhism."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Buddhist art adapting local features as it spread shows religion can be?",
+    "zh": "佛像艺术在各地融入本地特征，说明宗教传播具有？"
+   },
+   "zh": "佛教在传播中吸收各地的艺术与文化特征。",
+   "en": "As it travelled, Buddhism absorbed local artistic and cultural traits."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Chinese Chan (Zen) Buddhism blended Buddhism with which native tradition?",
+    "zh": "中国禅宗(Chan/Zen)将佛教与本土哪种思想融合？"
+   },
+   "zh": "禅宗将佛教修行与道家旨趣相融合。",
+   "en": "Chan (Zen) Buddhism fused Buddhist practice with Daoist sensibilities."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "To pilgrims like Faxian and Xuanzang, the route was above all a path of?",
+    "zh": "在法显、玄奘等高僧眼中，丝路更是一条什么之路？"
+   },
+   "zh": "对求法高僧而言，丝路是信仰与学问之路。",
+   "en": "For pilgrim-monks the route was a road of faith and scholarship."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "Confucian and Daoist ideas also spread eastward via exchange to?",
+    "zh": "儒、道思想也经东亚交流传至？"
+   },
+   "zh": "儒、道思想经交流传播至朝鲜与日本。",
+   "en": "Confucian and Daoist thought spread to Korea and Japan through exchange."
+  },
+  {
+   "category": "Philosophy",
+   "topic": {
+    "en": "The Silk Road's deepest lesson for the history of thought is that civilizations thrive through?",
+    "zh": "丝绸之路给思想史的启示是：文明因什么而繁荣？"
+   },
+   "zh": "丝路表明文明因交流互鉴而非孤立而繁荣。",
+   "en": "The route shows civilizations grow through exchange rather than isolation."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The eastern starting city of the overland Silk Road was?",
+    "zh": "陆上丝绸之路的东方起点城市是？"
+   },
+   "zh": "长安(今西安)是陆上丝路的东方起点。",
+   "en": "Chang'an (modern Xi'an) was the eastern terminus of the overland route."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which vast desert did NW-China caravans skirt along the route?",
+    "zh": "中国西北丝路商队绕行的大沙漠是？"
+   },
+   "zh": "丝路分南北道绕行凶险的塔克拉玛干沙漠。",
+   "en": "Routes ran north and south around the deadly Taklamakan Desert."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which mountains, the 'roof of the world', did the Central-Asian route cross?",
+    "zh": "丝路中亚段需翻越、号称「世界屋脊」的山是？"
+   },
+   "zh": "帕米尔高原是丝路上险峻的山地屏障。",
+   "en": "The Pamirs were a formidable mountain barrier on the route."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The narrow corridor in Gansu funneling the route west of China was the?",
+    "zh": "把丝路收束在中国西部的狭长通道是？"
+   },
+   "zh": "河西走廊在山地与沙漠之间引导丝路西行。",
+   "en": "The Hexi Corridor channelled the route between mountains and desert."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which westernmost Chinese oasis town was a hub where route branches met?",
+    "zh": "中国最西端、丝路南北道交汇的绿洲重镇是？"
+   },
+   "zh": "喀什位于中国最西，南北道在此交汇。",
+   "en": "Kashgar, at China's far west, was where northern and southern routes met."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which below-sea-level oasis on the route is watered by karez wells?",
+    "zh": "丝路上以坎儿井灌溉、低于海平面的绿洲是？"
+   },
+   "zh": "吐鲁番盆地炎热低洼，依靠坎儿井灌溉。",
+   "en": "The Turpan depression, hot and low-lying, relied on karez irrigation."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which lost oasis kingdom near Lop Nur was later buried by sand?",
+    "zh": "罗布泊畔、后被风沙湮没的丝路古国是？"
+   },
+   "zh": "楼兰位于罗布泊畔，后被沙漠吞没废弃。",
+   "en": "Loulan, near Lop Nur, was abandoned and swallowed by the desert."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Around the Taklamakan the route split into a northern route and a?",
+    "zh": "丝路绕塔克拉玛干分为北道与？"
+   },
+   "zh": "丝路绕沙漠分为北道与南道两支。",
+   "en": "The route divided into northern and southern branches around the desert."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "At the western (Mediterranean) end, the route reached which great cities?",
+    "zh": "丝路西端通往地中海的大城市是？"
+   },
+   "zh": "货物经丝路抵达地中海的罗马与后来的君士坦丁堡。",
+   "en": "Goods reached the Mediterranean world at Rome and, later, Constantinople."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The 'Maritime Silk Road' carried trade by what means?",
+    "zh": "与陆路并行的「海上丝绸之路」依靠什么运输？"
+   },
+   "zh": "海上丝绸之路以海船跨海运输货物。",
+   "en": "The Maritime Silk Road moved goods by ship across the seas."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Which civilization in the route's middle controlled much east-west trade?",
+    "zh": "丝路中段控制东西贸易的关键文明是？"
+   },
+   "zh": "波斯居丝路中段，长期居间掌控东西贸易。",
+   "en": "Persia sat astride the route and long mediated east-west trade."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Camels are nicknamed the 'ships of the ___'?",
+    "zh": "骆驼被称为「___之舟」？"
+   },
+   "zh": "骆驼是「沙漠之舟」，丝路主要的驮畜。",
+   "en": "Camels are the 'ships of the desert', the route's chief pack animal."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Spices and pepper on the maritime route came mainly from?",
+    "zh": "海上丝路的香料与胡椒主要产自？"
+   },
+   "zh": "香料贸易的胡椒等多产自印度与东南亚。",
+   "en": "The spice trade drew pepper and aromatics from India and Southeast Asia."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "At its classical height the route linked the Han Empire with which western empire?",
+    "zh": "古典鼎盛期，丝路连接东方汉朝与西方的哪一帝国？"
+   },
+   "zh": "鼎盛时丝路把汉朝与罗马帝国相连。",
+   "en": "At its peak the route connected Han China with the Roman Empire."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "Most goods moved along the route by?",
+    "zh": "丝路贸易中货物的实际流通方式多为？"
+   },
+   "zh": "少有商人走完全程，货物经多手分段转运。",
+   "en": "Few traders went end to end; goods passed through many hands in stages."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The Sogdian merchant homeland centred on which city?",
+    "zh": "善贾的粟特人故乡(粟特地区)以哪座城为中心？"
+   },
+   "zh": "以撒马尔罕为中心的粟特地区盛产丝路大商。",
+   "en": "Sogdiana, centred on Samarkand, produced the route's great merchants."
+  },
+  {
+   "category": "Geography",
+   "topic": {
+    "en": "The overland route declined largely as trade shifted to?",
+    "zh": "陆上丝路逐渐衰落，主要因贸易转向？"
+   },
+   "zh": "中古晚期起，海上航路日益取代陆路承担贸易。",
+   "en": "From the late medieval period, sea routes increasingly carried the trade."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Who opened the overland route through his Han-dynasty missions to the Western Regions?",
+    "zh": "以出使西域开通陆上丝路的汉代使者是？"
+   },
+   "zh": "张骞出使西域(公元前2世纪)开通了陆上丝路。",
+   "en": "Zhang Qian's missions (2nd c. BC) opened the overland Silk Road."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Zhang Qian was sent to the Western Regions by which emperor?",
+    "zh": "派遣张骞出使西域的是哪位皇帝？"
+   },
+   "zh": "汉武帝派遣张骞西行出使。",
+   "en": "Emperor Wu of Han dispatched Zhang Qian westward."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The term 'Silk Road' was coined in the 19th century by?",
+    "zh": "「丝绸之路」一词由19世纪哪位学者提出？"
+   },
+   "zh": "德国地理学家李希霍芬提出了「丝绸之路」一词。",
+   "en": "The German geographer von Richthofen coined 'Seidenstrasse' (Silk Road)."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Mongol Empire's unity eased route trade in a period called?",
+    "zh": "蒙古帝国统一带来丝路贸易便利的时期称为？"
+   },
+   "zh": "蒙古治世下统一的疆域使丝路通行更安全。",
+   "en": "Under the Pax Mongolica, a unified realm made route travel safer."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Marco Polo's travels say he served at the court of which ruler?",
+    "zh": "马可·波罗据其游记曾效力于哪位统治者？"
+   },
+   "zh": "马可·波罗游记称其曾效力于元世祖忽必烈。",
+   "en": "Marco Polo's account places him at the court of Kublai Khan (Yuan)."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Eastern Han general extended control over the Western Regions?",
+    "zh": "东汉经营西域、巩固丝路的名将是？"
+   },
+   "zh": "班超为东汉经营、稳固了西域。",
+   "en": "Ban Chao secured the Western Regions for the Eastern Han."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Silk Road trade was at one of its peaks during which Chinese dynasty?",
+    "zh": "丝绸之路最繁荣的时期之一是中国的哪个朝代？"
+   },
+   "zh": "唐代是陆上丝路交流的黄金时期之一。",
+   "en": "The Tang dynasty saw a golden age of overland Silk Road exchange."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Thanks to the route, the Tang capital Chang'an became?",
+    "zh": "因丝路，唐都长安成为？"
+   },
+   "zh": "长安汇聚欧亚各地的商人、僧侣与使节。",
+   "en": "Chang'an drew merchants, monks and envoys from across Eurasia."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The 751 AD Battle of Talas was fought between Tang China and?",
+    "zh": "公元751年怛罗斯之战，唐朝的对手是？"
+   },
+   "zh": "怛罗斯之战中唐军与阿拔斯王朝在中亚交锋。",
+   "en": "At Talas the Tang army clashed with the Abbasid Caliphate in Central Asia."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Eastern-Jin monk Faxian travelled the route to where, and why?",
+    "zh": "东晋法显沿丝路西行的目的地与目的是？"
+   },
+   "zh": "法显西行天竺求经，著《佛国记》。",
+   "en": "Faxian journeyed to India for scriptures and wrote 'A Record of Buddhist Kingdoms'."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Maritime Silk Road flourished especially under which two dynasties?",
+    "zh": "海上丝绸之路在中国哪两个朝代尤为繁荣？"
+   },
+   "zh": "海上贸易在宋元时期经泉州等港口而繁荣。",
+   "en": "Maritime trade thrived in the Song and Yuan, through ports like Quanzhou."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Which Ming admiral's voyages extended maritime trade as far as Africa?",
+    "zh": "率船队远航至非洲、拓展海上贸易的明代航海家是？"
+   },
+   "zh": "郑和15世纪的船队远达东南亚、印度与东非。",
+   "en": "Zheng He's 15th-century fleets reached Southeast Asia, India and East Africa."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Chinese gunpowder and printing travelling west affected?",
+    "zh": "火药、印刷术经丝路西传，深刻影响了？"
+   },
+   "zh": "这些技术西传重塑了全球的战争与知识传播。",
+   "en": "These transmissions reshaped warfare and the spread of knowledge worldwide."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Sogdian merchants dominated route trade chiefly during which era?",
+    "zh": "粟特商人主导丝路贸易大致在哪一时段？"
+   },
+   "zh": "中古早期粟特人是丝路的主导商队。",
+   "en": "Sogdians were the route's leading merchants in the early medieval centuries."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Byzantine emperor Justinian reportedly obtained silkworm eggs via?",
+    "zh": "拜占庭皇帝查士丁尼据传通过什么获得蚕种？"
+   },
+   "zh": "约公元550年僧侣将蚕种走私至拜占庭。",
+   "en": "Monks smuggled silkworm eggs to Byzantium around 550 AD."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "At its classical peak the route connected the Han Empire with which western power?",
+    "zh": "古典鼎盛期，丝路把东方的汉帝国与西方的哪个帝国相连？"
+   },
+   "zh": "古典鼎盛期丝路连接汉朝与罗马。",
+   "en": "The route's classical heyday linked Han China and Rome."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Early-20th-century explorers like Aurel Stein removed many manuscripts from?",
+    "zh": "20世纪初斯坦因等探险者从哪处带走大量写本？"
+   },
+   "zh": "斯坦因等人从敦煌藏经洞带走了数千件写本。",
+   "en": "Stein and others removed thousands of manuscripts from Dunhuang's library cave."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "Historically, the 'Silk Road' is best described as?",
+    "zh": "从史实看，「丝绸之路」实际上是？"
+   },
+   "zh": "它是横贯欧亚、不断变动的陆海路线网络。",
+   "en": "It was a shifting web of overland and maritime routes across Eurasia."
+  },
+  {
+   "category": "History",
+   "topic": {
+    "en": "The Eastern-Han envoy Gan Ying was sent west around 97 AD reportedly trying to reach which empire?",
+    "zh": "东汉甘英约公元97年奉命西使，据载试图抵达哪个帝国？"
+   },
+   "zh": "班超派遣的甘英据载欲抵罗马(大秦)，行至海边而返。",
+   "en": "Gan Ying, sent by Ban Chao, reportedly sought Rome (Daqin) but turned back at the sea."
+  }
+ ]
+}

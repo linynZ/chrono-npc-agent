@@ -5,11 +5,11 @@ A runtime LLM agent that lets you talk to the NPCs of [ChronoTraveler](https://y
 The NPC knows who it is, knows how far the player has actually progressed, can look things up with tools, is constrained by guardrails it cannot talk its way around, and falls back to the game's own written lines when the model is too slow or goes off the rails.
 
 > **Status: working end to end, in the actual game.** Three NPCs, cloud and local
-> backends, streaming with mid-stream guardrails, an evaluation harness, and a
-> Unity client that has been play-tested. What is not done is listed in
-> [Progress](#progress) rather than glossed over, and `docs/findings/` records
-> five results from testing — two of which falsified a design assumption I had
-> already written down here as fact.
+> backends, streaming with mid-stream guardrails, vector retrieval with measured
+> recall, an evaluation harness, and a Unity client that has been play-tested.
+> What is not done is listed in [Progress](#progress) rather than glossed over,
+> and `docs/findings/` records six results from testing — three of which
+> falsified a design assumption I had already written down here as fact.
 
 ---
 
@@ -97,6 +97,19 @@ That last one is not in his config. It says the gate is the player's to open and
 
 `scripts/validate_personas.py` gates new configs — it catches the YAML mapping trap (an unquoted `: ` in a list item, which cost me three separate debugging sessions), unknown tool names, missing bilingual fields, and a persona with no quiz-answer boundary.
 
+**6. Retrieval is a measured ladder, and the measurement overruled the plan.**
+
+`lookup_lore` shipped as substring overlap with a comment saying vectors would be added "if recall turns out to be the bottleneck — measured, not assumed." Measured: on 500 paraphrased player queries (committed, reproducible), substring recall@1 is 71.2%. The planned replacement was hybrid — BM25 + bge-m3 vectors, RRF-fused, the industry default. The eval overruled it:
+
+| method | recall@1 | recall@3 |
+|---|---|---|
+| substring (old) | 71.2% | 86.6% |
+| BM25 | 69.2% | 83.0% |
+| **vector (bge-m3 + Chroma)** | **95.8%** | **99.8%** |
+| hybrid (RRF) | 81.6% | 93.4% |
+
+BM25 collapses on paraphrases that share no wording with the record, and equal-weight fusion mixes that noise into a nearly-perfect vector ranking — hybrid lost 14 points at k=1 to its own ingredient. So production runs vector-first, and BM25's real job is degradation: vector → BM25 (embedding server down) → substring (index never built). The tool tags every result with the rung that answered (`retrieval: vector | bm25 | substring`), and the hybrid mode stays in the eval so the decision re-checks itself when the corpus changes. Full write-up: [`docs/findings/06-hybrid-retrieval.md`](docs/findings/06-hybrid-retrieval.md).
+
 ## Ground truth is extracted, never hand-written
 
 Nothing under `data/` is typed by hand. `scripts/extract_game_data.py` pulls it out of the Unity project so the agent cannot drift from the shipped game:
@@ -106,9 +119,10 @@ $ python scripts/extract_game_data.py
 npc_lines.json  15 NPCs        (each with base/mid/gate/post variants)
 quiz.json       500 questions across 5 regions
 quests.json     5 quests       (4 stages / 4 objectives each)
+lore.json       500 answer-free records across 5 regions
 ```
 
-The quest parser reads Unity's YAML `.asset` format directly, including its `\uXXXX`-escaped CJK. What ships in `data/` is the China era only — the one this project uses; `--eras all` pulls the rest.
+The quest parser reads Unity's YAML `.asset` format directly, including its `\uXXXX`-escaped CJK. Dialogue, quiz and quests ship filtered to the China era — the one this project plays; `--eras all` pulls the rest. `lore.json` is the exception in both directions: it always covers all five eras, and it is exported with the options and `correctIndex` stripped *at export time* — answers that never enter the repo cannot leak from the tool or from git history. It is what the retrieval index is built from.
 
 ## Layout
 
@@ -123,12 +137,13 @@ src/chrono_agent/
   persona.py         persona loading and state-as-perception injection
   providers/         base seam · openai_compat · deepseek · ollama · echo (fake)
   tools/             registry + the tools an NPC may call
+  retrieval/         embedder seam · Chroma index · BM25 · RRF · the ladder
   guardrails/        input steering, output backstop, contextual strictness
   agent.py           the loop: prompt, tools, guardrails, fallback, streaming
   server.py          FastAPI — /api/chat, /api/chat/stream, /api/npc/{id}
-eval/                paired guardrail cases + raw run records
-docs/findings/       five write-ups, including the assumptions that were wrong
-tests/               120 tests; runs offline against the fake provider
+eval/                paired guardrail cases + retrieval queries + raw run records
+docs/findings/       six write-ups, including the assumptions that were wrong
+tests/               133 tests; runs offline (fake provider, fake embedder)
 ```
 
 ## Running it
@@ -151,6 +166,15 @@ python scripts/validate_personas.py    # lint the character configs
 python scripts/check_key.py            # verify key, model and tool calling
 python scripts/chat.py                 # /state /lang /prompt /quit
 python scripts/chat.py --provider ollama --state gate
+```
+
+Optional but recommended — build the vector index (needs Ollama with the
+embedding model; without it, lore lookups quietly use the substring rung):
+
+```bash
+ollama pull bge-m3
+python scripts/build_lore_index.py     # ~90s for all five eras
+python scripts/evaluate_retrieval.py   # reproduce the recall table
 ```
 
 Or run the service and open the demo page at <http://127.0.0.1:8000>:
@@ -208,7 +232,8 @@ living in the service is a synchronisation bug waiting for someone to reload.
 | Tool registry + `lookup_quest` / `lookup_lore` | done |
 | Guardrails — input steering, output backstop, contextual strictness | done |
 | Agent loop — bounded tool iteration, 3 fallback paths | done |
-| Test suite | 106 tests, offline |
+| Vector retrieval (bge-m3 + Chroma), recall measured against BM25/hybrid/substring | done |
+| Test suite | 133 tests, offline |
 | CLI (`scripts/chat.py`) verified against the live model | done |
 | Evaluation harness — paired guardrail set, latency, fallback rate | done |
 | Ollama local backend, measured | done |
@@ -252,6 +277,17 @@ telling the player to collect seven fragments when there are three. Persona and
 guardrails are cheap enough for a 7B; grounded answers about live game state are
 not. [`docs/findings/04`](docs/findings/04-redundant-context.md) covers how a
 redundant prompt hid that defect completely until the prompt was narrowed.
+
+### Retrieval
+
+500 paraphrased player queries (committed in `eval/retrieval_queries.json`),
+recall against the record each query was rewritten from — full table and the
+hybrid post-mortem in design decision 6 and
+[`docs/findings/06`](docs/findings/06-hybrid-retrieval.md). Headline: vector
+95.8% recall@1 vs 71.2% for the shipped substring search, and RRF hybrid
+*under* pure vector by 14 points because BM25's paraphrase ranking is noise.
+Verbatim stems score ≥99.6% for every method, so the harness is sound. Warm
+per-query embedding costs ~150 ms on the local GPU; batched, ~200 ms per 64.
 
 ### Streaming
 

@@ -72,6 +72,7 @@ class NpcAgent:
         *,
         quests: dict[str, Any] | None = None,
         lore: list[dict[str, Any]] | None = None,
+        retriever: Any = None,
         timeout_ms: int = 4000,
         max_tool_rounds: int = 3,
         history_turns: int = 6,
@@ -82,6 +83,7 @@ class NpcAgent:
         self.fallback = fallback
         self.quests = quests or {}
         self.lore = lore or []
+        self.retriever = retriever
         self.timeout_ms = timeout_ms
         self.max_tool_rounds = max_tool_rounds
         self.history_turns = history_turns
@@ -114,6 +116,7 @@ class NpcAgent:
             quests=self.quests,
             lore=self.lore,
             npc_id=self.persona.npc_id,
+            retriever=self.retriever,
         )
 
         registry = self.registry
@@ -245,6 +248,7 @@ class NpcAgent:
             quests=self.quests,
             lore=self.lore,
             npc_id=self.persona.npc_id,
+            retriever=self.retriever,
         )
 
         registry = self.registry

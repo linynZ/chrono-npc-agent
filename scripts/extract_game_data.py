@@ -16,6 +16,8 @@ Outputs (all UTF-8 JSON, written to ./data):
                       four progress variants (base / mid / gate / post) grouped
     quiz.json         questions incl. correctIndex and explanation, by region
     quests.json       quest stages and objectives, parsed from the Unity assets
+    lore.json         answer-free knowledge records (explanation + question stem
+                      only), always exported for all five eras — see extract_lore
 
 By default only the eras this project actually uses are exported. The full game
 has five; Historian Mo needs one, and shipping the other four would publish a
@@ -113,6 +115,33 @@ def extract_quiz(resources: Path, eras: set[str]) -> dict:
             if region not in eras:
                 continue
             by_region.setdefault(region, []).append(question)
+    return by_region
+
+
+def extract_lore(resources: Path) -> dict:
+    """The answer-free knowledge base, for every era regardless of --eras.
+
+    quiz.json carries `correctIndex`, so exporting it is publishing answers —
+    which is why it stays filtered to the eras this project actually plays.
+    lore.json strips the options and the answer at export time, before anything
+    enters the repo: what was never written down cannot leak, from the tool or
+    from the git history. That makes it safe to ship all five eras, which is
+    what the retrieval index and any future non-china NPC run on.
+    """
+    by_region: dict[str, list] = {}
+    for region, questions in extract_quiz(resources, set(ALL_ERAS)).items():
+        for question in questions:
+            explanation = question.get("explanation") or {}
+            if not explanation:
+                continue
+            by_region.setdefault(region, []).append(
+                {
+                    "category": question.get("category", ""),
+                    "topic": question.get("question", {}),
+                    "zh": explanation.get("zh", ""),
+                    "en": explanation.get("en", ""),
+                }
+            )
     return by_region
 
 
@@ -233,10 +262,12 @@ def main() -> int:
     npcs = extract_npc_lines(resources, eras)
     quiz = extract_quiz(resources, eras)
     quests = extract_quests(resources, eras)
+    lore = extract_lore(resources)
 
     _write(args.out, "npc_lines.json", npcs)
     _write(args.out, "quiz.json", quiz)
     _write(args.out, "quests.json", quests)
+    _write(args.out, "lore.json", lore)
 
     print(f"eras            {', '.join(sorted(eras))}")
     print(f"npc_lines.json  {len(npcs)} NPCs")
@@ -245,6 +276,8 @@ def main() -> int:
         print(f"                  {npc_id:<24} {variants}")
     print(f"quiz.json       {sum(len(v) for v in quiz.values())} questions "
           f"across {len(quiz)} regions: {', '.join(sorted(quiz))}")
+    print(f"lore.json       {sum(len(v) for v in lore.values())} answer-free records "
+          f"across {len(lore)} regions (always all eras)")
     print(f"quests.json     {len(quests)} quests")
     for quest_id, quest in sorted(quests.items()):
         objectives = sum(len(s["objectives"]) for s in quest["stages"])
