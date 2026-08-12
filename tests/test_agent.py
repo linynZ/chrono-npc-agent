@@ -128,6 +128,22 @@ async def test_tool_call_is_executed_and_fed_back(make_agent, midgame_state):
     assert "2/3" in tool_messages[0].content
 
 
+async def test_lore_lookup_records_the_retrieval_rung(make_agent, midgame_state):
+    # Tests build no vector index, so the ladder answers on its bottom rung —
+    # and the recorded call name must say which rung it was.
+    provider = EchoProvider(
+        replies=[
+            ScriptedCall("lookup_lore", {"topic": "长城"}),
+            "长城之事，简上有载。",
+        ]
+    )
+    agent = make_agent(provider)
+
+    reply = await agent.reply("跟我讲讲长城", midgame_state)
+
+    assert reply.tool_calls_made == ["lookup_lore·substring"]
+
+
 async def test_only_granted_tools_are_advertised(make_agent, midgame_state):
     provider = EchoProvider(replies=["……"])
     agent = make_agent(provider)
