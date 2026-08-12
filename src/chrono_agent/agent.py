@@ -18,6 +18,7 @@ player's patience.
 from __future__ import annotations
 
 import asyncio
+import json
 import re
 import time
 from typing import Any, AsyncIterator
@@ -60,6 +61,18 @@ SENTENCE_END = re.compile(r"[。！？；…\n]|[.!?](?:\s|$)")
 def _merge_flags(incoming: list[str], outgoing: list[str]) -> list[str]:
     """Keep both sides of the record — what was attempted and what was said."""
     return incoming + [flag for flag in outgoing if flag not in incoming]
+
+
+def _tool_label(name: str, result: str) -> str:
+    """A tool may report which rung of its ladder answered (`lookup_lore`
+    returns `retrieval: vector | bm25 | substring`). Folding the rung into the
+    recorded call name surfaces a degraded index in the diagnostics strip,
+    instead of a server log nobody watches."""
+    try:
+        rung = json.loads(result).get("retrieval")
+    except (ValueError, AttributeError):
+        return name
+    return f"{name}·{rung}" if isinstance(rung, str) and rung else name
 
 
 class NpcAgent:
@@ -192,8 +205,8 @@ class NpcAgent:
 
             messages.append(reply)
             for call in reply.tool_calls:
-                tools_used.append(call.name)
                 result = registry.execute(context, call.name, call.arguments)
+                tools_used.append(_tool_label(call.name, result))
                 messages.append(
                     Message(
                         role=Role.TOOL,
@@ -328,8 +341,8 @@ class NpcAgent:
                     )
                 )
                 for call in tool_calls:
-                    tools_used.append(call.name)
                     result = registry.execute(context, call.name, call.arguments)
+                    tools_used.append(_tool_label(call.name, result))
                     messages.append(
                         Message(
                             role=Role.TOOL,
