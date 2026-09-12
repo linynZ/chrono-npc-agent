@@ -57,8 +57,7 @@ in `ChronoTraveler.Collectibles` (plural, unlike its folder), the localisation
 entry point is `LocalizationManager` rather than `Localization`, and `UITheme`
 sits in `ChronoTraveler.Battle` despite being used project-wide.
 
-**Not yet run in play mode.** Compiling is not the same as working, and this
-section will not claim otherwise until someone has actually talked to him.
+**Play-tested.** The first in-game session found three problems that compiling could not: long replies covering the buttons, Chinese input that could not be sent (the IME swallowed Enter and TMP's submit event fired in the same frame as focus loss), and ESC being eaten by the input field so the player was stuck in the panel. All three are fixed in `a020733`; the lesson — compiling is not the same as working — stands.
 
 ## What the bridge sends
 

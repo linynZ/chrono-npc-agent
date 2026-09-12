@@ -106,7 +106,7 @@ def _score(entry: dict, terms: list[str], language: str) -> int:
     """Crude overlap scoring — now the bottom rung of the retrieval ladder.
 
     This started as the whole search. Measuring it on paraphrased queries is
-    what justified the hybrid retriever in `retrieval/` (the numbers live in
+    what justified the vector retriever in `retrieval/` (the numbers live in
     `eval/results/`); it stays because a fresh clone with no index built must
     still answer, and zero-dependency substring matching can never be down.
     """
@@ -123,9 +123,10 @@ def _score(entry: dict, terms: list[str], language: str) -> int:
 def _lookup_lore(context: ToolContext, topic: str, limit: int = 3) -> dict[str, Any]:
     """Search the era's historical record for what is known about a topic.
 
-    Retrieval quality is a ladder, not a switch: hybrid (BM25 + vectors) when
-    the index is built, BM25 alone when the embedding server is down, and the
-    original substring scan when the retrieval stack was never set up. Rung
+    Retrieval quality is a ladder, not a switch: vector search when the index
+    is built (hybrid RRF lost to it by 14 points at k=1, see Finding 06), BM25
+    alone when the embedding server is down, and the original substring scan
+    when the retrieval stack was never set up. Rung
     changes show up in the result's `retrieval` field so a degraded lookup is
     visible in diagnostics instead of silently looking like a bad model day.
     """

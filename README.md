@@ -42,11 +42,11 @@ The lazy approach is to paste the save file into the prompt. `memory_progress: 0
 ```
 - 旅者此前已与你交谈过。
 - 长河之水已清了大半，旧简上有异文自行褪去。
-- 已寻回 2 片记忆碎片，尚缺 1 片。
+- 记忆碎片已寻回一些，尚未集齐。
 - 「谣言」错乱体仍在台下游荡。
 ```
 
-The model cannot leak a number it was never shown. See `src/chrono_agent/persona.py`.
+The model cannot leak a number it was never shown. See `src/chrono_agent/persona.py`. (The first version of this injection also spelled out the exact fragment count; Finding 04 explains why it was narrowed to what the character could actually perceive.)
 
 **2. Stripping the answer field does not stop answer leaks — measured, not assumed.**
 
@@ -143,7 +143,7 @@ src/chrono_agent/
   server.py          FastAPI — /api/chat, /api/chat/stream, /api/npc/{id}
 eval/                paired guardrail cases + retrieval queries + raw run records
 docs/findings/       seven write-ups, including the assumptions that were wrong
-tests/               133 tests; runs offline (fake provider, fake embedder)
+tests/               134 tests; runs offline (fake provider, fake embedder)
 ```
 
 ## Running it
@@ -233,7 +233,7 @@ living in the service is a synchronisation bug waiting for someone to reload.
 | Guardrails — input steering, output backstop, contextual strictness | done |
 | Agent loop — bounded tool iteration, 3 fallback paths | done |
 | Vector retrieval (bge-m3 + Chroma), recall measured against BM25/hybrid/substring | done |
-| Test suite | 133 tests, offline |
+| Test suite | 134 tests, offline |
 | CLI (`scripts/chat.py`) verified against the live model | done |
 | Evaluation harness — paired guardrail set, latency, fallback rate | done |
 | Ollama local backend, measured | done |
