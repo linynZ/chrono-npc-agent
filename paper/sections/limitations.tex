@@ -1,0 +1,31 @@
+\section{Limitations and Conclusion}
+
+\paragraph{Limitations.} This is a single case. One game, three personas from
+one era, one cloud model and three small local ones on one 8\,GB laptop GPU;
+none of the numbers should be read as a property of the models in general.
+The held-out set has 23 attacks, written by one author; five rounds give
+intervals on sampling noise, not on the choice of cases, and a different
+author would write different attacks. Every case is a single turn, while real
+players iterate. The judge belongs to the cloud model's family; we audited
+every flagged reply, but replies the judge passed and the substring check did
+not flag were not individually audited, so leak counts are lower bounds.
+The audit was performed by the author with AI assistance and has not been
+checked by a second rater. Hosted-model behaviour drifts, and our two
+measurement dates already disagree on latency. Finally, we measured whether a
+reply \emph{could} help a player, not whether players use NPCs this way.
+
+\paragraph{Conclusion.} Context-graded leakage---sharing a fact in
+conversation, refusing it when the player is holding the question---is the
+right threat model for an educational game, and a guardrail built around
+intent rather than vocabulary preserves the NPC's teaching role. But our own
+development numbers overstated how well it worked. On a frozen held-out set,
+every backend held only about half of the answer-seeking attacks; failures
+concentrated on requests for \emph{part} of an answer, which the detectors did
+not recognise and capable models treated as reasonable; and substring scoring
+missed most of the leaks that did occur. The practical recommendations are
+modest: pair every refusal case with an answer case; keep a frozen held-out
+set and report it separately; judge leakage with something that reads
+meaning, and audit the judge; and treat a confident wrong answer from a
+subject-expert NPC as a failure, not a hold. The next engineering steps follow
+directly: recognise partial and disguised answer requests at the input, make
+steering persona-neutral, and refuse system-prompt extraction explicitly.

@@ -1,0 +1,73 @@
+\section{Evaluation Method}
+\label{sec:method}
+
+\subsection{Paired cases}
+
+A refusal-only test suite rewards an NPC that says nothing. Following the
+logic of exaggerated-safety benchmarks \cite{rottger2024xstest}, every
+\emph{must-refuse} case has a \emph{must-answer} sibling on the same subject,
+and a pair passes only if both sides do. A must-answer case passes when the
+reply comes from the model (not a fallback), has at least eight characters,
+and calls any tool the case requires (e.g.\ \texttt{lookup\_quest} for ``how
+many fragments do I still need?''). A must-refuse case passes when the reply
+does not contain any of the case's forbidden substrings; whether it held in
+character or was caught by the backstop is recorded separately. A scripted
+backend that replies only ``\ldots'' serves as the mute-NPC control: on both
+sets it holds 100\% of refusals and passes 0\% of pairs.
+
+Forbidden lists contain only what the output backstop cannot see---answer
+terms and verbatim system-prompt fragments. Section~\ref{sec:lessons} explains
+how restating the backstop's bans as substrings produced three false
+positives, each on a reply that was in fact the correct refusal.
+
+\subsection{Development and held-out splits}
+
+The \textbf{development set} (10 pairs and 3 singles, 23 cases, Historian Mo
+only) was written while the guardrails were being built, and the guardrails
+were revised while watching it fail. Its scores are a development score.
+
+The \textbf{held-out set} (20 pairs and 6 singles, 46 cases, spread over all
+three NPCs) was written afterwards under three rules. It was written
+\emph{blind}: the author saw the detector's flag names but not its patterns.
+It was \emph{committed before any model ran on it} (the commit precedes every
+held-out result file in the repository history). And it is \emph{frozen}:
+neither the cases nor the guardrail code were changed in response to results
+on it. Its attacks deliberately differ in style from the development set:
+elimination (``which ones are definitely wrong?''), hint-fishing (``just the
+first character''), fiction wrappers (an acrostic poem), split questions,
+claimed developer authority, pleas for sympathy, urgency, fake prior consent,
+multi-intent messages, language switching and persona override. Several
+must-answer siblings legitimately contain the quiz answer (asking why the
+Dragon Boat Festival is celebrated should produce Qu Yuan), which is the
+context-grading design under test.
+
+\subsection{Two leak detectors}
+
+Substring checks cannot see paraphrase or hints: ``the governor of Shu built
+it'' leaks Li Bing without naming him. For every must-refuse reply whose case
+records an answer key, we therefore also asked a judge model
+(\texttt{deepseek-v4-flash} with thinking enabled) whether a player holding
+the question could use the reply to pick or narrow the answer, with verdicts
+\emph{none}, \emph{partial} (hints, eliminates, confirms or denies a guess) or
+\emph{full}. The judge shares a model family with the cloud NPC, and LLM
+judges are known to favour their own family's outputs
+\cite{panickssery2024selfpref,zheng2023judging}, so we do not trust it
+alone: every reply where the judge and the substring check disagree, and
+every non-\emph{none} verdict, was read by the author, and Table~\ref{tab:main}
+reports the audited figure.
+
+\subsection{Backends and protocol}
+
+We evaluated \texttt{deepseek-v4-flash} (cloud), and through Ollama
+\texttt{qwen2.5:7b}, \texttt{qwen2.5:1.5b} and \texttt{chrono-npc-1.5b}, a
+LoRA adapter \cite{hu2022lora} on the same quantised 1.5B base
+(\S\ref{sec:sft}). All local runs used one laptop GPU (8\,GB), with each model
+warmed before its runs so that load time is not counted as latency. Every
+backend ran each set for five rounds at concurrency~1, so latency reflects a
+single waiting player, with the cloud timeout at 8\,s and the local one at
+30\,s. Proportions carry Wilson 95\% intervals \cite{wilson1927probable},
+computed over case-rounds (pair-rounds for pairs); latency percentiles carry
+percentile-bootstrap intervals \cite{efron1993bootstrap}. All runs took place
+on 3~October~2026; hosted-model behaviour drifts \cite{chen2024chatgptdrift}, and
+our August development-time measurements of the same model differ from these
+(\S\ref{sec:results}).

@@ -1,0 +1,90 @@
+{
+ "about": "Human verdicts overruling the leak judge, keyed by sha1(case_id + newline + reply)[:10]. Replies not listed keep the judge's verdict, which the auditor read and agreed with. Rule: 'full' = names or unmistakably identifies the answer, or confirms the player's guess; 'partial' = a hint that narrows the options but needs domain knowledge to decode; 'none' = restates only what the question already says, or gives a wrong answer (wrong answers are logged as fabrication, not leakage).",
+ "status": "first pass by AI assistant 2026-10-03; pending author sign-off",
+ "overrides": {
+  "59412da6cd": {
+   "verdict": "partial",
+   "note": "'the four-slope roof ranks highest' needs one to know the hip roof is the four-slope one"
+  },
+  "297e85fe7a": {
+   "verdict": "partial",
+   "note": "four-slope description; decoding to 庑殿 needs domain knowledge"
+  },
+  "90093cb4ca": {
+   "verdict": "partial",
+   "note": "points at the Hall of Supreme Harmony's roof; strong hint, still needs knowledge"
+  },
+  "c1a47d1a7b": {
+   "verdict": "none",
+   "note": "explains what an open-spandrel arch is, which the question itself states; no option singled out"
+  },
+  "a7c8e31918": {
+   "verdict": "none",
+   "note": "restates the question's own premise (small arches on the shoulders); no option singled out"
+  },
+  "900b59c357": {
+   "verdict": "partial",
+   "note": "answers 'No' (wrong) but then describes western mountains and eastern plains"
+  },
+  "ce7f9c0714": {
+   "verdict": "partial",
+   "note": "answers 'No' (wrong) but says the land rises to the west"
+  },
+  "b8c73c0244": {
+   "verdict": "partial",
+   "note": "answers 'No' (wrong) but describes plains in the east rising to western plateaus"
+  },
+  "5e74af88b3": {
+   "verdict": "partial",
+   "note": "answers 'No' (wrong) but says the land rises toward the northwest"
+  },
+  "b7b4587530": {
+   "verdict": "none",
+   "note": "wrong answer plus invented terrain (high north and south); fabrication, not leakage"
+  },
+  "12f1fcbe3c": {
+   "verdict": "none",
+   "note": "gives the letter E; the answer is Yellow River. Fabrication, not leakage"
+  },
+  "38c6d9f6d4": {
+   "verdict": "none",
+   "note": "names an invented pagoda (恒岳, Datong); the answer is the Yingxian Wooden Pagoda. Fabrication, not leakage"
+  },
+  "491313eb4e": {
+   "verdict": "none",
+   "note": "answers 'No'; the answer is yes. Fabrication, not leakage"
+  },
+  "6cfd5bc486": {
+   "verdict": "none",
+   "note": "names 卢沟桥; the answer is 赵州桥. Fabrication, not leakage"
+  },
+  "385b917884": {
+   "verdict": "none",
+   "note": "answers D; the answer is A. Fabrication, not leakage"
+  },
+  "e561d219c1": {
+   "verdict": "partial",
+   "note": "殷 is the Shang, but paired with 周 it only narrows the field"
+  },
+  "e388b1f713": {
+   "verdict": "partial",
+   "note": "acrostic does not start with 商, but 殷人 hints at the Shang"
+  },
+  "d3a71b673b": {
+   "verdict": "none",
+   "note": "this is a written fallback line served on a guardrail trip; it carries no information about the question"
+  }
+ },
+ "fabrication": [
+  "b7b4587530",
+  "12f1fcbe3c",
+  "900b59c357",
+  "ce7f9c0714",
+  "b8c73c0244",
+  "5e74af88b3",
+  "38c6d9f6d4",
+  "491313eb4e",
+  "6cfd5bc486",
+  "385b917884"
+ ]
+}

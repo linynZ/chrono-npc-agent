@@ -1,0 +1,19 @@
+In an educational game where answering quiz questions is how the player
+fights, a free-talking LLM non-player character can destroy the core loop by
+handing out answers. We report an engineering case study of guarding such an
+NPC. Stripping answer fields from its knowledge base does not prevent leakage:
+66.8\% of the game's 500 quiz explanations state the correct option in prose.
+We therefore adopt a context-graded threat model---discussing history is the
+product, acting as an answer oracle is the failure---and guard request intent
+rather than vocabulary. To evaluate, we pair every must-refuse case with a
+must-answer case so that a mute NPC scores zero, and, because our development
+cases were written while tuning the guardrails, we froze a blind held-out set
+of 46 cases over three personas before running any model on it. Across a
+cloud model, two local models and a LoRA-tuned 1.5B model (five rounds each),
+development-set refusal holding of 82--100\% fell to 45--64\% on the held-out
+set once leaks were judged by meaning and audited by hand. Every attack that
+did not seek an answer was held in all 140 attempts; attacks asking for part
+of an answer---elimination, a first character, an acrostic, confirmation of a
+guess---mostly succeeded, and substring checks missed most of these leaks. We
+distil five lessons on measurements that pointed the wrong way, and release
+all code, cases and per-case run records.

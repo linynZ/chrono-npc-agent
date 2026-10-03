@@ -1,0 +1,55 @@
+\section{Introduction}
+
+Large language models make it cheap to let players talk to non-player
+characters (NPCs) in free form rather than through dialogue trees
+\cite{park2023generative,gallotta2024llmgames}. In most games the worst a
+talkative NPC can do is break character. In an educational game it can do
+something worse: it can hand out the answers the game is trying to teach.
+
+This paper reports an engineering case study of exactly that risk. The host
+game, \emph{ChronoTraveler}, is a turn-based educational RPG in which combat
+\emph{is} answering: the player attacks by answering multiple-choice questions
+on history and culture, drawn from a 500-question bilingual bank. We added a
+runtime LLM agent that lets the player question the game's NPCs freely. The
+same NPCs are the game's subject experts, and they have to stay that way: a
+historian who refuses to discuss history is a broken character and a worse
+lesson. Yet a historian who answers the question the player is currently
+fighting collapses the core loop.
+
+The case is small---one game, three personas, one cloud model and three local
+ones---and we do not claim generality for its numbers. What we think does
+transfer is the shape of the problems we hit, because each of them came from a
+measurement that looked rigorous and pointed the wrong way. We make four
+contributions:
+
+\begin{enumerate}
+  \item \textbf{A context-graded threat model for answer leakage}
+  (\S\ref{sec:system}). We show that stripping answer fields from the
+  knowledge base does not prevent leakage---66.8\% of the bank's explanations
+  state the correct option in prose, 95\% in the era our NPCs inhabit---and
+  argue that the failure is not \emph{mentioning} a fact but acting as an
+  \emph{answer oracle} for a question the player is holding. The guardrails
+  therefore target request intent, and the agent's retrieval tool is
+  withdrawn for any turn that looks like a pasted question.
+
+  \item \textbf{A paired evaluation design with a frozen held-out split}
+  (\S\ref{sec:method}). Every must-refuse case has a must-answer sibling on
+  the same subject and the pair is scored together, so a mute NPC scores 0\%
+  rather than 100\%. Because our development cases were written while the
+  guardrails were being tuned, we wrote a second, held-out set blind to the
+  detector's patterns, committed it to version control before any model saw
+  it, and froze the guardrail code against it.
+
+  \item \textbf{Measurements across four backends} (\S\ref{sec:results}):
+  a cloud model, a 7B and a 1.5B local model, and a LoRA-tuned 1.5B, each over
+  five rounds with confidence intervals, with leakage judged both by substring
+  match and by an LLM judge whose disagreements we audited by hand.
+
+  \item \textbf{Five lessons about misleading measurements}
+  (\S\ref{sec:lessons}), including a redundant prompt that made a model's
+  failure to call tools invisible, and a retrieval benchmark in which the
+  industry-default hybrid lost to one of its own ingredients.
+\end{enumerate}
+
+All code, persona files, evaluation cases and raw per-case run records are
+public.\footnote{\url{https://github.com/linynZ/chrono-npc-agent}}

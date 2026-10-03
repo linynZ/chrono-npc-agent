@@ -1,0 +1,86 @@
+\section{System}
+\label{sec:system}
+
+\subsection{The host game and the risk}
+
+ChronoTraveler sends the player through five historical eras. Each era's
+combat draws questions from a region-isolated bank of 100 bilingual
+multiple-choice items; the element of the skill the player uses selects the
+knowledge domain, and a correct answer is the attack. Fifteen NPCs speak
+through hand-written dialogue variants selected by progress. The agent keeps
+every written line---as its fallback---and puts a model in front of them.
+This paper evaluates the three NPCs of the China era: \emph{Historian Mo},
+literate and measured; \emph{Artisan Gongshu}, a gruff carpenter; and the
+\emph{Gatekeeper}, terse and nameless. Each is a single YAML file; the latter
+two were added without code changes.
+
+\subsection{Why stripping the answers was not enough}
+\label{sec:leakage}
+
+The NPCs need subject knowledge to be worth talking to, so their retrieval
+tool, \texttt{lookup\_lore}, indexes the quiz bank's \emph{explanations} with
+the options and correct index removed at export time. We initially described
+leakage as therefore impossible. The first manual query falsified that: the
+record for the Great Wall reads ``the best-preserved sections were mostly
+built under the Ming''---the answer, in prose. An audit of the full bank found
+that 66.8\% of explanations contain the correct option's text (65.8\% contain
+it and no distractor), ranging from 50\% for trade-route questions to 96\% in
+the China region.
+
+The number was always going to be high: an explanation exists to justify why
+an option is correct. The defect was in the threat model, not the data. Two
+behaviours had been conflated under ``leaking'':
+(i)~an NPC \emph{discussing} history, which in an educational game is the
+product working; and (ii)~an NPC acting as an \emph{answer oracle} for a
+question the player is holding, which breaks the loop. A vocabulary-based
+detector cannot separate them, and would score an NPC that refuses all
+history as perfectly safe.
+
+\subsection{Guardrails that target intent}
+
+\paragraph{Input steering.} Deterministic detectors flag four request shapes:
+\texttt{oracle\_request} (``just tell me the answer''),
+\texttt{pasted\_question} (a stem with an option list),
+\texttt{jailbreak} and \texttt{impossible\_request}. A flag does not block the
+request; it appends an instruction telling the NPC to decline \emph{in
+character}, because a historian refusing like a historian is part of the
+performance and a system error is not.
+
+\paragraph{Contextual strictness.} When a message parses as a pasted
+question, \texttt{lookup\_lore} is withheld for that turn. Asking a model that
+holds the record to use it wisely is the weaker guarantee; taking the record
+away is a smaller change with a harder one. The same fact therefore flows
+freely when the player asks ``who built Dujiangyan?'' in conversation, and not
+at all when the player pastes the quiz item.
+
+\paragraph{Output backstop.} A narrow detector over the reply looks for
+metalanguage about the quiz (``the answer is'', ``pick~B''), for
+self-identification as a model, and for promises the NPC cannot keep. It
+never looks for historical vocabulary. A tripped reply is replaced by a
+written line.
+
+\paragraph{Streaming.} The backstop wants the whole reply; the player wants
+the first words. We check at sentence boundaries during the stream and emit a
+\texttt{replace} event to retract text already shown, bounding exposure to one
+sentence rather than eliminating it. A client that ignores \texttt{replace}
+would leave a leaked answer on screen, so the Unity client treats it as
+mandatory.
+
+\subsection{State as perception}
+
+Game state reaches the prompt as what the character could plausibly perceive,
+not as numbers: ``the river has cleared by more than half'' rather than
+\texttt{memory\_progress: 0.62}. A model cannot quote a number it was never
+shown. Exact quest facts are available only through a \texttt{lookup\_quest}
+tool. Section~\ref{sec:lessons} explains why this narrowing turned out to be
+an evaluation decision as much as a fiction one.
+
+\subsection{Backends and degradation}
+
+DeepSeek (\texttt{deepseek-v4-flash}, thinking mode disabled) and Ollama share
+one OpenAI-compatible client, so request building, timeouts and accounting are
+identical and a comparison measures the models rather than the plumbing. A
+latency budget covers the whole interaction, including tool rounds; on timeout
+or error the player receives a written line. Retrieval degrades in three rungs
+(bge-m3 vectors $\rightarrow$ BM25 $\rightarrow$ substring) and every result
+is tagged with the rung that answered.

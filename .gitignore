@@ -25,3 +25,12 @@ Thumbs.db
 # Finetune workspace — env and checkpoints stay local
 finetune/.venv/
 finetune/out/
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/build.log
+paper/preview/
+eval/logs/
+paper/comment.cut

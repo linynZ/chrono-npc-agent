@@ -1,0 +1,48 @@
+\section{Related Work}
+
+\paragraph{LLM-driven characters.} Generative agents showed that LLMs can
+sustain believable characters with memory and planning \cite{park2023generative},
+and LLM-generated quests and NPC dialogue have been studied directly in
+role-playing games \cite{ashby2023personalized}; Gallotta et al.\ survey the
+wider space of LLMs in games \cite{gallotta2024llmgames}. Shanahan et al.\
+frame persona-conditioned dialogue as role-play \cite{shanahan2023roleplay},
+a framing we found practically useful: a persona whose ethic matches the
+constraint (a historian afraid of writing untrue history) refused better than
+a policy attached to an arbitrary character, but role-play is not a security
+boundary, and our held-out results show the character yielding.
+
+\paragraph{LLMs in education and answer giveaway.} The risks of LLMs in
+education are widely discussed \cite{kasneci2023chatgpt}. Closest to our
+problem, MathDial found that LLM tutors tend to reveal solutions too early
+instead of scaffolding \cite{macina2023mathdial}. Our setting differs in two
+ways: the leak target is the answer to a live in-game question rather than a
+worked solution, and the same facts are \emph{supposed} to be shared outside
+that context, which is why the threat model has to be graded by context.
+
+\paragraph{Attacks and guardrails.} Prompt injection and goal hijacking
+\cite{perez2022ignore,greshake2023indirect} and the failure modes of safety
+training \cite{wei2023jailbroken} motivate layered defences. Classifier-based
+safeguards such as Llama Guard \cite{inan2023llamaguard} and programmable
+rails such as NeMo Guardrails \cite{rebedea2023nemo} address general harm
+categories; ours is a domain-specific property (``do not act as an answer
+oracle'') checked by lightweight deterministic detectors plus tool
+withdrawal, which keeps the latency budget of a real-time NPC.
+
+\paragraph{Evaluation.} XSTest pairs unsafe prompts with superficially similar
+safe ones to expose exaggerated refusal \cite{rottger2024xstest}; our paired
+scoring applies the same idea within each subject. LLM-as-judge is convenient
+but biased, including toward the judge's own outputs
+\cite{zheng2023judging,panickssery2024selfpref}, which is why our judge's
+verdicts are audited. Contamination of evaluation data inflates reported
+performance \cite{sainz2023contamination}; the analogous risk for a guardrail
+is that it was tuned on the very cases used to score it, which our frozen
+held-out split addresses. Hosted model behaviour drifts over time
+\cite{chen2024chatgptdrift}, limiting reproducibility of any API measurement.
+
+\paragraph{Retrieval and adaptation.} The NPC's lore tool is
+retrieval-augmented generation \cite{lewis2020rag} over bge-m3 embeddings
+\cite{chen2024bgem3}, compared against BM25 \cite{robertson2009bm25} and
+reciprocal rank fusion \cite{cormack2009rrf}. The local model is adapted with
+LoRA \cite{hu2022lora}. Invented answers about game state are a case of
+hallucination \cite{ji2023hallucination}, here with a concrete cost: the
+player acts on them.

@@ -1,0 +1,68 @@
+\section{Lessons: When the Measurement Points the Wrong Way}
+\label{sec:lessons}
+
+Every result above was preceded by a measurement that looked rigorous and
+pointed the wrong way. We group them because the pattern, not any single
+number, is what we expect to transfer.
+
+\paragraph{L1: The cheap metric pulls toward a mute NPC.} Twice, a check that
+was easy to compute would have rewarded silence. A leak metric keyed on
+whether the reply contains the correct option's text would score a historian
+who refuses to discuss history as perfectly safe (\S\ref{sec:leakage}). Later,
+our own evaluation set did the same one level up: forbidden substrings such
+as ``language model'' fired on the reply \zh{何谓``AI语言模型''？}---the NPC
+quoting the player's word back because he did not recognise it, which was the
+best refusal in the run. Substring matching cannot tell use from mention. A
+false positive is more dangerous than a missed leak, because the natural fix
+is to change the behaviour until the test passes; here that would have meant
+forbidding the NPC to quote the player and degrading every refusal. Paired
+scoring and a judge with human audit are the corrections; the held-out
+results in \S\ref{sec:results} show the substring check also erring the
+other way, missing elimination, acrostics and confirmations entirely.
+
+\paragraph{L2: Redundant context hides model defects.} The local 7B model
+first failed two must-answer cases only because it did not call
+\texttt{lookup\_quest}---yet its replies were correct, because our state
+injection had already placed ``two of three fragments recovered'' in the
+prompt. When we narrowed injection to what the character could perceive
+(``some fragments recovered, not yet all''), the same model, still calling no
+tool, answered that the journey needed \emph{seven} fragments and two were
+missing. It never called the tool in either configuration; the redundant
+prompt had made its failure invisible. Redundant context makes an evaluation
+measure the prompt instead of the model.
+
+\paragraph{L3: Defaults are part of the model.} The cloud model was chosen on
+price, tool calling and context length. Its first reply was empty: thinking
+mode was on by default, every output token went to reasoning, and
+\texttt{temperature} was silently inert. Because empty replies fall back to
+written lines, the failure would have looked like a flaky network.
+Disabling thinking cut tokens from 161 to 32 and latency from 1948\,ms to
+1242\,ms. For latency-bound dialogue, ``is this a reasoning model, and can it
+be turned off?'' belongs beside price in model selection. A related near-miss:
+a local first-token latency of 4114\,ms turned out to be a model reload after
+VRAM eviction; warm, it was about 750\,ms. The contradiction with an earlier
+measurement, not care at the time, is what caught it.
+
+\paragraph{L4: The industry default lost to its own ingredient.} We expected
+hybrid retrieval to win. On 500 LLM-paraphrased player queries (committed for
+reproducibility), recall@1 was 71.2\% for the shipped substring search, 69.2\%
+for BM25, 95.8\% for bge-m3 vectors and 81.6\% for their reciprocal rank
+fusion. BM25 carried almost no signal on paraphrases, and equal-weight fusion
+mixed that noise into a near-perfect ranking. Vectors became the default and
+BM25 the degradation rung, which is a different job: it needs no embedding
+server. The caveat is the query style: LLM paraphrases are fluent sentences,
+and real players also type fragments, where BM25 may do better.
+
+\paragraph{L5: A development score is not a test score.} This is the lesson
+of the held-out split itself. Everything above was found by testing, yet the
+cases we tested with were the ones we had tuned against; the frozen set
+showed how much of the 100\% was ours rather than the system's
+(\S\ref{sec:results}). The gap was in attack shape, not persona: the
+historian we developed against fared worst. Writing the held-out set also
+surfaced a code defect our development set could not---the steering text
+appended to flagged requests was written for the historian (``show a
+historian's puzzlement'') and is sent unchanged to every NPC. Because the
+detectors rarely fired on held-out attacks, this defect cannot explain the
+held-out failures, but it does mean that adding a persona was a YAML file for
+the character and not yet for the guardrail. Per the freezing rule, it is
+reported here rather than fixed before measurement.

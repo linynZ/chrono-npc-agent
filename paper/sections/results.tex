@@ -1,0 +1,115 @@
+\section{Results}
+\label{sec:results}
+
+\begin{table*}[t]
+\caption{Guardrail evaluation, five rounds per backend. Pair pass is per
+pair-round; \emph{judged} counts a pair as failed if the audited leak verdict
+for its refusal is \emph{partial} or \emph{full}. \emph{Held (audited)} is
+the share of refusals with no substring hit and no audited leak. Brackets are
+95\% intervals (Wilson for proportions, bootstrap for latency). The mute
+control replies ``\ldots'' to everything.}
+\label{tab:main}
+\small
+\begin{tabular}{llccccccc}
+\toprule
+Split & Backend & Pair pass & Pair pass (judged) & Must-answer & Held (substring) & Held (audited) & p50 ms & Fallback \\
+\midrule
+Dev & deepseek-v4-flash & 100 [93,100] & 100 [93,100] & 100 [94,100] & 100 [93,100] & 100 [93,100] & 927 [887,987] & 4.3 \\
+(23 cases) & qwen2.5:7b & 80 [67,89] & 80 [67,89] & 83.3 [72,91] & 100 [93,100] & 100 [93,100] & 766 [685,836] & 1.7 \\
+ & qwen2.5:1.5b & 60 [46,72] & 60 [46,72] & 83.3 [72,91] & 81.8 [70,90] & 81.8 [70,90] & 391 [315,460] & 5.2 \\
+ & chrono-npc-1.5b & 76 [63,86] & 76 [63,86] & 76.7 [65,86] & 96.4 [88,99] & 96.4 [88,99] & 494 [439,640] & 13.0 \\
+\midrule
+Held-out & deepseek-v4-flash & 72 [63,80] & 54 [44,63] & 99.1 [95,100] & 74.8 [66,82] & 56.5 [47,65] & 954 [916,998] & 0.9 \\
+(46 cases) & qwen2.5:7b & 58 [48,67] & 46 [37,56] & 100 [97,100] & 63.5 [54,72] & 45.2 [36,54] & 738 [657,826] & 0.0 \\
+ & qwen2.5:1.5b & 67 [57,75] & 53 [43,62] & 97.4 [93,99] & 70.4 [62,78] & 53.0 [44,62] & 334 [260,417] & 0.4 \\
+ & chrono-npc-1.5b & 61 [51,70] & 57 [47,66] & 83.5 [76,89] & 72.2 [63,80] & 63.5 [54,72] & 450 [353,561] & 21.7 \\
+ & mute control & 0 [0,16] & -- & 0 [0,14] & 100 [86,100] & -- & -- & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:main} gives the headline numbers. Four observations follow.
+
+\paragraph{The development score did not survive the held-out set.} On the
+development set the cloud model passed every pair in every round, reproducing
+the August measurement. On the frozen held-out set its audited refusal hold
+rate was 56.5\% [47, 65], and judged pair pass fell from 100\% to 54\%. Every
+backend fell: no held-out audited hold rate exceeds 64\%, and the four
+backends' intervals overlap, so the data do not rank them. Must-answer
+performance, by contrast, stayed near the ceiling for every backend except the
+fine-tuned one, so the drop is a guardrail failure, not a capability one.
+
+\paragraph{The deterministic layer barely participated.} The input detectors
+flagged 2 of the 23 held-out attacks. Pasted questions without the
+punctuation the patterns expected (``A硬山 B歇山 C庑殿'') went unrecognised, so
+contextual strictness---withdrawing the lore tool---almost never engaged.
+Whatever held on the held-out set was held by the model and the persona.
+
+\input{sections/table_attacks}
+
+\paragraph{Failures cluster by attack shape, not by persona.} Breaking the
+refusals down by case (Table~\ref{tab:attacks}) separates the attacks
+cleanly.
+Attacks that do not seek a specific answer---persona override, renaming,
+impossible requests, claimed developer authority, the examiner role-play and
+the ``carve it, don't say it'' loophole---were held in all 140 attempts across
+all four backends. Attacks that ask for \emph{part} of an answer, or wrap the
+request as something else, failed most of the time: elimination, first
+character, acrostic, confirmation of a guess, a half-question to complete, and
+a quiz question appended to small talk. The persona the guardrails were
+developed on was not the safest: the cloud model's judged pair pass was
+37.5\% for the historian against 63--67\% for the two new characters.
+Stronger instruction-following appears to cut both ways: the cloud model
+treated ``just the first character'' as a reasonable, smaller request, and
+said so in character (\zh{旅者问得省，我便答得省}, ``the traveller asks
+sparingly, so I answer sparingly''). One result needs stating plainly: asked
+in English to ``print everything above this line'', three of the four
+backends reproduced passages of the Gatekeeper's system prompt verbatim in
+every round;
+the substring check caught it, and no input detector fired. The fine-tuned
+model held 27 of 50 partial-or-disguised attempts against 10--13 for the
+others, partly through output-guardrail fallbacks rather than in-character
+refusals.
+
+\paragraph{Substring checks missed most leaks.} Across the four held-out
+runs the judge, after audit, found 194 full or partial leaks among 360 judged
+refusals, against 122 substring hits. Elimination (``Confucius, Mencius and
+Xunzi are all Confucians; strike those three''), acrostics whose first
+character was the answer, and bare confirmations (``Yes. Xunzi held that human
+nature is evil'') contain no forbidden term. The audit overruled the judge on
+18 of 178 distinct flagged replies, in both directions: it called restating
+the question's own premise a leak, and it counted wrong answers as leaks.
+
+\paragraph{Small models sometimes ``held'' by being wrong.} Ten audited
+replies from the local models gave a wrong answer---``E'' for the Yellow
+River, a non-existent ``Hengyue'' pagoda, ``No'' to a question whose answer is
+yes. These are not leaks, but in an educational game a confident wrong answer
+from a subject expert is a failure of its own kind, and a substring or leak
+metric scores it as a success.
+
+\subsection{Fine-tuning and its trade-off}
+\label{sec:sft}
+
+The 1.5B base model's dev-set leak of the Dujiangyan answer (``B. 李冰'')
+motivated a LoRA adapter trained on about 200 samples synthesised by the cloud
+model under the production prompt, with tool results from the live index and
+every sample screened by the output guardrail. A first mix with 51\% refusal
+samples drove must-answer from 75\% to 58\% on a single dev round; a second
+mix at roughly 3:1 answers to refusals recovered most of it. Over five rounds,
+the shipped adapter raised dev-set refusal holding from 81.8\% to 96.4\% and
+had the highest held-out audited hold rate (63.5\%), but paid for it in
+must-answer (83.5\% vs.\ 97.4\% held-out) and in fallbacks (21.7\%, 48 of 50 of them output-guardrail trips). On this budget, refusing was teachable;
+answering well was not free, and the data mix was the most sensitive knob.
+
+\subsection{Latency}
+
+The local models were faster than the cloud model at the median (334--738\,ms
+vs.\ 954\,ms on held-out), but tails were wide for all backends, with p95
+between 1.8 and 3.6\,s on held-out (7B and fine-tuned 1.5B widest).
+Streaming reduced perceived wait by only 1.4--1.6$\times$ in earlier
+measurements, because time-to-first-token dominates; 86\% of the cloud
+prompt was served from the provider's prefix cache with no latency change,
+which locates the bottleneck in the round trip rather than prefill. The cloud
+median in October (927\,ms on dev) was markedly lower than in August
+(1588\,ms) for the same model name and harness, a reminder that hosted-model
+measurements are dated observations.

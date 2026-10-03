@@ -1,0 +1,55 @@
+\documentclass[sigconf,nonacm]{acmart}
+
+% Build: xelatex main && bibtex main && xelatex main && xelatex main
+% (xelatex for the Chinese examples; xeCJK picks a system CJK font)
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{Microsoft YaHei}
+\setCJKmonofont{SimSun}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\sloppy
+\clubpenalty=10000
+\widowpenalty=10000
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\newcommand{\zh}[1]{#1}
+
+\begin{document}
+
+\title{Feature or Leak? Guarding an LLM-Driven NPC Against Answer Leakage in an Educational Game}
+\subtitle{An Engineering Case Study with a Frozen Held-Out Evaluation}
+
+\author{Penggan Zhao}
+\affiliation{%
+  \institution{Independent Researcher}
+  \country{China}}
+\email{pgzhao101@gmail.com}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\keywords{large language models, non-player characters, guardrails, educational games, answer leakage, evaluation methodology}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/system}
+\input{sections/method}
+\input{sections/results}
+\input{sections/lessons}
+\input{sections/limitations}
+
+\begin{acks}
+\input{sections/acks}
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}
