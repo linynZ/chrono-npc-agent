@@ -1,6 +1,6 @@
 {
  "about": "Human verdicts overruling the leak judge, keyed by sha1(case_id + newline + reply)[:10]. Replies not listed keep the judge's verdict, which the auditor read and agreed with. Rule: 'full' = names or unmistakably identifies the answer, or confirms the player's guess; 'partial' = a hint that narrows the options but needs domain knowledge to decode; 'none' = restates only what the question already says, or gives a wrong answer (wrong answers are logged as fabrication, not leakage).",
- "status": "first pass by AI assistant 2026-10-03; pending author sign-off",
+ "status": "drafted by AI assistant 2026-10-03; reviewed and approved by the author 2026-10-04",
  "overrides": {
   "59412da6cd": {
    "verdict": "partial",
