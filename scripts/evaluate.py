@@ -8,6 +8,7 @@ Usage:
     python scripts/evaluate.py
     python scripts/evaluate.py --provider ollama --repeat 3
     python scripts/evaluate.py --compare            # cloud vs local, one table
+    python scripts/evaluate.py --cases eval/cases_heldout.yaml --repeat 5
 
 Results are written to eval/results/ as JSON so runs can be diffed later.
 """
@@ -36,6 +37,7 @@ from chrono_agent.factory import build_agent  # noqa: E402
 from chrono_agent.models import PlayerState, QuestStage, ReplySource  # noqa: E402
 
 CASES_PATH = ROOT / "eval" / "cases.yaml"
+DEFAULT_NPC = "npc_china_historian"
 RESULTS_DIR = ROOT / "eval" / "results"
 
 # The mid-game save used for every case, so results are comparable across runs.
@@ -64,6 +66,7 @@ MIN_SUBSTANTIVE_CHARS = 8
 class CaseResult:
     case_id: str
     kind: str
+    npc: str
     topic: str
     message: str
     reply: str
@@ -78,8 +81,8 @@ class CaseResult:
     tokens: int = 0
 
 
-def load_cases() -> list[dict]:
-    with CASES_PATH.open(encoding="utf-8") as fh:
+def load_cases(path: Path = CASES_PATH) -> list[dict]:
+    with path.open(encoding="utf-8") as fh:
         raw = yaml.safe_load(fh)
 
     cases: list[dict] = []
@@ -89,10 +92,20 @@ def load_cases() -> list[dict]:
             spec = pair.get(kind)
             if not spec:
                 continue
-            cases.append({**spec, "kind": kind, "topic": topic, "id": f"{topic}/{kind}"})
+            cases.append({
+                **spec,
+                "kind": kind,
+                "topic": topic,
+                "id": f"{topic}/{kind}",
+                "npc": pair.get("npc", DEFAULT_NPC),
+            })
 
     for single in raw.get("singles", []):
-        cases.append({**single, "topic": single.get("id", "single")})
+        cases.append({
+            **single,
+            "topic": single.get("id", "single"),
+            "npc": single.get("npc", DEFAULT_NPC),
+        })
 
     return cases
 
@@ -102,6 +115,7 @@ def judge(case: dict, reply) -> CaseResult:
     result = CaseResult(
         case_id=case["id"],
         kind=case["kind"],
+        npc=case["npc"],
         topic=case["topic"],
         message=case["message"],
         reply=text,
@@ -159,7 +173,8 @@ def judge(case: dict, reply) -> CaseResult:
     return result
 
 
-async def run_case(agent, case: dict, semaphore: asyncio.Semaphore) -> CaseResult:
+async def run_case(agents: dict, case: dict, semaphore: asyncio.Semaphore) -> CaseResult:
+    agent = agents[case["npc"]]
     language = case.get("language", "zh")
     state = EVAL_STATE.model_copy(update={"language": language})
     async with semaphore:
@@ -168,12 +183,17 @@ async def run_case(agent, case: dict, semaphore: asyncio.Semaphore) -> CaseResul
 
 
 async def evaluate(
-    provider_name: str, repeat: int, concurrency: int, timeout_ms: int
+    provider_name: str, repeat: int, concurrency: int, timeout_ms: int,
+    cases_path: Path = CASES_PATH,
 ) -> dict:
-    cases = load_cases()
+    cases = load_cases(cases_path)
     settings = Settings.from_env()
     provider = build_provider(settings, name=provider_name)
-    agent = build_agent("npc_china_historian", provider=provider, timeout_ms=timeout_ms)
+    # One agent per persona, all on the same provider.
+    agents = {
+        npc: build_agent(npc, provider=provider, timeout_ms=timeout_ms)
+        for npc in sorted({c["npc"] for c in cases})
+    }
 
     semaphore = asyncio.Semaphore(concurrency)
     all_results: list[CaseResult] = []
@@ -181,14 +201,16 @@ async def evaluate(
     for round_index in range(repeat):
         print(f"  round {round_index + 1}/{repeat} ... ", end="", flush=True)
         results = await asyncio.gather(
-            *(run_case(agent, case, semaphore) for case in cases)
+            *(run_case(agents, case, semaphore) for case in cases)
         )
         all_results.extend(results)
         passed = sum(1 for r in results if r.passed)
         print(f"{passed}/{len(results)} passed")
 
     await provider.aclose()
-    return summarise(provider_name, agent.provider.model, all_results, repeat)
+    summary = summarise(provider_name, provider.model, all_results, repeat)
+    summary["cases_file"] = cases_path.relative_to(ROOT).as_posix()
+    return summary
 
 
 def summarise(
@@ -310,7 +332,10 @@ def print_report(summary: dict) -> None:
 def save(summary: dict) -> Path:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     stamp = summary["timestamp"].replace(":", "").replace("-", "")
-    path = RESULTS_DIR / f"{summary['provider']}_{stamp}.json"
+    split = Path(summary.get("cases_file", "cases.yaml")).stem
+    tag = "" if split == "cases" else f"_{split.removeprefix('cases_')}"
+    model = summary["model"].replace(":", "-").replace("/", "-")
+    path = RESULTS_DIR / f"{summary['provider']}{tag}_{model}_{stamp}.json"
     with path.open("w", encoding="utf-8") as fh:
         json.dump(summary, fh, ensure_ascii=False, indent=1)
     return path
@@ -344,7 +369,8 @@ async def main_async(args: argparse.Namespace) -> int:
         print(f"\nevaluating {name} ...")
         try:
             summary = await evaluate(
-                name, args.repeat, args.concurrency, args.timeout
+                name, args.repeat, args.concurrency, args.timeout,
+                cases_path=(ROOT / args.cases).resolve(),
             )
         except Exception as exc:  # noqa: BLE001 - one backend failing must not
             # abort the other half of a comparison run.
@@ -367,6 +393,8 @@ def main() -> int:
                         choices=["deepseek", "ollama", "echo"])
     parser.add_argument("--compare", action="store_true",
                         help="run deepseek and ollama, print a comparison table")
+    parser.add_argument("--cases", default="eval/cases.yaml",
+                        help="case file, relative to the project root")
     parser.add_argument("--repeat", type=int, default=1)
     parser.add_argument("--concurrency", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=8000)
