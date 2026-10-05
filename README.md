@@ -11,6 +11,16 @@ The NPC knows who it is, knows how far the player has actually progressed, can l
 > and `docs/findings/` records seven results from testing — four of which
 > falsified a design assumption I had already written down here as fact.
 
+**Paper:** *Feature or Leak? Guarding an LLM-Driven NPC Against Answer Leakage
+in an Educational Game* — preprint on Zenodo,
+[doi:10.5281/zenodo.23150869](https://doi.org/10.5281/zenodo.23150869)
+(PDF and LaTeX source in `paper/`; Chinese summary: `paper/summary_zh.md`).
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23150869.svg)](https://doi.org/10.5281/zenodo.23150869)
+
+> Zhao, P. (2026). *Feature or Leak? Guarding an LLM-Driven NPC Against Answer
+> Leakage in an Educational Game*. Zenodo. https://doi.org/10.5281/zenodo.23150869
+
 ---
 
 ## Why this exists
